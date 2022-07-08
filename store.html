@@ -1,0 +1,2424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+    
+        <script src="js/jquery.page.js"></script>
+    
+    <!-- 會員中心 Dropdowns -->
+    <script>
+                /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script><!-- 會員中心 Dropdowns -->
+    
+</head>
+    
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+<!--
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+-->
+                
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li class="hover"><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover" style="display:none"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="center">
+                <div class="left_store">
+                    <table class="store_msg top">
+                      <tr> 
+                        <th rowspan="2" style="vertical-align:top;">
+                            <div class="store_photo">
+                                <table>
+                                    <tr>
+                                        <th colspan="2">
+                                            <a href="#" data-toggle="modal" data-target="#store_img"><img src="images/store.jpg" alt=""></a>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td style="z-index:1;">
+                                            <a href=""><i class="fa fa-chevron-left" aria-hidden="true"></i> 上一張</a>
+                                        </td>
+                                        <td style="text-align:right; z-index:1;">
+                                            <a href="">下一張 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </th> 
+                        <th><h2 style="top: -20px;">XPC!德總電腦</h2>
+                          <span class="btn_like"><i class="fa fa-thumbs-up fa-lg icon_like hover" aria-hidden="true"></i>500</span>
+                          <hr style="margin-top:10px; margin-bottom:0;"></th> 
+                      </tr> 
+                      <tr> 
+                        <td class="info" style="">地址：台北市中正區市民大道三段8號2樓64、65、66室&nbsp;
+                            <a style="vertical-align:super; color:#C1272D;"><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i></a><br>
+                            電話：02-23218206<br>
+                            網址：<br>
+                            最新更新日期：2017/03/22</td> 
+                      </tr> 
+                      <tr> 
+                        <td style="line-height:3;">                            
+                            <div>
+                                <button type="button" class="btn btn-primary blue" onclick="document.location.href='store_valuation_list.html'">
+                                    <i class="fa fa-file-text" aria-hidden="true"></i>&nbsp;生成估價單</button>
+                                <button type="button" class="btn btn-primary blue2" data-toggle="modal" data-target="#msg_board">
+                                    <i class="fa fa-commenting-o" aria-hidden="true"></i>&nbsp;門市留言</button>
+                            </div></td> 
+                        <td>
+                            <table class="store-msg-box" width="90%" style="margin:10px 0;"> 
+                              <tr>
+                                  <th rowspan="2" style="vertical-align:top;"><img src="images/store_msg_member.png" alt=""></th>
+                                  <td colspan="2">
+                                      <i class="fa fa-thumbs-up fa-lg hover" aria-hidden="true"></i>&nbsp;Sumi留言：<span class="msg_span">2016-09-24 00:45</span>
+                                  </td>
+                              </tr> 
+                              <tr>
+                                  <td colspan="2">請問intel什麼時候有貨呢?請問intel什麼時候
+                                      <label data-toggle="modal" data-target="#msg_board">
+                                        <span><strong>&nbsp;…more</strong></span></label></td>
+                              </tr> 
+                            </table>
+                        </td> 
+                      </tr> 
+                    </table>
+                <div class="store_tabs">
+                    <div class="tabs">
+                        <input type="radio" id="tab1" name="tab-control" checked>
+                        <input type="radio" id="tab2" name="tab-control">
+                        <input type="radio" id="tab3" name="tab-control">
+                        <input type="radio" id="tab4" name="tab-control">
+
+                        <ul class="menu_ul">
+                            <li title="週邊產品" class="li0"><label for="tab1" role="button"><span>DIY產品</span></label></li>
+                            <li title="DIY產品" class="li0"><label for="tab2" role="button"><span>週邊產品</span></label></li>
+                            <li title="優惠專區" class="li0"><label for="tab3" role="button"><span>優惠專區</span></label></li>
+                            <li title="門市商品" class="li0"><label for="tab4" role="button"><span>門市商品</span></label></li>
+                        </ul>
+                        <div class="content">
+                            <section>
+                                <div class="panel-bg">
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        
+                                        <div class="panel panel-default">
+                                             <div class="panel-heading" role="tab" id="headingOne">
+                                                <div class="panel-title clearfix" style="display:flex;">
+                                                    <table>
+<!--
+                                                        <tr>
+                                                            <td class="panel-img" rowspan="2">
+                                                                <img src="images/icon1_cpu_b.png" alt="">
+                                                            </td>
+                                                            <td valign="bottom">
+                                                                <div class="top">
+                                                                    <span class="store-title">
+                                                                        [愛普生EPSON] L565 彩色噴墨事務機 1440x5760 dpi, 黑白33 ppm, 彩色15 ppm, 1Y保固
+                                                                    </span>
+                                                                    <span class="store-price">建議售價<br>$2,020</span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+-->
+                                                        <tr>
+                                                            <td class="panel-img" rowspan="2">
+                                                                <img src="images/icon1_cpu_b.png" alt="">
+                                                            </td>
+                                                            <td style="height:100%;">
+                                                                <div style="text-align:center;">
+                                                                    <span>
+                                                                    觀看經銷商全品項商品
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="vertical-align:bottom;">
+                                                                <div class="bottom">
+                                                                最新更新日期：2017/05/10<p>
+                                                                價格議動 450
+                                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1" class="bottom-btn"><img src="images/bottom-btn.png" width="30" height="15"></a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    
+                                                    <div class="cp_box">
+                                                        <ul class="cf">
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; font-weight: 900; height:30px;">
+                                                                商品規格比較</li>
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; height: 30px;">
+                                                                <button class="btn btn-info btn-md blue3" data-toggle="modal" data-target="#calculate_list">
+                                                                <i class="fa fa-balance-scale fa-lg" aria-hidden="true"></i>&nbsp;比較</button></li>
+                                                        </ul>
+                                                        
+                                                        <div class="col th-large product">
+                                                            <h3 data-toggle="tooltip" data-placement="bottom"
+                                                                title="" placement="auto left"
+                                                                data-original-title="Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200
+                                                            </h3>
+                                                            <div class="border box">
+                                                                <a class="btn-close xs" ng-click="DeleteCareProduct(item)">
+                                                                    <i class="fa fa-times-circle" aria-hidden="true" 
+                                                                    style="position:initial; color:#3e3a39; font-size:10pt; text-shadow: 0px 0px 10px #fff,0px 0px 10px #fff;"></i>
+                                                                </a>
+                                                                <div class="col-img img_xs">
+                                                                    <a href=""><img src="images/product.jpg" alt=""></a></div>
+                                                                <p class="font-date" style="margin:0;">
+                                                                    <span class="font-red font-red2">$5,0000</span>
+                                                                </p>
+                                                            </div>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product">
+                                                            <h3 data-toggle="tooltip" data-placement="bottom"
+                                                                title="" placement="auto left"
+                                                                data-original-title="Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200
+                                                            </h3>
+                                                            <div class="border box">
+                                                                <a class="btn-close xs" ng-click="DeleteCareProduct(item)">
+                                                                    <i class="fa fa-times-circle" aria-hidden="true" 
+                                                                    style="position:initial; color:#3e3a39; font-size:10pt; text-shadow: 0px 0px 10px #fff,0px 0px 10px #fff;"></i>
+                                                                </a>
+                                                                <div class="col-img img_xs">
+                                                                    <a href=""><img src="images/product.jpg" alt=""></a></div>
+                                                                <p class="font-date" style="margin:0;">
+                                                                    <span class="font-red font-red2">$5,0000</span>
+                                                                </p>
+                                                            </div>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                    </div>
+                                                </div><!-- panel-title end -->
+                                            </div><!-- panel-heading end -->
+                                            
+                                            <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <ul class="panel-body">
+                                                    <li class="search">
+                                                        <form class="input-group">
+                                                           <span class="input-group-btn">
+                                                              <button class="btn btn-default size" type="button">
+                                                                 <i class="fa fa-search search-xs" aria-hidden="true"></i>
+                                                              </button>
+                                                           </span>
+                                                           <input class="form-control" type="text" class="form-control size" style="width:100%;" placeholder="商品關鍵字">
+                                                        </form>  
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">建議售價<br>$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- panel-collapse end -->
+                                        </div><!-- cpu panel-default end -->
+                                        
+                                        <div class="panel panel-default">
+                                             <div class="panel-heading" role="tab" id="headingOne">
+                                                <div class="panel-title clearfix" style="display:flex;">
+                                                    
+                                                    <table>
+                                                        <tr>
+                                                            <td class="panel-img" rowspan="2">
+                                                                <img src="images/icon2_mb_b.png" alt="">
+                                                            </td>
+                                                            <td valign="bottom">
+                                                                <div class="top">
+                                                                    <span class="store-title">
+                                                                        [愛普生EPSON] L565 彩色噴墨事務機 1440x5760 dpi, 黑白33 ppm, 彩色15 ppm, 1Y保固
+                                                                    </span>
+                                                                    <span class="store-price">建議售價<br>$2,020</span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="vertical-align:bottom;">
+                                                                <div class="bottom">
+                                                                最新更新日期：2017/05/10<p>
+                                                                價格議動 450
+                                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1" class="bottom-btn"><img src="images/bottom-btn.png" width="30" height="15"></a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    
+                                                    <div class="cp_box">
+                                                        <ul class="cf">
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; font-weight: 900; height:30px;">
+                                                                商品規格比較</li>
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; height: 30px;"></li>
+                                                        </ul>
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                    </div>
+                                                </div><!-- panel-title end -->
+                                            </div><!-- panel-heading end -->
+                                            <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <ul class="panel-body">
+                                                    <li class="search">
+                                                        <div style="font-weight:bold;">
+                                                            <button>搜尋</button>
+                                                            <input class="span2" type="text" placeholder="商品關鍵字">
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- panel-collapse end -->
+                                        </div><!-- mb panel-default end -->
+                                        
+                                        <div class="panel panel-default">
+                                             <div class="panel-heading" role="tab" id="headingOne">
+                                                <div class="panel-title clearfix" style="display:flex;">
+                                                    <div class="panel-img">
+                                                        <img src="images/icon3_ram_b.png" alt="">
+                                                    </div>
+                                                    <div style="width:45%;">
+                                                        <div class="top">
+                                                            <span class="store-title">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200i3-3200 SR&RG
+                                                            </span>
+                                                            <span class="store-price">$2,020 </span>
+                                                        </div>
+                                                        <div class="bottom">
+                                                            最新更新日期：2017/05/10<p>
+                                                            價格議動 45
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3" class="bottom-btn"><img src="images/bottom-btn.png" width="30" height="15"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div style="background-color:#fffcda; width:50%; overflow-y:hidden; padding:5px;">
+                                                        <ul class="cf">
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; font-weight: 900; height:30px;">
+                                                                商品規格比較</li>
+                                                        </ul>
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                    </div>
+                                                </div><!-- panel-title end -->
+                                            </div><!-- panel-heading end -->
+                                            <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <ul class="panel-body">
+                                                    <li class="search">
+                                                        <div style="font-weight:bold;">
+                                                            <button>搜尋</button>
+                                                            <input class="span2" type="text" placeholder="商品關鍵字">
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- panel-collapse end -->
+                                        </div><!-- ram panel-default end -->
+                                        
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <div class="panel-title clearfix" style="display:flex;">
+                                                    <div class="panel-img">
+                                                        <img src="images/icon4_3d_b.png" alt="">
+                                                    </div>
+                                                    <div style="width:45%;">
+                                                        <div class="top">
+                                                            <span class="store-title">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200i3-3200 SR&RG
+                                                            </span>
+                                                            <span class="store-price">$2,020 </span>
+                                                        </div>
+                                                        <div class="bottom">
+                                                            最新更新日期：2017/05/10<p>
+                                                            價格議動 45
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4" class="bottom-btn"><img src="images/bottom-btn.png" width="30" height="15"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div style="background-color:#fffcda; width:50%; overflow-y:hidden; padding:5px;">
+                                                        <ul class="cf">
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; font-weight: 900; height:30px;">
+                                                                商品規格比較</li>
+                                                        </ul>
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                    </div>
+                                                </div><!-- panel-title end -->
+                                            </div><!-- panel-heading end -->
+                                            <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <ul class="panel-body">
+                                                    <li class="search">
+                                                        <div style="font-weight:bold;">
+                                                            <button>搜尋</button>
+                                                            <input class="span2" type="text" placeholder="商品關鍵字">
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- panel-collapse end -->
+                                        </div><!-- 3d panel-default end -->
+                                        
+                                        <div class="panel panel-default">
+                                             <div class="panel-heading" role="tab" id="headingOne">
+                                                <div class="panel-title clearfix" style="display:flex;">
+                                                    <div class="panel-img">
+                                                        <img src="images/icon5_hd_b.png" alt="">
+                                                    </div>
+                                                    <div style="width:45%;">
+                                                        <div class="top">
+                                                            <span class="store-title">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200i3-3200 SR&RG
+                                                            </span>
+                                                            <span class="store-price">$2,020 </span>
+                                                        </div>
+                                                        <div class="bottom">
+                                                            最新更新日期：2017/05/10<p>
+                                                            價格議動 45
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapse5" class="bottom-btn"><img src="images/bottom-btn.png" width="30" height="15"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div style="background-color:#fffcda; width:50%; overflow-y:hidden; padding:5px;">
+                                                        <ul class="cf">
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; font-weight: 900; height:30px;">
+                                                                商品規格比較</li>
+                                                        </ul>
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                    </div>
+                                                </div><!-- panel-title end -->
+                                            </div><!-- panel-heading end -->
+                                            <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <ul class="panel-body">
+                                                    <li class="search">
+                                                        <div style="font-weight:bold;">
+                                                            <button>搜尋</button>
+                                                            <input class="span2" type="text" placeholder="商品關鍵字">
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- panel-collapse end -->
+                                        </div><!-- hd panel-default end -->
+                                        
+                                        <div class="panel panel-default">
+                                             <div class="panel-heading" role="tab" id="headingOne">
+                                                <div class="panel-title clearfix" style="display:flex;">
+                                                    <div class="panel-img">
+                                                        <img src="images/icon6_ssd_b.png" alt="">
+                                                    </div>
+                                                    <div style="width:45%;">
+                                                        <div class="top">
+                                                            <span class="store-title">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200i3-3200 SR&RG
+                                                            </span>
+                                                            <span class="store-price">$2,020 </span>
+                                                        </div>
+                                                        <div class="bottom">
+                                                            價格議動 45
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="true" aria-controls="collapse6" class="bottom-btn"><img src="images/bottom-btn.png" width="30" height="15"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div style="background-color:#fffcda; width:50%; overflow-y:hidden; padding:5px;">
+                                                        <ul class="cf">
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; font-weight: 900; height:30px;">
+                                                                商品規格比較</li>
+                                                        </ul>
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                    </div>
+                                                </div><!-- panel-title end -->
+                                            </div><!-- panel-heading end -->
+                                            <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <ul class="panel-body">
+                                                    <li class="search">
+                                                        <div style="font-weight:bold;">
+                                                            <button>搜尋</button>
+                                                            <input class="span2" type="text" placeholder="商品關鍵字">
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- panel-collapse end -->
+                                        </div><!-- ssd panel-default end -->
+                                        
+                                        <div class="panel panel-default">
+                                             <div class="panel-heading" role="tab" id="headingOne">
+                                                <div class="panel-title clearfix" style="display:flex;">
+                                                    <div class="panel-img">
+                                                        <img src="images/icon7_power_b.png" alt="">
+                                                    </div>
+                                                    <div style="width:45%;">
+                                                        <div class="top">
+                                                            <span class="store-title">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200i3-3200 SR&RG
+                                                            </span>
+                                                            <span class="store-price">$2,020 </span>
+                                                        </div>
+                                                        <div class="bottom">
+                                                            最新更新日期：2017/05/10<p>
+                                                            價格議動 45
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapse7" class="bottom-btn"><img src="images/bottom-btn.png" width="30" height="15"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div style="background-color:#fffcda; width:50%; overflow-y:hidden; padding:5px;">
+                                                        <ul class="cf">
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; font-weight: 900; height:30px;">
+                                                                商品規格比較</li>
+                                                        </ul>
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                    </div>
+                                                </div><!-- panel-title end -->
+                                            </div><!-- panel-heading end -->
+                                            <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <ul class="panel-body">
+                                                    <li class="search">
+                                                        <div style="font-weight:bold;">
+                                                            <button>搜尋</button>
+                                                            <input class="span2" type="text" placeholder="商品關鍵字">
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- panel-collapse end -->
+                                        </div><!-- power panel-default end -->
+                                        
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div class="panel-bg">
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                             <div class="panel-heading" role="tab" id="headingOne">
+                                                <div class="panel-title clearfix" style="display:flex;">
+                                                    <div class="panel-img">
+                                                        <img src="images/pc_icon_b1.png" alt="">
+                                                    </div>
+                                                    <div style="width:45%;">
+                                                        <div class="top">
+                                                            <span class="store-title">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200i3-3200 SR&RG
+                                                            </span>
+                                                            <span class="store-price">$2,020 </span>
+                                                        </div>
+                                                        <div class="bottom">
+                                                            最新更新日期：2017/05/10<p>
+                                                            價格議動 45
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="true" aria-controls="collapse8" class="bottom-btn"><img src="images/bottom-btn.png" width="30" height="15"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div style="background-color:#fffcda; width:50%; overflow-y:hidden; padding:5px;">
+                                                        <ul class="cf">
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; font-weight: 900; height:30px;">
+                                                                商品規格比較</li>
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; height: 30px;">
+                                                                <button class="btn btn-info btn-md blue3" data-toggle="modal" data-target="#calculate_list">
+                                                                <i class="fa fa-balance-scale fa-lg" aria-hidden="true"></i>&nbsp;比較</button></li>
+                                                        </ul>
+                                                        
+                                                        <div class="col th-large product">
+                                                            <h3 data-toggle="tooltip" data-placement="bottom"
+                                                                title="" placement="auto left"
+                                                                data-original-title="Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200
+                                                            </h3>
+                                                            <div class="border box" style="padding:5px;">
+                                                                <a class="btn-close xs" ng-click="DeleteCareProduct(item)">
+                                                                    <i class="fa fa-times-circle" aria-hidden="true" 
+                                                                    style="position:initial; color:#3e3a39; font-size:10pt; text-shadow: 0px 0px 10px #fff,0px 0px 10px #fff;"></i>
+                                                                </a>
+                                                                <div class="col-img img_xs">
+                                                                    <a href=""><img src="images/product.jpg" alt=""></a></div>
+                                                                <p class="font-date" style="margin:0;">
+                                                                    <span class="font-red font-red2">NT$ 5,000</span>
+                                                                </p>
+                                                            </div>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product">
+                                                            <h3 data-toggle="tooltip" data-placement="bottom"
+                                                                title="" placement="auto left"
+                                                                data-original-title="Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200
+                                                            </h3>
+                                                            <div class="border box" style="padding:5px;">
+                                                                <a class="btn-close xs" ng-click="DeleteCareProduct(item)">
+                                                                    <i class="fa fa-times-circle" aria-hidden="true" 
+                                                                    style="position:initial; color:#3e3a39; font-size:10pt; text-shadow: 0px 0px 10px #fff,0px 0px 10px #fff;"></i>
+                                                                </a>
+                                                                <div class="col-img img_xs">
+                                                                    <a href=""><img src="images/product.jpg" alt=""></a></div>
+                                                                <p class="font-date" style="margin:0;">
+                                                                    <span class="font-red font-red2">NT$ 5,000</span>
+                                                                </p>
+                                                            </div>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                    </div>
+                                                </div><!-- panel-title end -->
+                                            </div><!-- panel-heading end -->
+                                            <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                  <ul class="panel-body">
+                                                    <li class="search">
+                                                        <div style="font-weight:bold;">
+                                                            <button>搜尋</button>
+                                                            <input class="span2" type="text" placeholder="商品關鍵字">
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- panel-collapse end -->
+                                        </div><!-- pc1 panel-default end -->
+                                        
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <div class="panel-title clearfix" style="display:flex;">
+                                                    <div class="panel-img">
+                                                        <img src="images/pc_icon_b2.png" alt="">
+                                                    </div>
+                                                    <div style="width:45%;">
+                                                        <div class="top">
+                                                            <span class="store-title">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200i3-3200 SR&RG
+                                                            </span>
+                                                            <span class="store-price">$2,020 </span>
+                                                        </div>
+                                                        <div class="bottom">
+                                                            最新更新日期：2017/05/10<p>
+                                                            價格議動 45
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="true" aria-controls="collapse9" class="bottom-btn"><img src="images/bottom-btn.png" width="30" height="15"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div style="background-color:#fffcda; width:50%; overflow-y:hidden; padding:5px;">
+                                                        <ul class="cf">
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; font-weight: 900; height:30px;">
+                                                                商品規格比較</li>
+                                                        </ul>
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                    </div>
+                                                </div><!-- panel-title end -->
+                                            </div><!-- panel-heading end -->
+                                            <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <ul class="panel-body">
+                                                    <li class="search">
+                                                        <div style="font-weight:bold;">
+                                                            <button>搜尋</button>
+                                                            <input class="span2" type="text" placeholder="商品關鍵字">
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- panel-collapse end -->
+                                        </div><!-- pc2 panel-default end -->
+                                        
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <div class="panel-title clearfix" style="display:flex;">
+                                                    <div class="panel-img">
+                                                        <img src="images/pc_icon_b3.png" alt="">
+                                                    </div>
+                                                    <div style="width:45%;">
+                                                        <div class="top">
+                                                            <span class="store-title">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200i3-3200 SR&RG
+                                                            </span>
+                                                            <span class="store-price">$2,020 </span>
+                                                        </div>
+                                                        <div class="bottom">
+                                                            最新更新日期：2017/05/10<p>
+                                                            價格議動 45
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="true" aria-controls="collapse10" class="bottom-btn"><img src="images/bottom-btn.png" width="30" height="15"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div style="background-color:#fffcda; width:50%; overflow-y:hidden; padding:5px;">
+                                                        <ul class="cf">
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; font-weight: 900; height:30px;">
+                                                                商品規格比較</li>
+                                                        </ul>
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                    </div>
+                                                </div><!-- panel-title end -->
+                                            </div><!-- panel-heading end -->
+                                            <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <ul class="panel-body">
+                                                    <li class="search">
+                                                        <div style="font-weight:bold;">
+                                                            <button>搜尋</button>
+                                                            <input class="span2" type="text" placeholder="商品關鍵字">
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- panel-collapse end -->
+                                        </div><!-- pc3 panel-default end -->
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <div class="panel-title clearfix" style="display:flex;">
+                                                    <div class="panel-img">
+                                                        <img src="images/pc_icon_b4.png" alt="">
+                                                    </div>
+                                                    <div style="width:45%;">
+                                                        <div class="top">
+                                                            <span class="store-title">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200i3-3200 SR&RG
+                                                            </span>
+                                                            <span class="store-price">$2,020 </span>
+                                                        </div>
+                                                        <div class="bottom">
+                                                            最新更新日期：2017/05/10<p>
+                                                            價格議動 45
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="true" aria-controls="collapse11" class="bottom-btn"><img src="images/bottom-btn.png" width="30" height="15"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div style="background-color:#fffcda; width:50%; overflow-y:hidden; padding:5px;">
+                                                        <ul class="cf">
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; font-weight: 900; height:30px;">
+                                                                商品規格比較</li>
+                                                        </ul>
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                    </div>
+                                                </div><!-- panel-title end -->
+                                            </div><!-- panel-heading end -->
+                                            <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <ul class="panel-body">
+                                                    <li class="search">
+                                                        <div style="font-weight:bold;">
+                                                            <button>搜尋</button>
+                                                            <input class="span2" type="text" placeholder="商品關鍵字">
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- panel-collapse end -->
+                                        </div><!-- pc4 panel-default end -->
+                                        
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <div class="panel-title clearfix" style="display:flex;">
+                                                    <div class="panel-img">
+                                                        <img src="images/pc_icon_b5.png" alt="">
+                                                    </div>
+                                                    <div style="width:45%;">
+                                                        <div class="top">
+                                                            <span class="store-title">
+                                                                i3-3200 SR&RG 3.30GHZi3-3200i3-3200 SR&RG
+                                                            </span>
+                                                            <span class="store-price">$2,020 </span>
+                                                        </div>
+                                                        <div class="bottom">
+                                                            最新更新日期：2017/05/10<p>
+                                                            價格議動 45
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="true" aria-controls="collapse12" class="bottom-btn"><img src="images/bottom-btn.png" width="30" height="15"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div style="background-color:#fffcda; width:50%; overflow-y:hidden; padding:5px;">
+                                                        <ul class="cf">
+                                                            <li style="width:auto; background-color:rgba(255, 255, 255, 0.15); border:0; font-weight: 900; height:30px;">
+                                                                商品規格比較</li>
+                                                        </ul>
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                        <div class="col th-large product space">
+                                                            <h5>未選擇</h5>
+                                                        </div><!-- col th-large end -->
+                                                        
+                                                    </div>
+                                                </div><!-- panel-title end -->
+                                            </div><!-- panel-heading end -->
+                                            <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <ul class="panel-body">
+                                                    <li class="search">
+                                                        <div style="font-weight:bold;">
+                                                            <button>搜尋</button>
+                                                            <input class="span2" type="text" placeholder="商品關鍵字">
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li>
+                                                         <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                         <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                         <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                         <table>
+                                                            <tr>
+                                                                <td class="name"><a href="">技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3技嘉H170-Gaming 3 DDR3</a></td>
+                                                                <td class="panel-body-price">$2,020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right" style="padding:10px 0;">
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-plus1.png"></a>
+                                                                    <a href="#" class="bottom-btnr"><img src="images/btn-feedback.png"></a>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- panel-collapse end -->
+                                        </div><!-- pc5 panel-default end -->
+
+                                    </div>
+                                </div>
+                            </section> 
+
+                            <section>
+                                <div class="panel-bg">
+                                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    <div class="search">
+<!--
+                                                        <div style="font-weight:bold;">
+                                                            <button>搜尋</button>
+                                                            <input class="span2" type="text" placeholder="商品關鍵字">
+                                                        </div>
+-->
+                                                        <form class="input-group">
+                                                           <span class="input-group-btn">
+                                                              <button class="btn btn-default size" type="button">
+                                                                 <i class="fa fa-search search-xs" aria-hidden="true"></i>
+                                                              </button>
+                                                           </span>
+                                                           <input class="search_box" type="text" class="form-control size" style="width:100%;" placeholder="商品關鍵字">
+                                                        </form> 
+                                                        
+                                                    </div>
+                                                </div>
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse13" aria-expanded="true" aria-controls="collapse13" class="bottom-btn"><div class="panel-body offer">
+                                                維京戰魂機&nbsp;<span class="caret"></span></div></a><!-- offer1 panel-collapse end -->
+                                            
+                                                <div id="collapse13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                    <ul class="panel-body">
+                                                        <li>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="name">維京戰魂機 I7 7700K GTX 1060 6G 榮耀戰魂 電競主機 [英特爾intel] Core i7 7700K,[華碩ASUS] ROG STRIX H270F GAMING,[美光Micron] DDR4 2400 16G(8Gx2),[威剛ADATA] Premier SP550 240G 2.5吋SATA3,[華碩ASUS] ROG STRIX-GTX1060-O6G-GAMING,[振華SuperFlower] LEADEX Gold 650W</td>
+                                                                    <td class="panel-body-price">$2,020</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="date">最新更新日期：2017/05/10</td>
+                                                                    <td colspan="2" align="right">
+                                                                        <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </li>
+                                                        <li>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="name"><a href="">文書上網機_組合2</a></td>
+                                                                    <td class="panel-body-price">$2,020</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="date">最新更新日期：2017/05/10</td>
+                                                                    <td colspan="2" align="right">
+                                                                        <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a></td>
+                                                                </tr>
+                                                            </table></li>
+                                                        <li>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="name"><a href="">文書上網機_組合3</a></td>
+                                                                    <td class="panel-body-price">$2,020</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="date">最新更新日期：2017/05/10</td>
+                                                                    <td colspan="2" align="right">
+                                                                        <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </li>
+                                                    </ul>
+                                                </div><!-- offer1 panel-body offer end -->
+                                            
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse14" aria-expanded="true" aria-controls="collapse14" class="bottom-btn"><div class="panel-body offer">
+                                                遊戲娛樂機&nbsp;<span class="caret"></span></div></a><!-- offer2 panel-collapse end -->
+                                            
+                                                <div id="collapse14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                    <ul class="panel-body">
+                                                        <li>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="name"><a href="">遊戲娛樂機_組合1</a></td>
+                                                                    <td class="panel-body-price">$2,020</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="date">最新更新日期：2017/05/10</td>
+                                                                    <td colspan="2" align="right">
+                                                                        <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </li>
+                                                        <li>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="name"><a href="">遊戲娛樂機_組合2</a></td>
+                                                                    <td class="panel-body-price">$2,020</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="date">最新更新日期：2017/05/10</td>
+                                                                    <td colspan="2" align="right">
+                                                                        <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a></td>
+                                                                </tr>
+                                                            </table></li>
+                                                        <li>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="name"><a href="">遊戲娛樂機_組合3</a></td>
+                                                                    <td class="panel-body-price">$2,020</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="date">最新更新日期：2017/05/10</td>
+                                                                    <td colspan="2" align="right">
+                                                                        <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </li>
+                                                    </ul>
+                                                </div><!-- offer2 panel-body offer end -->
+                                            
+                                        </div><!-- panel-default end -->
+                                    </div>
+                                </div>
+                            </section>                           
+                            
+                            <section>
+                                <div class="panel-bg">
+                                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    <div class="search">
+                                                        <div style="font-weight:bold;">
+                                                            <button>搜尋</button>
+                                                            <input class="span2" type="text" placeholder="商品關鍵字">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse15" aria-expanded="true" aria-controls="collapse15" class="bottom-btn"><div class="panel-body offer">
+                                                羅技滑鼠&nbsp;<span class="caret"></span></div></a><!-- offer1 panel-collapse end -->
+                                            
+                                                <div id="collapse15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                    <ul class="panel-body">
+                                                        <li>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="name"><a href="">維京戰魂機 I7 7700K GTX 1060 6G 榮耀戰魂 電競主機 [英特爾intel] Core i7 7700K,[華碩ASUS] ROG STRIX H270F GAMING,[美光Micron] DDR4 2400 16G(8Gx2),[威剛ADATA] Premier SP550 240G 2.5吋SATA3,[華碩ASUS] ROG STRIX-GTX1060-O6G-GAMING,[振華SuperFlower] LEADEX Gold 650W</a></td>
+                                                                    <td class="panel-body-price">$2,020</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="date">最新更新日期：2017/05/10</td>
+                                                                    <td colspan="2" align="right">
+                                                                        <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </li>
+                                                        <li>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="name"><a href="">文書上網機_組合2</a></td>
+                                                                    <td class="panel-body-price">$2,020</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="date">最新更新日期：2017/05/10</td>
+                                                                    <td colspan="2" align="right">
+                                                                        <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a></td>
+                                                                </tr>
+                                                            </table></li>
+                                                        <li>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="name"><a href="">文書上網機_組合3</a></td>
+                                                                    <td class="panel-body-price">$2,020</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="date">最新更新日期：2017/05/10</td>
+                                                                    <td colspan="2" align="right">
+                                                                        <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </li>
+                                                    </ul>
+                                                </div><!-- commodity1 panel-body offer end -->
+                                            
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse16" aria-expanded="true" aria-controls="collapse16" class="bottom-btn"><div class="panel-body offer">
+                                                藍芽鍵盤&nbsp;<span class="caret"></span></div></a><!-- offer2 panel-collapse end -->
+                                            
+                                                <div id="collapse16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                    <ul class="panel-body">
+                                                        <li>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="name"><a href="">遊戲娛樂機_組合1</a></td>
+                                                                    <td class="panel-body-price">$2,020</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="date">最新更新日期：2017/05/10</td>
+                                                                    <td colspan="2" align="right">
+                                                                        <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </li>
+                                                        <li>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="name"><a href="">遊戲娛樂機_組合2</a></td>
+                                                                    <td class="panel-body-price">$2,020</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="date">最新更新日期：2017/05/10</td>
+                                                                    <td colspan="2" align="right">
+                                                                        <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a></td>
+                                                                </tr>
+                                                            </table></li>
+                                                        <li>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="name"><a href="">遊戲娛樂機_組合3</a></td>
+                                                                    <td class="panel-body-price">$2,020</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="date">最新更新日期：2017/05/10</td>
+                                                                    <td colspan="2" align="right">
+                                                                        <a href="#" class="bottom-btnr"><img src="images/btn-plus3.png"></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </li>
+                                                    </ul>
+                                                </div><!-- commodity2 panel-body offer end -->
+                                            
+                                        </div><!-- panel-default end -->
+                                    </div>
+                                </div>  
+                            </section> 
+
+                        </div>
+                    </div>
+                 </div>
+                
+                <div style="text-align:left; line-height:22px; margin-bottom:25px;">
+                    <div class="font-bold"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 退換貨須知</div>
+                    <div class="notice-box">
+                        iPCE線上購物的消費者，都可以依照消費者保護法的規定，享有商品貨到次日起七天猶豫期的權益。但猶豫期並非試用期，請留意，您所退回的商品必須回復原狀（須回復至商品到貨時的原始狀態）並且保持完整包裝（包括商品本體、配件、贈品、保證書、原廠包裝及所有附隨文件或資料的完整性），切勿缺漏任何配件或損毀原廠外盒。<br><br>
+                        如果您所購買的商品是屬於易於腐敗之商品、保存期限較短之商品、客製化商品、報紙、期刊、雜誌，依據消費者保護法之規定，於收受商品後將無法享有七天猶豫期之權益且不得辦理退貨。<br><br>
+                        如果您所購買的是影音商品、電腦軟體或個人衛生用品等一經拆封即無法回復原狀的商品，在您還不確定是否要辦理退貨以前，請勿拆封，一經拆封則依消費者保護法之規定，無法享有七天猶豫期之權益且不得辦理退貨。<br><br>
+                        如果您所購買的是非以有形媒介提供之數位內容或一經提供即為完成之線上服務，一經您事先同意後始提供者，依消費者保護法之規定，您將無法享有七天猶豫期之權益且不得辦理退貨。<br><br>
+                        提醒您，原廠外盒及原廠包裝都屬於商品的一部分，若有遺失、毀損或缺件，可能影響您退貨的權益，也可能依照損毀程度扣除為回復原狀所必要的費用。
+                    </div>
+                </div>    
+                
+                </div>
+                        
+                <div class="right_ad fixed2">
+                    <a href="" target="_blank">
+                        <div class="ad3"
+                         style="margin-top:5px; background-image:url('images/store_ad1.jpg');">
+                        </div></a><!-- fixed -->
+                    <a href="" target="_blank">
+                        <div class="ad3"
+                         style="background-image:url('images/store_ad2.jpg');">
+                        </div></a><!-- fixed -->
+                    <a href="" target="_blank">
+                        <div class="ad2"
+                         style="background-image:url('images/store_ad3.jpg');">
+                        </div></a><!-- fixed --> 
+                    <a href="" target="_blank">
+                        <div class="ad2"
+                         style="background-image:url('images/store_ad4.jpg');">
+                        </div></a><!-- fixed -->
+                    <a href="" target="_blank">
+                        <div class="ad2"
+                         style="background-image:url('images/store_ad5.jpg');">
+                        </div></a><!-- fixed -->
+                    <div style="text-align:left; line-height:22px;">
+                        <div class="font-bold"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 購物須知</div>
+                        <div class="notice-box">
+                            1. iPCE線上下單將透過門市專人聯絡，待回覆確定後並需依循線上系統操作指示進行付款，訂單方可生效成立。<br><br>
+                            2. iPCE平台所有商品圖形、規格僅供參考，所有商品圖、規格若有任何的錯誤或原廠變更修改，以原廠所公布資料為準，購買前若有疑慮請詳閱個原廠官方資料查核比對。<br><br>
+                            3. 訂單如有訂購、付款、發票、商品等平台購物、使用等問題，在常見Q&A中仍無法為您解答，請聯繫iPCE 客服中心或撥打客服專線0800000123 (服務時間：星期一至星期日10:00-21:30) ，或查詢您所訂購之經銷門市頁面聯絡方式，我們將提供您相關問題解答與購物服務。<br>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- 查看留言 modal -->
+    <div class="modal fade adpop" tabindex="-1" role="dialog" id="msg_board">
+        <div class="modal-dialog lg" role="document">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <div class="article">
+                    <div class="panel-bg">
+                        <div class="store_msg">
+                            <div><span>幫店家評個價</span>&nbsp;&nbsp;
+                                <span style="top:-5px;">
+                                    <a href=""><i class="fa fa-thumbs-up" aria-hidden="true"> 讚</i></a>&nbsp;&nbsp;
+                                    <a href=""><i class="fa fa-hand-rock-o" aria-hidden="true"> 加油</i></a>&nbsp;&nbsp;
+                                    <a href=""><i class="fa fa-thumbs-down" aria-hidden="true"> 不讚</i></a>
+                                </span>
+                                <div class="textarea">
+                                    <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="給店家的話…"></textarea>
+                                    <a href="" class="btn btn-store">留言</a>
+                                </div>
+                                <a href="" data-toggle="modal" data-target="#spec">點我看留言規範</a>
+                            </div>
+
+                            <div class="store-msg-box2">
+                                <ul style="padding-left:0;">
+                                    <li>
+                                        <table class="store-msg-box"> 
+                                          <tr>
+                                              <th class="th_img" rowspan="2"><img src="images/store_msg_member.png" alt=""></th>
+                                              <td><i class="fa fa-thumbs-up fa-lg hover" aria-hidden="true"></i>
+                                                  &nbsp;Sumi留言：</td>
+                                              <td style="text-align:right;">2016-09-24 00:45</td>
+                                          </tr> 
+                                          <tr>
+                                              <td colspan="2">請問intel什麼時候有貨呢?請問intel什麼時候</td>
+                                          </tr> 
+                                        </table>
+                                    </li>
+                                    <li>
+                                        <table class="store-msg-box"> 
+                                          <tr>
+                                              <th rowspan="2" class="th_img"><img src="images/store_msg_member.png" alt=""></th>
+                                              <td><i class="fa fa-thumbs-down fa-lg hover" aria-hidden="true"></i>
+                                                  &nbsp;Sumi留言：</td>
+                                              <td style="text-align:right;">2016-09-24 00:45</td>
+                                          </tr> 
+                                          <tr>
+                                              <td colspan="2">請問intel什麼時候有貨呢?請問intel什麼時候</td>
+                                          </tr> 
+                                        </table>
+                                    </li>
+                                    <li>
+                                        <table class="store-msg-box"> 
+                                          <tr>
+                                              <th rowspan="2" class="th_img"><img src="images/store_msg_member.png" alt=""></th>
+                                              <td><i class="fa fa-hand-rock-o fa-lg hover" aria-hidden="true"></i>
+                                                  &nbsp;Sumi留言：</td>
+                                              <td style="text-align:right;">2016-09-24 00:45</td>
+                                          </tr> 
+                                          <tr>
+                                              <td colspan="2">請問intel什麼時候有貨呢?請問intel什麼時候</td>
+                                          </tr> 
+                                        </table>
+                                    </li>
+                                    <li>
+                                        <table class="store-msg-box"> 
+                                          <tr>
+                                              <th rowspan="2" class="th_img"><img src="images/store_msg_member.png" alt=""></th>
+                                              <td><i class="fa fa-thumbs-up fa-lg hover" aria-hidden="true"></i>
+                                                  &nbsp;Sumi留言：</td>
+                                              <td style="text-align:right;">2016-09-24 00:45</td>
+                                          </tr> 
+                                          <tr>
+                                              <td colspan="2">請問intel什麼時候有貨呢?請問intel什麼時候</td>
+                                          </tr> 
+                                        </table>
+                                    </li>
+                                    <li>
+                                        <table class="store-msg-box"> 
+                                          <tr>
+                                              <th rowspan="2" class="th_img"><img src="images/store_msg_member.png" alt=""></th>
+                                              <td><i class="fa fa-thumbs-up fa-lg hover" aria-hidden="true"></i>
+                                                  &nbsp;Sumi留言：</td>
+                                              <td style="text-align:right;">2016-09-24 00:45</td>
+                                          </tr> 
+                                          <tr>
+                                              <td colspan="2">請問intel什麼時候有貨呢?請問intel什麼時候</td>
+                                          </tr> 
+                                        </table>
+                                    </li>
+                                </ul>
+                                        
+                                <div style="text-align:center;">
+                                    <ul class="pagination" style="display:inline-block;">
+                                      <li><a href="#">&laquo;</a></li>
+                                      <li class="active"><a href="#">1</a></li>
+                                      <li class="disabled"><a href="#">2</a></li>
+                                      <li><a href="#">3</a></li>
+                                      <li><a href="#">4</a></li>
+                                      <li><a href="#">5</a></li>
+                                      <li><a href="#">&raquo;</a></li>
+                                    </ul>
+                                </div>
+                                        
+                            </div>
+                        </div>
+                    </div>
+                  </div>    
+                </div>
+                
+            </div>
+        </div>
+    </div><!-- 查看留言 modal end -->
+    
+    <!-- 留言規範 modal -->
+    <div class="modal fade adpop" tabindex="-1" role="dialog" id="spec">
+        <div class="modal-dialog lg" role="document" style="left:-10px;">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <div class="article">
+                        <h4>iPCE留言規範</h4>
+                        <hr>
+                        經銷商留言區定義為，針對店家服務及店家狀況留言發表意見。 凡是留言內容無店家服務、店家狀況無關者，iPCE得依本規範刪除。 經舉證該留言為虛構，該留言予以刪除。經查有惡意造謠者，視同違反iPCE規範。
+                        <br><br>
+                        <strong>【留言規範】</strong><br>
+                        留言有下列情事者留言文章刪除或鎖定帳號(1)無意義留言； (2)廣告文、業配文或其他商業類內容，無明顯謀求個人利益者，該文刪除；(3)內容含有色情內容、暴力內容、十八禁連結者；(4)文章內容含有對特定人物、使用者、特定族群進行言詞侮辱、挑釁、威 脅、謾罵、 歧視、引戰之文章；(5)發表無內容文空白文。
+                        <br><br>
+                        <strong>【操作不當】</strong><br>
+                        若使用者非故意違反板規（操作失誤、手機操作失誤）等非故意違反規定，iPCE可依情節考量決定鎖定帳號條件。
+                        <br><br>
+                        <strong>【補充】</strong><br>
+                        規範不到之模糊地帶，iPCE將臨時應變處理。對於特殊事件之處理，有另訂公告規範之必要者，iPCE得另行公告。
+                  </div>    
+                </div>
+                
+            </div>
+        </div>
+    </div><!-- 留言規範 modal end -->
+    
+    <!-- 規格比較 modal fade -->
+    <div class="modal fade" id="calculate_list">
+      <div class="modal-dialog lg" role="document">
+        <div class="modal-content">
+          <div class="modal-head">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <table class="table-spec">
+                    <thead>
+                        <tr>
+                            <th colspan="4" style="font-size: 20px;">規格比較表</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th width="16%"><div class="border-right" style="text-align: left;"></div></th>
+                            <td width="28%"><div class="border-right"><img src="images/product.jpg" width="70%"></div></td>
+                            <td width="28%"><div class="border-right"><img src="images/product.jpg" width="70%"></div></td>
+                            <td width="28%"><div class="border-right"><img src="images/product.jpg" width="70%"></div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU品牌</div></th>
+                            <td><div class="border-right">英特爾intel英特爾intel英特爾intel</div></td>
+                            <td><div class="border-right">英特爾intel</div></td>
+                            <td><div class="border-right org">英特爾intel</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU核心數</div></th>
+                            <td><div class="border-right">2核</div></td>
+                            <td><div class="border-right">2核</div></td>
+                            <td><div class="border-right org">4核</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU處理器系列</div></th>
+                            <td><div class="border-right">Celeron G1840</div></td>
+                            <td><div class="border-right">Celeron G1840</div></td>
+                            <td><div class="border-right org">Core i5 4460</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU Socket</div></th>
+                            <td><div class="border-right">1150</div></td>
+                            <td><div class="border-right">1150</div></td>
+                            <td><div class="border-right org">1150</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 時脈</div></th>
+                            <td><div class="border-right">2.8 GHz</div></td>
+                            <td><div class="border-right">2.9 GHz</div></td>
+                            <td><div class="border-right org">3.2 GHz</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 快取</div></th>
+                            <td><div class="border-right">2M</div></td>
+                            <td><div class="border-right">2M</div></td>
+                            <td><div class="border-right org">6M</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 顯示晶片</div></th>
+                            <td><div class="border-right">HD Graphics</div></td>
+                            <td><div class="border-right">HD Graphics</div></td>
+                            <td><div class="border-right org">HD 4600</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 瓦數</div></th>
+                            <td><div class="border-right">35W</div></td>
+                            <td><div class="border-right">35W</div></td>
+                            <td><div class="border-right org">35W</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 製程</div></th>
+                            <td><div class="border-right">22 nm</div></td>
+                            <td><div class="border-right">22 nm</div></td>
+                            <td><div class="border-right org">22 nm</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 保固</div></th>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right org">3Y</div></td>
+                        </tr>
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 保固</div></th>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right org">3Y</div></td>
+                        </tr>
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 保固</div></th>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right org">3Y</div></td>
+                        </tr>
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 保固</div></th>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right org">3Y</div></td>
+                        </tr>
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 保固</div></th>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right org">3Y</div></td>
+                        </tr>
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 保固</div></th>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right org">3Y</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+          </div>
+        </div>
+      </div>
+    </div><!-- 規格比較 modal fade end -->
+    
+    <!-- 經銷商圖放大 modal fade -->
+    <div class="modal fade" id="store_img">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-head">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body" style="text-align:center;">
+              <img src="images/store.jpg" style="width:100%">
+          </div>
+        </div>
+      </div>
+    </div><!-- 經銷商圖放大 modal fade end -->
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+    });
+    </script>
+    
+</body>
+</html>

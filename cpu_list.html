@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/component.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/inc/classie.js"></script>
+
+    <script>
+        $(function () {
+            var menuRight = document.getElementById('cbp-spmenu-s2'),
+                showRight = document.getElementById('showRight'),
+                // showRightPush = document.getElementById( 'showRightPush' ),
+                body = document.body;
+                
+            showRight.onclick = function () {
+                classie.toggle(this, 'active');
+                classie.toggle(menuRight, 'cbp-spmenu-open');
+                disableOther('showRight');
+            };
+
+            function disableOther(button) {
+                if (button !== 'showRight') {
+                    classie.toggle(showRight, 'disabled');
+                }
+            }
+        });
+        
+    </script>
+    
+</head>
+    
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+<!--
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+-->
+                
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li class="hover"><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover" style="display:none"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="contact">
+                
+                <div class="left_sm" style="margin:0 auto;">
+                      <div style="display:flex;">
+                        <div class="pc-list1 med" style="height:450px;">
+                            <ul>
+                                <li style="left:80px;"><span class="num-circle gray">3</span><img src="images/pc_icon_1.png"></li>
+                                <li style="left:35px;"><span class="num-circle">1</span><img src="images/pc_icon_2.png"></li>
+                                <li><span class="num-circle">1</span><img src="images/pc_icon_3.png"></li>
+                                <li style="left:35px;"><span class="num-circle">1</span><img src="images/pc_icon_4.png"></li>
+                                <li style="left:80px;"><span class="num-circle">1</span><img src="images/pc_icon_5.png"></li>
+                            </ul>
+                        </div>
+                        <div class="pc-list2" style="height:450px;">
+                            <div class="pc_bg" style="display:flex;">
+                              <div class="pc_icon1 med">
+                                <ul>
+                                    <li><img src="images/pc_icon1-1.png"></li>
+                                    <li><img src="images/pc_icon1-2.png"></li>
+                                    <li><img src="images/pc_icon1-3.png"></li>
+                                </ul>
+                              </div>
+                              <div class="pc_icon2 med">
+                                <ul>
+                                    <li class="li2"><span class="num-circle gray">3</span><img class="img2" src="images/pc_icon2-1.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-2.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-3.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-4.png"></li>
+                                </ul>
+                              </div>
+                              <div class="pc_icon3 med">
+                                <ul>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-5.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-6.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-7.png"></li>
+                                </ul>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="right_list slider_scroll">
+                    <div><a id="showRight" class="icon-arrow-out active"><p>篩</p><p>選</p></a></div> 
+                    <div id="cbp-spmenu-s2" class="slider_content cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right cbp-spmenu-open" role="navigation">
+                        <h4>品牌</h4>
+                        <div>
+                            <button>intel</button>
+                        </div>
+
+                        <h4>產品應用</h4>
+                        <div>
+                            <button>intel</button>
+                        </div>
+
+                        <h4>類別</h4>
+                        <div>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                        </div>
+
+                        <h4>類別</h4>
+                        <div>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                        </div>
+
+                        <h4>類別</h4>
+                        <div>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                        </div>
+
+                        <h4>類別</h4>
+                        <div>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                        </div>
+
+                        <h4>類別</h4>
+                        <div>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                        </div>
+
+                        <h4>類別</h4>
+                        <div>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                        </div>
+
+                        <h4>類別</h4>
+                        <div>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                        </div>
+
+                        <h4>類別</h4>
+                        <div>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                        </div>
+
+                        <h4>類別</h4>
+                        <div>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                        </div>
+
+                        <h4>類別</h4>
+                        <div>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                        </div>
+
+                        <h4>類別</h4>
+                        <div>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                        </div>
+
+                        <h4>類別</h4>
+                        <div>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                            <button>intel</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right1">
+                    <div class="row" style="margin-bottom:0;"> 
+                        <table border="0">
+                             <tr>
+                                 <td rowspan="2"><img class="table_icon" src="images/icon1_cpu.png"></td>
+                                 <td class="span-xs" style="font-weight:900; text-align:right; color:#187fc3; padding-bottom:15px;">
+                                    <span style="float:left; color:#666; font-weight:500;">今日&nbsp;&nbsp;上架數：000&nbsp;&nbsp;下架數：000</span>
+                                    <span style="float:left; color:#666; font-weight:500;">&nbsp;&nbsp;&nbsp;價格異動 56</span>
+                                    <a href="cpu_th-large%20.html">圖文顯示: <i class="fa fa-th-large fa-lg" aria-hidden="true"></i></a></td>
+                             </tr>
+                             <tr>
+                                 <td style="display:flex;">
+                                    <span class="price" style="top:5px;">選擇價格：</span>
+                                    <span><input type="password" class="form-control size" id="exampleInputPassword1" placeholder="最低價格"></span>
+                                    <span class="price" style="top:5px;">~</span>
+                                    <span><input type="password" class="form-control size" id="exampleInputPassword1" placeholder="最高價格"></span>
+                                     &nbsp;&nbsp;&nbsp;
+                                    <div class="input-group">
+                                       <span class="input-group-btn">
+                                          <button class="btn btn-default size" type="button">
+                                             <i class="fa fa-search search-xs" aria-hidden="true"></i>
+                                          </button>
+                                       </span>
+                                       <input class="search_box" type="text" class="form-control size" placeholder="商品名稱">
+                                    </div>
+                                 </td>
+                             </tr>
+                        </table>
+                    </div>
+                    <hr>
+                        
+                    <div class="row">
+                        <table class="list-li" border="0">
+                             <tr>
+                                 <td rowspan="2"><a href="store-detail.html"><img class="table_icon" style="padding:5px; margin-right:10px;" src="images/cpu_sample.jpg"></a></td>
+                                 <td class="list-title">Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)Intel® Core™ i3-4160 Processor</td>
+                                 <td class="list-prize" rowspan="2">
+                                     <span>最低價:</span><span class="red">1500</span>
+                                    <br><a href="" class="btn_plus"></a>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="date">
+                                     最新更新日期：2016-09-11
+                                 </td>
+                             </tr>
+                        </table><!-- col end -->
+                        
+                        <table class="list-li" border="0">
+                             <tr>
+                                 <td rowspan="2"><a href="store-detail.html"><img class="table_icon" style="padding:5px; margin-right:10px;" src="images/cpu_sample.jpg"></a></td>
+                                 <td class="list-title">Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)Intel® Core™ i3-4160 Processor</td>
+                                 <td class="list-prize" rowspan="2">
+                                     <span>最低價:</span><span class="red">1500</span>
+                                    <br><a href="" class="btn_plus"></a>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="date">
+                                     最新更新日期：2016-09-11
+                                 </td>
+                             </tr>
+                        </table><!-- col end -->
+                        
+                        <table class="list-li" border="0">
+                             <tr>
+                                 <td rowspan="2"><a href="store-detail.html"><img class="table_icon" style="padding:5px; margin-right:10px;" src="images/cpu_sample.jpg"></a></td>
+                                 <td class="list-title">Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)Intel® Core™ i3-4160 Processor</td>
+                                 <td class="list-prize" rowspan="2">
+                                     <span>最低價:</span><span class="red">1500</span>
+                                    <br><a href="" class="btn_plus"></a>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="date">
+                                     最新更新日期：2016-09-11
+                                 </td>
+                             </tr>
+                        </table><!-- col end -->
+                        
+                        <table class="list-li" border="0">
+                             <tr>
+                                 <td rowspan="2"><a href="store-detail.html"><img class="table_icon" style="padding:5px; margin-right:10px;" src="images/cpu_sample.jpg"></a></td>
+                                 <td class="list-title">Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)Intel® Core™ i3-4160 Processor</td>
+                                 <td class="list-prize" rowspan="2">
+                                     <span>最低價:</span><span class="red">1500</span>
+                                    <br><a href="" class="btn_plus"></a>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="date">
+                                     最新更新日期：2016-09-11
+                                 </td>
+                             </tr>
+                        </table><!-- col end -->
+                        
+                        <table class="list-li" border="0">
+                             <tr>
+                                 <td rowspan="2"><a href="store-detail.html"><img class="table_icon" style="padding:5px; margin-right:10px;" src="images/cpu_sample.jpg"></a></td>
+                                 <td class="list-title">Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)Intel® Core™ i3-4160 Processor</td>
+                                 <td class="list-prize" rowspan="2">
+                                     <span>最低價:</span><span class="red">1500</span>
+                                    <br><a href="" class="btn_plus"></a>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="date">
+                                     最新更新日期：2016-09-11
+                                 </td>
+                             </tr>
+                        </table><!-- col end -->
+                        
+                        <table class="list-li" border="0">
+                             <tr>
+                                 <td rowspan="2"><a href="store-detail.html"><img class="table_icon" style="padding:5px; margin-right:10px;" src="images/cpu_sample.jpg"></a></td>
+                                 <td class="list-title">Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)Intel® Core™ i3-4160 Processor</td>
+                                 <td class="list-prize" rowspan="2">
+                                     <span>最低價:</span><span class="red">1500</span>
+                                    <br><a href="" class="btn_plus"></a>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="date">
+                                     最新更新日期：2016-09-11
+                                 </td>
+                             </tr>
+                        </table><!-- col end -->
+                        
+                        <table class="list-li" border="0">
+                             <tr>
+                                 <td rowspan="2"><a href="store-detail.html"><img class="table_icon" style="padding:5px; margin-right:10px;" src="images/cpu_sample.jpg"></a></td>
+                                 <td class="list-title">Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)Intel® Core™ i3-4160 Processor</td>
+                                 <td class="list-prize" rowspan="2">
+                                     <span>最低價:</span><span class="red">1500</span>
+                                    <br><a href="" class="btn_plus"></a>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="date">
+                                     最新更新日期：2016-09-11
+                                 </td>
+                             </tr>
+                        </table><!-- col end -->
+                        
+                        <table class="list-li" border="0">
+                             <tr>
+                                 <td rowspan="2"><a href="store-detail.html"><img class="table_icon" style="padding:5px; margin-right:10px;" src="images/cpu_sample.jpg"></a></td>
+                                 <td class="list-title">Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)Intel® Core™ i3-4160 Processor</td>
+                                 <td class="list-prize" rowspan="2">
+                                     <span>最低價:</span><span class="red">1500</span>
+                                    <br><a href="" class="btn_plus"></a>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="date">
+                                     最新更新日期：2016-09-11
+                                 </td>
+                             </tr>
+                        </table><!-- col end -->
+                        
+                        <table class="list-li" border="0">
+                             <tr>
+                                 <td rowspan="2"><img class="table_icon" style="padding:5px; margin-right:10px;" src="images/cpu_sample.jpg"></td>
+                                 <td class="list-title">Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)Intel® Core™ i3-4160 Processor</td>
+                                 <td class="list-prize" rowspan="2">
+                                     <span>最低價:</span><span class="red">1500</span>
+                                    <br><a href="" class="btn_plus"></a>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="date">
+                                     最新更新日期：2016-09-11
+                                 </td>
+                             </tr>
+                        </table><!-- col end -->
+                        
+                        <table class="list-li" border="0">
+                             <tr>
+                                 <td rowspan="2"><a href="store-detail.html"><img class="table_icon" style="padding:5px; margin-right:10px;" src="images/cpu_sample.jpg"></a></td>
+                                 <td class="list-title">Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)Intel® Core™ i3-4160 Processor</td>
+                                 <td class="list-prize" rowspan="2">
+                                     <span>最低價:</span><span class="red">1500</span>
+                                    <br><a href="" class="btn_plus"></a>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="date">
+                                     最新更新日期：2016-09-11
+                                 </td>
+                             </tr>
+                        </table><!-- col end -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+        
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+    });
+    </script>
+
+</body>
+
+</html>

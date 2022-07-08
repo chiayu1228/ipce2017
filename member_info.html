@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+
+</head>
+    
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+<!--
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+-->
+                
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover" style="display:none"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="member_list">
+                <div class="left_member">
+                    <div class="mb_top"><img src="images/member01.png" alt="" width="100%"></div>
+                    <div class="mb_middle">
+                        <ul class="list-inline" style="margin: 10px 0;">
+                            <li class="mb_img" style="padding:0;">
+                                <a href="member_%20record.html"><img src="images/member02.png" alt="" width="100%"></a>
+                            </li>
+                            <li class="mb_img" style="padding:0;">
+                                <span class="num-circle">1</span>
+                                <a href="member_%20mail.html"><img src="images/member03.png" alt="" width="100%"></a>
+                            </li>
+                            <li class="mb_img" style="padding:0;">
+                                <a href="member_%20UserQA.html"><img src="images/member04.png" alt="" width="100%"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb_bottom">
+                        <div>
+                            <a href="member_info.html"><img src="images/member05.jpg" alt="" width="100%"></a>
+                        </div>
+                        <img src="images/ad_xs.jpg" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="center_member">
+                    <div class="mb_content">
+
+                        <table class="mb_table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        <h3 style="font-weight:900;">您好， Saintmen@gmail.com</h3>
+                                        <hr>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                       &nbsp;暱&emsp;&emsp;稱 
+                                    </th>
+                                    <td>
+                                        <input type="nickname" class="form-control" id="nickname" placeholder="Ex: 王小明">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span style="color:red;">*</span>電子信箱
+                                    </th>
+                                    <td>
+                                        <input type="email" class="form-control" id="email" placeholder="Ex: iPCE@saintmen.com">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                       <span style="color:red;">*</span>密&emsp;&emsp;碼
+                                    </th>
+                                    <td>
+                                        <input type="password" class="form-control" id="password" placeholder="數字、英文大小寫不限，至少8位以上最多16位">
+                                        <span><a href="">不更改密碼</a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                       &nbsp;確認密碼
+                                    </th>
+                                    <td>
+                                        <input type="password" class="form-control" id="password" placeholder="數字、英文大小寫不限，至少8位以上最多16位">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span style="color:red;">*</span>姓&emsp;&emsp;名 
+                                    </th>
+                                    <td>
+                                        <input type="name" class="form-control" id="name" placeholder="Ex: 王小明">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        身分證字號
+                                    </th>
+                                    <td>
+                                        <input type="id_card" class="form-control" id="id_card" placeholder="Ex: A123123123">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                       &nbsp;性&emsp;&emsp;別
+                                    </th>
+                                    <td>
+                                        <select id="disabledSelect" class="form-control">
+                                            <option>請選擇</option>
+                                            <option value="female">女生</option>
+                                            <option value="male">男生</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                       &nbsp;生&emsp;&emsp;日
+                                    </th>
+                                    <td>
+                                        <input type="birthday" class="form-control" id="birthday" placeholder="Ex: 2016-04-01">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span style="color:red;">*</span>手機號碼
+                                    </th>
+                                    <td>
+                                        <input type="mobile" class="form-control" id="mobile" placeholder="Ex: 0900000000">
+                                        <span class="font-red" style="font-size:12px;">
+                                            <span style="color:red;">如無輸入手機號碼，將無法使用簡訊相關功能喔!!</span></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                       &nbsp;聯絡電話
+                                    </th>
+                                    <td>
+                                        <input type="tel" class="form-control" id="tel" placeholder="Ex: 02-2391-1761">
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <th>
+                                       &nbsp;地&emsp;&emsp;址
+                                    </th>
+                                    <td>
+                                        <div style="display:flex;">
+                                            <select id="disabledSelect" class="form-control" style="width:20%">
+                                                <option>請選擇</option>
+                                            </select>&nbsp;
+                                            <input type="address" class="form-control" id="address" placeholder="Ex: 台北市中正區八德路一段00號" style="width:80%">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span style="color:red;">*</span>驗證碼
+                                    </th>
+                                    <td>
+                                        <div style="display:flex;">
+                                            <img style="width:87px" src="images/verification%20code.jpeg">&nbsp;
+                                            <input type="code" class="form-control" id="code" placeholder="請輸入圖片中字元" style="width:32%">
+                                            &nbsp;&nbsp;<button>重新產生</button>
+                                        </div>
+                                        <span style="font-size:12px; color: #777;">不分大小寫</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button style="width:100%; height:40px; font-weight:900;" 
+                                        data-toggle="modal" data-target="#undone">
+                                        儲存資料</button>
+                                        <hr>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <th colspan="2">
+                                    i 錢幣：<span class="font-red" style="top:-2px;">999999</span> 點
+                                    &nbsp;&nbsp;<a href="" style="top:-2px;">點數說明</a><br>
+                                    i 點數：<span class="font-red" style="top:-2px;">999999</span> 點
+                                    &nbsp;&nbsp;<a href="" style="top:-2px;">點數說明</a>
+                                </th>
+                            </tfoot>
+                        </table>
+                        
+                    </div>
+                </div>
+                <div class="right_member"><a href=""><img src="images/ad_vertical.jpg" alt="" width="100%"></a></div>
+            </div>
+        </div>
+        
+        
+    <footer class="container">
+            <div class="row footer_menu">
+                <div class="left">
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">
+                            &nbsp;操作說明</li>
+                        <li  class="li2" >
+                            <a href="#" data-toggle="modal" data-target="#CS00">經銷商搜尋</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#RP00">i比較</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#CP00">i計較</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#UO00">i優惠</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#FR00">i環保</a></li>
+                    </ul>
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">&nbsp;兌換中心</li>
+                        <li class="li2"><a>兌換中心</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">
+                            &nbsp;帳戶管理</li>
+                        <li class="li2"><a>會員中心</a></li>
+                        <li style="padding:0px;"><a>問與答</a></li>
+                    </ul>
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">
+                            &nbsp;網站介紹</li>
+                        <li class="li2"><a>何謂iPCE</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#HowiPCE">如何使用iPCE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+            <div class="left">
+                Copyright © 2016 Saintmen iPCE All rights reserved. &nbsp; &nbsp;<a href="PrivacyPolicy.html">| 隱私權政策 |  </a>
+                <a href="UseTerms.html">| 使用條款 |  </a>
+            </div>
+            <div class="right">
+                <strong>客服專線：0800-000-234&nbsp;&nbsp;&nbsp;客服信箱: <a href="mailto:ipce@saintmen.com">iPCE@saintmen.com</a></strong>
+            </div>
+            </div>
+    </footer>
+    <br>
+        
+    </div>
+    
+    <!-- 資料未填寫完成 model -->
+    <div class="modal fade" id="undone">
+      <div class="modal-dialog login-xs" role="document">
+        <div class="modal-content">
+          <div class="modal-body" style="text-align:center; line-height:30px;">
+              <span class="font-red">提醒您尚有資料未填寫完成</span><br>
+              填寫完資料有送點數<br>
+              只有一次機會喔!!<br>
+              <p><button style="width:100%; font-weight:900;">繼續填寫</button></p>
+              <p><button style="width:100%; font-weight:900;">確認送出</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 資料未填寫完成 model end -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+                
+</body>
+</html>

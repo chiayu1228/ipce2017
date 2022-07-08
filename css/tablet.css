@@ -1,0 +1,552 @@
+@media only screen and (min-width:481px) and (max-width:1024px){
+    /*--首頁分區CSS--*/
+    #search_box {
+        margin: 0;
+        left: 10%;
+    }
+    
+    .top_navbar ul{
+        left: 10%; 
+    }
+    
+    .left.list .pc-list1, .left.list .pc-list2 {
+        left: 25px;
+    }
+    .contact .left .pc-list1, .contact .left .pc-list2{
+        max-height: 520px;
+    }
+    
+    .contact .left .pc_bg{
+        width: 85%;
+        height: 85%;
+    }
+    
+    .right .list{
+        width: 50%;
+        margin: 10px;
+        right: 25px;
+    }
+    .pc_icon1{
+        margin-top: 100px;
+        margin-left: -20px;
+    }
+    .pc_icon2 {
+        margin-top: 40px;
+        margin-left: -45px;
+    }
+    .pc_icon3{
+        margin-top: 40px;
+        margin-left: -50px;
+    }
+    .pc-list1 ul li .num-circle{
+        top: 20px;
+        right: 5px;
+    }
+    .pc_icon2 ul li .num-circle, .pc_icon3 ul li .num-circle{
+        top: -5px;
+        right: 10px;
+    }
+    .modal-dialog.xl{
+        margin: 0 20%;
+    }
+    /*---------*/
+    
+    /*--i比較頁面CSS--*/
+    .cbp-spmenu-right.cbp-spmenu-open{
+        right: 360px;
+    }
+    .cbp-spmenu-vertical{
+        width: 240px;
+    }
+    .contact .left_sm .pc_bg{
+        background-size: 240px 350px;
+        left: -85px;
+    }
+    
+    .pc_icon1.med {
+        margin-top: 80px;
+        margin-left: -25px;
+    }
+    .pc-list1.med ul {
+        left: -70px;
+        width: 100%;
+    }
+    .pc_icon2.med {
+        margin-top: 40px;
+        margin-left: -110px;
+    }
+    .pc_icon3.med {
+        margin-top: 40px;
+        margin-left: -115px;
+    }
+    .contact .left_sm ul li img {
+        width: 50%;
+    }
+    .contact .left_sm .pc_bg ul li .img2 {
+        width: 45%;
+    }
+    .pc-list1.med ul li .num-circle{
+        right: 60px;
+    }
+    .pc_icon2.med ul li .num-circle, .pc_icon3.med ul li .num-circle {
+        right: 70px;
+    }
+    .contact .right1{
+        margin-right: -510px;
+        width: 660px;
+    }
+    .right1 .row .price.title {
+        width:15%;
+    }
+    .form-control.size{
+      width: 80px;   
+    }
+    .showrooms {
+    width: 940px;
+    }
+    .showrooms img {
+    width: 55px;
+    }
+    
+    /*--i比較篩選選單--*/
+    .slider_content.v2 {
+        width: 360px;
+    }
+    .icon-arrow_v2{
+        width: 360px;
+        right: 360px;
+    }
+    
+    /*---------*/
+    
+    /*--i計較頁面CSS--*/
+    .list-inline.btn-list .li2 {
+    width: 72%;
+    text-align: right;
+    }
+    /*---------*/
+    
+    /*--i環保頁面CSS--*/
+    .table-recycle{
+        display: block;
+    }
+    .right{
+        width: auto;
+    }
+    /*---------*/
+    
+    /*--i兌換頁面CSS--*/
+    .event_list_m .people99 .left, .event_list_m .people99 .right{
+        font-size: 12px;
+        margin: 0;
+    }
+    /*---------*/
+    
+    /*--經銷商頁面CSS--*/
+    .container .center{
+        left: -50px;
+        width: 110%;
+    }
+    .store_msg .store_photo img{
+        width: 300px;
+    }
+    .notice-box{
+        min-width: 169px;
+    }
+    .fixed2 {
+        padding: 0 20px;
+    }
+    /*---------*/
+    
+    /*--會員中心CSS--*/
+    .left_member .mb_middle .mb_img{
+        width: 31.5%;
+    }
+    
+    /*-- 我的訂單列表 CSS --*/
+    #menu1 .form-inline .form-control, #menu2 .form-inline .form-control, #menu3 .form-inline .form-control, #menu4 .form-inline .form-control, #menu5 .form-inline .form-control, #menu6 .form-inline .form-control, #menu7 .form-inline .form-control {
+        width: 100px;
+    }
+    /*---------*/
+    
+    /*-- i選購頁面 CSS --*/
+    .text-box.pay table {
+    margin-left: 45%;
+    }
+}
+
+/*--平板直式CSS--*/
+@media only screen and (min-width: 737px) and (max-width: 768px) {
+    .contact .left.list{
+        padding: 0;
+    }
+    #search_box {
+        display: none !important;
+    }
+    #search_box_tb{
+        display: block !important;
+        margin-left: 70%;
+        top: -20px;
+    }
+
+    .top_navbar ul{
+        left: 0; 
+    }
+    
+    .contact .left .pc-list1{
+        display: block !important;
+    }
+    .left.list .pc-list1, .left.list .pc-list2 {
+        left: 100px;
+    }
+    .mv_list {
+        display: none !important;
+    }
+    .contact .left .pc_bg {
+        width: 95%;
+        height: 85%;
+    }
+    .contact .left .pc-list2 {
+        max-height: 665px !important;
+    }
+    .pc_icon1 {
+        margin-top: 130px;
+        margin-left: -20px;
+    }
+    .pc_icon2 {
+        margin-top: 70px;
+        margin-left: -45px;
+    }
+    .pc_icon3 {
+        margin-top: 70px;
+        margin-left: -50px;
+    }
+    .pc-list1 ul li .num-circle{
+        top: 25px !important;
+        right: 20px !important;
+    }
+    .pc_icon2 ul li .num-circle, .pc_icon3 ul li .num-circle{
+        top: -5px !important;
+        right: 25px !important;
+    }
+    .carousel_board{
+        width: 500px !important;
+        height: 127px !important;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .row.footer_menu{
+        display: block;
+    }
+    #search_xs {
+        display: block !important;
+    }
+    .modal-dialog.lg .modal-content {
+        margin: 0 auto !important;
+    }
+    
+    /*--i比較頁面CSS--*/  
+    .list-inline.btn-list .li2 {
+        width: 68% !important;
+        text-align: right !important;
+    }
+    
+    .cbp-spmenu-right.cbp-spmenu-open {
+        right: 560px;
+    }
+    
+    .right1 .row{
+        padding: 0 100px;
+    }
+    .right1 .row .table_icon {
+        width: 90px !important;
+    }
+    .right1 .row .price{
+        font-size: 14px !important;
+    }
+    .form-control.size{
+        width: 80px !important;
+        font-size: 14px !important;
+    }
+    .input-group .search_box{
+        width: 100px !important;
+        font-size: 14px !important;
+    }
+    .right1 .row .span-xs {
+        font-size: 14px !important;
+    }
+    .right1 hr{
+        margin: 10px 90px;
+    }
+    .showrooms ul {
+    width: 360px !important;
+    }
+    
+    /*--i比較篩選選單--*/
+    .contact .slider_scroll {
+        height: 96% !important;
+    }
+    .contact .slider_scroll.v2 {
+        height: 86.5% !important;
+    }
+    
+    /*--i比較商品頁--*/
+    .contact .right1{
+        padding: 30px !important;
+    }
+    .detail-table table{
+        width: 100% !important;
+    }
+    .right1 .row.detail {
+        padding: 0;
+    }
+    .right1 .hr.detail {
+        margin: 0;
+    }
+    .right1 .row .product_icon {
+        width: 80px !important;
+    }
+    
+    /*--i訊息內容頁CSS--*/
+    .ad.message img {
+        max-width: 625px !important;
+    }
+    
+    /*--經銷商頁面CSS--*/
+    .container .center {
+        left: 0;
+        width: 100%;
+        padding: 10px 30px !important;
+    }
+    .tabs .menu_ul{
+        top: 0 !important;
+    }
+    .store_msg.top .msg_span{
+        float: right !important;
+    }
+    .store_msg h2 {
+        font-size: 30px !important;
+    }
+    .tabs ul li label span{
+        font-size: 16px !important;
+    }
+    .left_store .panel-img img {
+        width: 90px !important;
+    }
+    .panel-title .cp_box {
+        width: 30% !important;
+    }
+    .panel-title.clearfix table {
+        width: 70% !important;
+    }
+    .left_store .panel-title .top{
+        font-size: 12px !important;
+    }
+    .left_store .panel-title .top .store-title {
+        width: 85% !important;
+    }
+    .left_store .panel-title .top .store-price {
+        width: 15% !important;
+    }
+    
+    /*--會員中心頁面CSS--*/
+    .mb_table tr td {
+        width: 90% !important;
+    }
+    /*-- 我的訂單列表 CSS --*/
+    #menu1 .form-inline .form-control, #menu2 .form-inline .form-control, #menu3 .form-inline .form-control, #menu4 .form-inline .form-control, #menu5 .form-inline .form-control, #menu6 .form-inline .form-control, #menu7 .form-inline .form-control {
+        width: 100px !important;
+        margin-bottom: 0 !important;
+    }
+    #menu1 .form-inline .form-control.lg, #menu2 .form-inline .form-control.lg,
+    #menu3 .form-inline .form-control.lg, #menu4 .form-inline .form-control.lg,
+    #menu5 .form-inline .form-control.lg, #menu6 .form-inline .form-control.lg, 
+    #menu7 .form-inline .form-control.lg {
+            width: 33% !important;
+            margin-bottom: 10px !important;
+    }
+
+    
+    /*--i環保頁面CSS--*/
+    .table-recycle {
+        display: flex !important;
+    }
+    .table-recycle .right {
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0;
+    }
+    .recycle_box{
+        padding: 12px 4px !important;
+        font-size: 14px !important;
+    }
+    .recycle_box span {
+        font-size: 24px !important;
+    }
+    
+    /*-- i選購頁面 CSS --*/
+    .form-inline .form-control.lg {
+    width: 455px !important;
+    }
+    
+    .text-box.pay table {
+    margin-left: 70% !important;
+    }
+}
+/*---------*/
+
+/*--手機橫式CSS--*/
+@media only screen and (min-width: 481px) and (max-width: 736px) {
+    .top_navbar ul{
+        left: 0;
+    }
+    .contact .left .pc-list1{
+        display: block !important;
+    }
+    .left.list .pc-list1, .left.list .pc-list2 {
+        left: 10%;
+        margin-bottom: 50px;
+    }
+    .mv_list {
+        display: none !important;
+    }
+    .contact .left .pc_bg {
+        width: 100%;
+        height: 100%;
+        min-height: 600px;
+    }
+    .contact .left .pc-list2 {
+        height: auto !important;
+        max-height: none !important;
+    }
+    .pc_icon1 {
+        margin-top: 130px;
+        margin-left: -20px;
+    }
+    .pc_icon2 {
+        margin-top: 70px;
+        margin-left: -45px;
+    }
+    .pc_icon3 {
+        margin-top: 70px;
+        margin-left: -50px;
+    }
+    .pc-list1 ul li .num-circle{
+        top: 25px !important;
+        right: 20px !important;
+    }
+    .pc_icon2 ul li .num-circle, .pc_icon3 ul li .num-circle{
+        top: -5px !important;
+        right: 25px !important;
+    }
+    .carousel_board{
+        width: 500px !important;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .row.footer_menu{
+        display: block;
+    }
+    .modal-dialog.xl{
+        width: 55% !important;
+        margin: 0 22% !important;
+    }
+    
+    /*--i比較頁面CSS--*/
+    .cbp-spmenu-right.cbp-spmenu-open {
+        right: 560px;
+    }
+    .right1 .row .table_icon {
+        width: 90px !important;
+    }
+    .right1 .row{
+        padding: 0 100px;
+    }
+    .form-control.size{
+        width: 80px !important;   
+    }
+    .right1 hr{
+        margin: 10px 90px;
+    }
+    .showrooms ul {
+        width: 350px !important;
+    }
+    
+    /*--i比較篩選選單--*/
+    .contact .slider_scroll {
+        height: 90% !important;
+    }
+    .contact .slider_scroll.v2 {
+        height: 66% !important;
+    }
+    
+    /*--i比較商品頁--*/
+    .contact .right1{
+        padding: 30px !important;
+    }
+    .right1 .row .product_icon {
+        width: 80px !important;
+    }
+    .detail-table table{
+        width: 100% !important;
+    }
+    .right1 .row.detail {
+        padding: 0;
+    }
+    .right1 .hr.detail {
+        margin: 0;
+    } 
+    
+    /*--經銷商頁面CSS--*/
+    .container .center {
+        left: 0;
+        width: 100%;
+        padding: 20px 30px !important;
+    }
+    .tabs .menu_ul{
+        top: 0 !important;
+    }
+    .store_msg .store_photo img {
+        width: 200px !important;
+    }
+    .store_msg.top .msg_span{
+        float: right !important;
+    }
+    .store_msg h2 {
+        font-size: 30px !important;
+    }
+    .tabs ul li label span{
+        font-size: 16px !important;
+    }
+    .left_store .panel-img img {
+    width: 90px !important;
+    }
+    .panel-title .cp_box {
+    width: 30% !important;
+    }
+    .panel-title.clearfix table {
+    width: 70% !important;
+    }
+    .left_store .panel-title .top{
+    font-size: 12px !important;
+    }
+    .left_store .panel-title .top .store-title {
+    width: 85% !important;
+    }
+    .left_store .panel-title .top .store-price {
+    width: 15% !important;
+    }
+    
+    /*-- 我的訂單列表 CSS --*/
+    #menu1 .form-inline .form-control, #menu2 .form-inline .form-control, #menu3 .form-inline .form-control, #menu4 .form-inline .form-control, #menu5 .form-inline .form-control, #menu6 .form-inline .form-control, #menu7 .form-inline .form-control {
+        margin-bottom: 10px !important;
+    }
+    
+    /*-- i選購頁面 CSS --*/
+    .text-box.pay table {
+    margin-left: 70% !important;
+    }
+}
+/*---------*/

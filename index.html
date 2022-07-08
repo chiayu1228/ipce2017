@@ -1,11 +1,917 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+    
+    <!-- 會員中心 Dropdowns -->
+    <script>
+                /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script><!-- 會員中心 Dropdowns end -->
+
 </head>
+
 <body>
-    <h1>ipce 2017</h1>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a href="#" id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <button id="Member_Manage" type="button" onclick="document.location.href='member_%20footprints.html'" class="btn btn-primary">會員中心</button>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                
+<!--
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+-->
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group input-group-sm" id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li class="hover"><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li class="end"><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member" style="display:none"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover"><span class="num-circle">1</span>
+                    <a href="#myDropdown" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" onclick="document.location.href='member_%20footprints.html'" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="contact">
+                <form class="collapse navbar-collapse top_navbar" id="search_box_tb">
+                    <div class="form-group has-feedback search_box">
+                      <div class="input-group" style="padding-top:15px">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default size btn-search" type="button">
+                                <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button>
+                        </span>
+                        <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      </div>
+                    </div>
+                </form>
+                
+                <div class="left list">
+                  <div style="display:flex;">
+                    <div class="pc-list1" style="margin-top:-20px;">
+                        <ul style="left:-25px;">
+                            <li style="left:70px;"><span class="num-circle gray">3</span><img src="images/pc_icon_1.png"></li>
+                            <li><span class="num-circle">1</span><img src="images/pc_icon_2.png"></li>
+                            <li style="left:-60px;"><span class="num-circle">1</span><img src="images/pc_icon_3.png"></li>
+                            <li><span class="num-circle">1</span><img src="images/pc_icon_4.png"></li>
+                            <li style="left:70px;"><span class="num-circle">1</span><img src="images/pc_icon_5.png"></li>
+                        </ul>
+                    </div>
+                    <div class="pc-list2">
+                        <div class="pc_bg" style="display:flex;">
+                          <div class="pc_icon1">
+                            <ul>
+                                <li><a href="diy_th-large.html"><img src="images/pc_icon1-1.png"></a></li>
+                                <li><img src="images/pc_icon1-2.png"></li>
+                                <li><img src="images/pc_icon1-3.png"></li>
+                            </ul>
+                          </div>
+                          <div class="pc_icon2">
+                            <ul>
+                                <li class="li2"><span class="num-circle gray">3</span>
+                                    <a href="cpu_th-large%20.html"><img class="img2" src="images/pc_icon2-1.png"></a></li>
+                                <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-2.png"></li>
+                                <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-3.png"></li>
+                                <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-4.png"></li>
+                            </ul>
+                          </div>
+                          <div class="pc_icon3">
+                            <ul>
+                                <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-5.png"></li>
+                                <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-6.png"></li>
+                                <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-7.png"></li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="right list">
+                    <div class="pc-list1 mv_list" style="text-align:center; margin:5% 0 20%;">
+                        <ul class="list-inline">
+                            <li style="width:30%;"><span class="num-circle">1</span><img src="images/pc_icon_1.png" style="width:100%;"></li>
+                            <li style="width:30%;"><span class="num-circle">1</span><img src="images/pc_icon_2.png" style="width:100%;"></li>
+                            <li style="width:30%;"><span class="num-circle">1</span><img src="images/pc_icon_3.png" style="width:100%;"></li>
+                        </ul>
+                        <ul class="list-inline">
+                            <li style="width:30%;"><span class="num-circle">1</span><img src="images/pc_icon_4.png" style="width:100%;"></li>
+                            <li style="width:30%;"><span class="num-circle">1</span><img src="images/pc_icon_5.png" style="width:100%;"></li>
+                        </ul>
+                    </div>
+                    <!--youtube宣傳片 電腦版-->
+                    <div class="embed-responsive embed-responsive-16by9">
+<!--
+                        <iframe class="embed-responsive-item"
+                        src="https://www.youtube.com/embed/dCQ_tEml_HI?rel=0&autoplay=1"
+                        frameborder="0" allowfullscreen=""></iframe>
+-->
+                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLxNBE0FIspKvaD-buiYJFzgDzE9NWJ433&loop=1&playlist=PLxNBE0FIspKvaD-buiYJFzgDzE9NWJ433?rel=0&autoplay=1"
+                        ></iframe>
+                        <p>
+                    </div>
+                    <!--內建宣傳片 手機板-->
+<!--
+                    <div class="movie mobile">
+                        <video id="movie" preload controls loop width="100%" height="280" autoplay="1" muted="muted" style="border-width:3px;border-style:solid;border-color:#3e3a39;background:#3e3a39">
+                            <source src="https://images.ipce.com.tw/Video/Video.mp4" type="video/mp4">
+                            您的瀏覽器不支援HTML 5影片播放標籤
+                            格式。
+                            Your browser doesn't support the
+                            tag.
+                        </video>
+                    </div>
+-->
+                    
+                    <!--輪播廣告-->
+                    <div class="carousel_board">
+                        <div id="carousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                              <ol class="carousel-indicators">
+                                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel" data-slide-to="1"></li>
+                                <li data-target="#carousel" data-slide-to="2"></li>
+                              </ol>
+                            <!-- Wrapper for slides 幻燈片﹙輪播資料﹚-->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/ad11.jpg" alt="..." width="500px"></a>
+                                </div>
+                                <div class="item">
+                                  <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/ad12.jpg" alt="..." width="500px"></a>
+                                </div>
+                                <div class="item">
+                                  <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/ad13.jpg" alt="..." width="500px"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--人氣排行榜-->
+                    <div class="nav-tabs" style="border-bottom:0;">
+                        <h3 style="font-weight:900; color:#161b61;">人氣排行榜</h3>
+                            <ul class="nav nav-tabs ranking">
+                              <li role="presentation" class="active"><a href="#0" data-toggle="tab">合作經銷商</a></li>
+                              <li role="presentation"><a href="#1" data-toggle="tab">線上</a></li>
+                              <li role="presentation"><a href="#2" data-toggle="tab">北區</a></li>
+                              <li role="presentation"><a href="#3"data-toggle="tab">桃竹</a></li>
+                              <li role="presentation"><a href="#4"data-toggle="tab">中區</a></li>
+                              <li role="presentation"><a href="#5"data-toggle="tab">南區</a></li>
+                            </ul>
+                        <div class="tab-content" style="margin-top:15px;">
+                            <div class="tab-pane active" id="0">                
+                                    <div class="panel panel-default">
+                                        <table class="table table-striped ranking">
+                                          <thead>
+                                          <tr>
+                                            <th colspan="4">合作經銷商</th>
+                                          </tr>
+                                          </thead>
+                                          <tr>
+                                            <td><a href="store.html">德源電腦線上…</a></td>
+                                            <td>燦坤快3網路…</td> 
+                                            <td>德總電腦網路…</td> 
+                                            <td>三井3C購物網</td> 
+                                          </tr>
+                                          <tr>
+                                            <td>HD數位3C-霐…</td>
+                                            <td>伽威電腦</td>
+                                            <td>德總電腦</td>
+                                            <td>安辰科技</td>
+                                          </tr>
+                                          <tr>
+                                            <td>原價屋光華店</td>
+                                            <td>良興市民店</td>
+                                            <td>原價屋中壢店</td>
+                                            <td>威盟資訊</td> 
+                                          </tr>
+                                          <tr>
+                                            <td>欣亞數位桃園…</td>
+                                            <td>三井電腦</td>
+                                            <td>京樺科技中壢…</td>
+                                            <td>欣亞數位…</td>
+                                          </tr>
+                                          <tr>
+                                            <td>微秒科技</td>
+                                            <td>凌傑資訊</td>
+                                            <td>鴻鑫電腦</td>
+                                            <td>欣亞數位台中…</td>
+                                          </tr>
+                                        </table>
+                                        
+                                    </div>
+                                </div>
+                            <div class="tab-pane" id="1">                
+                                    <div class="panel panel-default">
+                                        <table class="table table-striped ranking">
+                                          <thead>
+                                          <tr>
+                                            <th class="sequence">排名</th>
+                                            <th class="name">店鋪名稱</th> 
+                                            <th class="quantity">總讚數</th>
+                                          </tr>
+                                          </thead>
+                                          <tr>
+                                            <td class="sequence">1</td>
+                                              <td><a href="store.html">欣亞排排購| 欣亞數位‧ 買電腦，找欣亞</a></td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>125</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">2</td>
+                                            <td>欣亞排排購| 欣亞數位‧ 買電腦，找欣亞</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>101</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">3</td>
+                                            <td>欣亞排排購| 欣亞數位‧ 買電腦，找欣亞</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>94</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">4</td>
+                                            <td>欣亞排排購| 欣亞數位‧ 買電腦，找欣亞</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>83</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">5</td>
+                                            <td>欣亞排排購| 欣亞數位‧ 買電腦，找欣亞</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>72</td>
+                                          </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            <div class="tab-pane" id="2">
+                                    <div class="panel panel-default">
+                                        <table class="table table-striped ranking">
+                                          <thead>
+                                          <tr>
+                                            <th class="sequence">排名</th>
+                                            <th class="name">店鋪名稱</th> 
+                                            <th class="quantity">總讚數</th>
+                                          </tr>
+                                          </thead>
+                                          <tr>
+                                            <td class="sequence">1</td>
+                                            <td>Pchome Online 網路家庭 24h購物</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>125</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">2</td>
+                                            <td>Pchome Online 網路家庭 24h購物</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>101</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">3</td>
+                                            <td>Pchome Online 網路家庭 24h購物</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>94</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">4</td>
+                                            <td>Pchome Online 網路家庭 24h購物</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>83</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">5</td>
+                                            <td>Pchome Online 網路家庭 24h購物</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>72</td>
+                                          </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            <div class="tab-pane" id="3">
+                                    <div class="panel panel-default">
+                                        <table class="table table-striped ranking">
+                                          <thead>
+                                          <tr>
+                                            <th class="sequence">排名</th>
+                                            <th class="name">店鋪名稱</th> 
+                                            <th class="quantity">總讚數</th>
+                                          </tr>
+                                          </thead>
+                                          <tr>
+                                            <td class="sequence">1</td>
+                                            <td>欣亞數位桃園NOVA店(桃園NOVA室216室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>125</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">2</td>
+                                            <td>欣亞數位桃園NOVA店(桃園NOVA室216室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>101</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">3</td>
+                                            <td>欣亞數位桃園NOVA店(桃園NOVA室216室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>94</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">4</td>
+                                            <td>欣亞數位桃園NOVA店(桃園NOVA室216室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>83</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">5</td>
+                                            <td>欣亞數位桃園NOVA店(桃園NOVA室216室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>72</td>
+                                          </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            <div class="tab-pane" id="4">
+                                    <div class="panel panel-default">
+                                        <table class="table table-striped ranking">
+                                          <thead>
+                                          <tr>
+                                            <th class="sequence">排名</th>
+                                            <th class="name">店鋪名稱</th> 
+                                            <th class="quantity">總讚數</th>
+                                          </tr>
+                                          </thead>
+                                          <tr>
+                                            <td class="sequence">1</td>
+                                            <td>孟庭資訊(北門商場A13、A14、A18、A19室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>125</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">2</td>
+                                            <td>孟庭資訊(北門商場A13、A14、A18、A19室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>101</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">3</td>
+                                            <td>孟庭資訊(北門商場A13、A14、A18、A19室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>94</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">4</td>
+                                            <td>孟庭資訊(北門商場A13、A14、A18、A19室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>83</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">5</td>
+                                            <td>孟庭資訊(北門商場A13、A14、A18、A19室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>72</td>
+                                          </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            <div class="tab-pane" id="5">
+                                    <div class="panel panel-default">
+                                        <table class="table table-striped ranking">
+                                          <thead>
+                                          <tr>
+                                            <th class="sequence">排名</th>
+                                            <th class="name">店鋪名稱</th> 
+                                            <th class="quantity">總讚數</th>
+                                          </tr>
+                                          </thead>
+                                          <tr>
+                                            <td class="sequence">1</td>
+                                            <td>紐頓光華第二分公司(光華3F76、77室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>125</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">2</td>
+                                            <td>紐頓光華第二分公司(光華3F76、77室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>101</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">3</td>
+                                            <td>紐頓光華第二分公司(光華3F76、77室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>94</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">4</td>
+                                            <td>紐頓光華第二分公司(光華3F76、77室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>83</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="sequence">5</td>
+                                            <td>紐頓光華第二分公司(光華3F76、77室)</td> 
+                                            <td><i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>72</td>
+                                          </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+    
+    <footer class="container">
+            <div class="row footer_menu">
+                <div class="left">
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">
+                            &nbsp;操作說明</li>
+                        <li  class="li2 top" >
+                            <a href="#" data-toggle="modal" data-target="#CS00">經銷商搜尋</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#RP00">i比較</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#CP00">i計較</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#UO00">i優惠</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#FR00">i環保</a></li>
+                        <li style="display:inline; padding:10px; position:relative;">
+                            <span style="color:#ed1b23; font-size:8pt; font-weight:bold; position:absolute; top:-2.5px; left:2.5px; text-shadow: 0px 0px 10px yellow;">New!</span>
+                            <a href="#" data-toggle="modal" data-target="#DP00">經銷商頁面</a></li>
+                    </ul>
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">&nbsp;兌換中心</li>
+                        <li class="li2 bottom"> <a href="event-4.html">兌換中心</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">
+                            &nbsp;帳戶管理</li>
+                        <li class="li2 top"><a href="member_%20record.html">會員中心</a></li>
+                        <li><a href="member_%20UserQA.html">問與答</a></li>
+                        <li><a href="#">訂單查詢</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#dealer">後台登入</a></li>
+                    </ul>
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">
+                            &nbsp;網站介紹</li>
+                        <li class="li2 bottom"><a href="About.html">何謂iPCE</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#HowiPCE">如何使用iPCE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+            <div class="left">
+                <ul class="list-inline">
+                    <li>Copyright © 2016 Saintmen iPCE All rights reserved.</li>
+                    <li><a href="PrivacyPolicy.html">| 隱私權政策 |  </a>
+                        <a href="UseTerms.html">| 使用條款 |  </a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <strong>
+                    <ul class="list-inline">
+                        <li>客服專線：0800-000-234</li>
+                        <li>客服信箱: <a href="mailto:ipce@saintmen.com">iPCE@saintmen.com</a></li>
+                    </ul></strong>
+            </div>
+            </div>
+    </footer>
+    <br>
+    
+    <!--modal彈跳蓋版ad-->
+    <div class="modal fade adpop" tabindex="-1" role="dialog" id="adPopup">
+        <div class="modal-dialog xl" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <img style="width:100%;" src="images/ad5.jpg" alt="">
+            </div>
+        </div>
+    </div><!--modal彈跳蓋版ad end-->
+    
+    <!-- Explain Popup -->
+    <!-- 經銷商說明圖片 -->
+    <div class="modal fade adpop" tabindex="-1" role="dialog" id="CS00">
+        <div class="modal-dialog lg" role="document">
+            <div class="modal-content">
+            <div class="modal-head">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+                <div class="container coverflow" style="width:100%; padding:0;">       
+                    <div id="carousel" class="carousel slowdown" data-ride="carousel" style="text-align:center;">
+                      <!-- Wrapper for slides 幻燈片﹙輪播資料﹚-->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/CS01.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/CS02.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/CS03.jpg" alt="..."></a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div><!-- 經銷商說明圖片 -->
+    
+    <!-- i比較說明圖片 -->
+    <div class="modal fade adpop" tabindex="-1" role="dialog" id="RP00">
+        <div class="modal-dialog lg" role="document">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                
+                <div class="container coverflow" style="width:100%; padding:0;">       
+                    <div id="carousel" class="carousel slowdown" data-ride="carousel" style="text-align:center;">
+                      <!-- Wrapper for slides 幻燈片﹙輪播資料﹚-->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/RP01.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/RP02.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/RP03.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/RP04.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/RP05.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/RP06.jpg" alt="..."></a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div><!-- i比較說明圖片 -->
+    
+    <!-- i計較說明圖片 -->
+    <div class="modal fade adpop" tabindex="-1" role="dialog" id="CP00">
+        <div class="modal-dialog lg" role="document">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                
+                <div class="container coverflow" style="width:100%; padding:0;">       
+                    <div id="carousel" class="carousel slowdown" data-ride="carousel" style="text-align:center;">
+                      <!-- Wrapper for slides 幻燈片﹙輪播資料﹚-->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/CP01.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/CP02.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/CP03.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/CP04.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/CP05.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/CP06.jpg" alt="..."></a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div><!-- i計較說明圖片 -->
+    
+    <!-- i環保說明圖片 -->
+    <div class="modal fade adpop" tabindex="-1" role="dialog" id="FR00">
+        <div class="modal-dialog lg" role="document">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                
+                <div class="container coverflow" style="width:100%; padding:0;">       
+                    <div id="carousel" class="carousel slowdown" data-ride="carousel" style="text-align:center;">
+                      <!-- Wrapper for slides 幻燈片﹙輪播資料﹚-->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/FR01.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/FR02.jpg" alt="..."></a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div><!-- i環保說明圖片 -->
+    
+    <!-- i優惠說明圖片 -->
+    <div class="modal fade adpop" tabindex="-1" role="dialog" id="UO00">
+        <div class="modal-dialog lg" role="document">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                
+                <div class="container coverflow" style="width:100%; padding:0;">       
+                    <div id="carousel" class="carousel slowdown" data-ride="carousel" style="text-align:center;">
+                      <!-- Wrapper for slides 幻燈片﹙輪播資料﹚-->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/UO01.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/UO02.jpg" alt="..."></a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div><!-- i優惠說明圖片 -->
+    
+    <!-- 如何使用iPCE說明圖片 -->
+    <div class="modal fade adpop" tabindex="-1" role="dialog" id="HowiPCE">
+        <div class="modal-dialog lg" role="document">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                
+                <div class="container coverflow" style="width:100%; padding:0;">       
+                    <div id="carousel" class="carousel slowdown" data-ride="carousel" style="text-align:center;">
+                      <!-- Wrapper for slides 幻燈片﹙輪播資料﹚-->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/HowiPCE.jpg" alt="..."></a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div><!-- 如何使用iPCE說明圖片 -->
+    <!-- 經銷商頁面說明圖片 -->
+    <div class="modal fade adpop" tabindex="-1" role="dialog" id="DP00">
+        <div class="modal-dialog lg" role="document">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                
+                <div class="container coverflow" style="width:100%; padding:0;">       
+                    <div id="carousel" class="carousel slowdown" data-ride="carousel" style="text-align:center;">
+                      <!-- Wrapper for slides 幻燈片﹙輪播資料﹚-->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/DP01.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/DP02.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/DP03.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/DP04.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/DP05.jpg" alt="..."></a>
+                        </div>
+                        <div class="item">
+                          <a href="" data-toggle="modal" data-target="#adPopup"><img src="images/SlideImg/DP06.jpg" alt="..."></a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div><!-- 經銷商頁面說明圖片 -->
+    <!-- Explain Popup -->
+    
+    <!-- Login登入 -->
+    <div class="modal fade" id="LOGIN">
+      <div class="modal-dialog login-xs" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="padding:5px 10px 0 0; border:0;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="images/login_logo.png" style="width:35%; margin-bottom:3%;">
+            <form class="form-horizontal">
+			  <div class="form-group">
+			  	<div class="col-sm-9">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="電話號碼/電子郵件">
+			    </div>
+			    <div class="col-sm-3 login-font"><a href="registered.html">新用戶註冊</a></div>
+			  </div>
+			  <div class="form-group">
+			  	<div class="col-sm-9">
+			    	<input type="password" class="form-control" id="exampleInputPassword1" placeholder="密碼">
+			    </div>
+			    <div class="col-sm-3 login-font"><a href="signin_ForgotPassword.html">忘記密碼</a></div>
+			  </div>
+			  <div class="form-group">
+			  	<div class="col-sm-9 align-right" style="text-align:right;">
+			  		<button type="submit" class="btn btn-primary btn-login">登入</button>
+			  	</div>
+			    <!-- <div class="col-sm-4"></div> -->
+			  </div>
+			  <div class="form-group">
+			  	<div class="col-sm-9 icons">
+			  		<span class="icons_font">快速註冊/登入</span>
+                    <a href=""><img src="images/icon_google.png" width="74px" alt=""></a>
+			  		<a href=""><img src="images/icon_fb.png" width="74px" alt=""></a>
+			  	</div>
+			  </div>
+			</form>
+          </div>
+            <div class="modal-footer">
+				<a href="">登入</a>/<a href="member_%20UserQA.html">註冊Q&A</a>
+			</div>
+        </div>
+      </div>
+    </div><!-- Login登入 end -->
+    
+    <!-- 是否登出提示框 -->
+    <div class="modal fade" id="LOGOUT">
+      <div class="modal-dialog logout-xs" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+              是否登出頁面
+          </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-login">是</button>
+                <button type="submit" class="btn btn-primary btn-login" data-dismiss="modal" aria-label="Close">否</button>
+			</div>
+        </div>
+      </div>
+    </div><!-- 是否登出提示框 end -->
+    
+    <!-- Login登入 -->
+    <div class="modal fade" id="dealer">
+      <div class="modal-dialog login-xs" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="padding:5px 10px 0 0; border:0;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="padding:0 50px 50px;">
+              <h3>後台登入</h3>
+              <br>
+              <button type="submit" class="button btn-primary btn-lg btn-login" style="height:50px; font-weight:600;">經銷/門市專區</button>
+              &nbsp;&nbsp;
+              <button type="submit" class="button btn-info btn-lg btn-login" style="height:50px; font-weight:600;">業務專區</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- Login登入 end -->
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.progress.js"></script>
+
 </body>
+
 </html>

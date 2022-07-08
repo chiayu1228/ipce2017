@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+    <link href="css/bootstrap-toggle.css" rel="stylesheet">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap-toggle.js"></script>
+
+</head>
+    
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+<!--
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+-->
+                
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li class="hover"><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover" style="display:none"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="contact">
+                
+                <div class="left_sm" style="margin:0 auto;">
+                      <div style="display:flex;">
+                        <div class="pc-list1 med" style="height:450px;">
+                            <ul>
+                                <li style="left:80px;"><span class="num-circle gray">3</span><img src="images/pc_icon_1.png"></li>
+                                <li style="left:35px;"><span class="num-circle">1</span><img src="images/pc_icon_2.png"></li>
+                                <li><span class="num-circle">1</span><img src="images/pc_icon_3.png"></li>
+                                <li style="left:35px;"><span class="num-circle">1</span><img src="images/pc_icon_4.png"></li>
+                                <li style="left:80px;"><span class="num-circle">1</span><img src="images/pc_icon_5.png"></li>
+                            </ul>
+                        </div>
+                        <div class="pc-list2" style="height:450px;">
+                            <div class="pc_bg" style="display:flex;">
+                              <div class="pc_icon1 med">
+                                <ul>
+                                    <li><img src="images/pc_icon1-1.png"></li>
+                                    <li><img src="images/pc_icon1-2.png"></li>
+                                    <li><img src="images/pc_icon1-3.png"></li>
+                                </ul>
+                              </div>
+                              <div class="pc_icon2 med">
+                                <ul>
+                                    <li class="li2"><span class="num-circle gray">3</span><img class="img2" src="images/pc_icon2-1.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-2.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-3.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-4.png"></li>
+                                </ul>
+                              </div>
+                              <div class="pc_icon3 med">
+                                <ul>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-5.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-6.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-7.png"></li>
+                                </ul>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right1">
+                    <div class="row">
+                        <ul class="list-inline btn-list">
+                            <li>
+                                <a><button class="btn btn-primary btn-md blue2">
+                                <i class="fa fa-desktop fa-lg" aria-hidden="true"></i>&nbsp;前往週邊 i 計較</button></a>
+                            </li>
+                            <li class="li2">
+                                <a href="valuation_list.html">
+                                    <button type="button" class="btn btn-primary blue">
+                                        <i class="fa fa-file-text" aria-hidden="true"></i>&nbsp;生成估價單
+                                    </button></a>
+                                <a href="valuation_list.html">
+                                    <button type="button" class="btn btn-primary blue">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;清空估價單
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr> 
+                    <div class="row">
+                        <table class="title" style="list-style:none; width:95%">
+                            <tr>
+                                <td style="line-height:45px;"><img class="table_icon" src="images/icon1_cpu.png">&nbsp;
+                                    <button class="btn btn-info btn-md blue3" data-toggle="modal" data-target="#ShareModal">
+                                    <i class="fa fa-balance-scale fa-lg" aria-hidden="true"></i>&nbsp;比較</button>
+                                </td>
+                                <td style="text-align:right; line-height:30px;">
+                                    <button class="btn gray">
+                                        <i class="fa fa-plus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                    <button class="btn gray">
+                                        <i class="fa fa-minus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <hr>
+                        <div class="col th-large box_o">
+                            <h3 data-toggle="tooltip" data-placement="bottom" class="h3_o"
+                                title="" placement="auto left"
+                                data-original-title="Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)">
+                                i3-3200 SR&RG 3.30GHZi3-3200
+                            </h3>
+                            <div class="border box">
+                                <a href="" class="btn-close" ng-click="DeleteCareProduct(item)">
+                                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                </a>
+                                <div class="col-img"><a href="store-detail.html"><img src="images/cpu_sample.jpg" alt=""></a></div>
+                                <p class="font-date">最新更新日期：2016-09-11</p>
+                                <div class="font-date">
+                                    <div class="font-bold price">最低價
+                                        <span class="font-red">$ 5,0000</span></div>
+                                    <div class="font-bold price">自選價
+                                        <span class="font-red">$ 5,0000</span></div>
+                                </div>
+                                <div class="swich-btn box-line-top-o">
+                                    <input type="checkbox" data-toggle="toggle">
+                                </div>
+                            </div>
+                        </div><!-- col end -->
+                        
+                        <div class="col th-large box_o">
+                            <h3 data-toggle="tooltip" data-placement="bottom" class="h3_o"
+                                title="" placement="auto left"
+                                data-original-title="Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)">
+                                i3-3200 SR&RG 3.30GHZi3-3200
+                            </h3>
+                            <div class="border box">
+                                <a href="" class="btn-close" ng-click="DeleteCareProduct(item)">
+                                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                </a>
+                                <div class="col-img"><a href="store-detail.html"><img src="images/cpu_sample.jpg" alt=""></a></div>
+                                <p class="font-date">最新更新日期：2016-09-11</p>
+                                <p class="font-date">
+                                    <span class="font-bold">最低價</span>
+
+                                    <span class="font-red">NT$ 5,000</span>
+                                </p>
+                                <div class="swich-btn box-line-top-o">
+                                    <input type="checkbox" data-toggle="toggle">
+                                </div>
+                            </div>
+                        </div><!-- col end -->
+                        
+                        <div class="col th-large box_o">
+                            <h3 data-toggle="tooltip" data-placement="bottom" class="h3_o"
+                                title="" placement="auto left"data-original-title="Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)">
+                                i3-3200 SR&RG 3.30GHZi3-3200
+                            </h3>
+                            <div class="border box">
+                                <a href="" class="btn-close" ng-click="DeleteCareProduct(item)">
+                                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                </a>
+                                <div class="col-img"><a href="store-detail.html"><img src="images/cpu_sample.jpg" alt=""></a></div>
+                                <p class="font-date">最新更新日期：2016-09-11</p>
+                                <p class="font-date">
+                                    <span class="font-bold">最低價</span>
+
+                                    <span class="font-red">NT$ 5,000</span>
+                                </p>
+                                <div class="swich-btn box-line-top-o">
+                                    <input type="checkbox" data-toggle="toggle">
+                                </div>
+                            </div>
+                        </div><!-- col end -->                                                       
+                    </div>
+
+                    <div class="row">
+                        <table class="title" style="list-style:none; width:95%">
+                                <tr>
+                                    <td style="line-height:45px;"><img class="table_icon" src="images/icon2_mb.png">&nbsp;
+                                        <button class="btn btn-info btn-md blue3" data-toggle="modal" data-target="#calculate_list">
+                                    <i class="fa fa-balance-scale fa-lg" aria-hidden="true"></i>&nbsp;比較</button>
+                                    </td>
+                                    <td style="text-align:right; line-height:30px;">
+                                        <button class="btn gray">
+                                        <i class="fa fa-plus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                        <button class="btn gray">
+                                        <i class="fa fa-minus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        <hr>
+                        <div class="col th-large box_b">
+                                <h3 data-toggle="tooltip" data-placement="bottom" class="h3_b"
+                                    title="" placement="auto left"
+                                    data-original-title="Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)">
+                                    i3-3200 SR&RG 3.30GHZi3-3200
+                                </h3>
+                                <div class="border box">
+                                    <a href="" class="btn-close" ng-click="DeleteCareProduct(item)">
+                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="col-img"><a href="store-detail.html"><img src="images/cpu_sample.jpg" alt=""></a></div>
+                                    <p class="font-date">最新更新日期：2016-09-11</p>
+                                    <p class="font-date">
+                                        <span class="font-bold">最低價</span>
+
+                                        <span class="font-red">NT$ 5,000</span>
+                                    </p>
+                                    <div class="swich-btn box-line-top-b">
+                                        <input type="checkbox" data-toggle="toggle">
+                                    </div>
+                                </div>
+                            </div><!-- col end -->
+
+                        <div class="col th-large box_b">
+                                <h3 data-toggle="tooltip" data-placement="bottom" class="h3_b"
+                                    title="" placement="auto left"
+                                    data-original-title="Intel® Core™ i3-4160 Processor(3M Cache, 3.60 GHz)">
+                                    i3-3200 SR&RG 3.30GHZi3-3200
+                                </h3>
+                                <div class="border box">
+                                    <a href="" class="btn-close" ng-click="DeleteCareProduct(item)">
+                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="col-img"><a href="store-detail.html"><img src="images/cpu_sample.jpg" alt=""></a></div>
+                                    <p class="font-date">最新更新日期：2016-09-11</p>
+                                    <p class="font-date">
+                                        <span class="font-bold">最低價</span>
+
+                                        <span class="font-red">NT$ 5,000</span>
+                                    </p>
+                                    <div class="swich-btn box-line-top-b">
+                                        <input type="checkbox" data-toggle="toggle">
+                                    </div>
+                                </div>
+                            </div><!-- col end -->
+                    </div>
+
+                    <div class="row">
+                        <table class="title" style="list-style:none; width:95%">
+                            <tr>
+                                <td style="line-height:45px;"><img class="table_icon" src="images/icon3_ram.png">&nbsp;
+                                    <a href="" data-toggle="modal" data-target="#calculate_list"><button class="btn btn-info btn-md" style="font-weight:900; vertical-align:bottom;">規 格<br>比 較</button></a></td>
+                                <td style="text-align:right; line-height:30px;">
+                                    <button class="btn gray">
+                                        <i class="fa fa-plus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                    <button class="btn gray">
+                                        <i class="fa fa-minus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <hr>
+                    </div>
+
+                    <div class="row">
+                        <table class="title" style="list-style:none; width:95%">
+                            <tr>
+                                <td style="line-height:45px;"><img class="table_icon" src="images/icon4_3d.png">&nbsp;
+                                    <a href="" data-toggle="modal" data-target="#calculate_list"><button class="btn btn-info btn-md" style="font-weight:900; vertical-align:bottom;">規 格<br>比 較</button></a></td>
+                                <td style="text-align:right; line-height:30px;">
+                                    <button class="btn gray">
+                                        <i class="fa fa-plus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                    <button class="btn gray">
+                                        <i class="fa fa-minus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <hr>
+                    </div>
+
+                    <div class="row">
+                        <table class="title" style="list-style:none; width:95%">
+                            <tr>
+                                <td style="line-height:45px;"><img class="table_icon" src="images/icon5_hd.png">&nbsp;
+                                    <a href="" data-toggle="modal" data-target="#calculate_list"><button class="btn btn-info btn-md" style="font-weight:900; vertical-align:bottom;">規 格<br>比 較</button></a></td>
+                                <td style="text-align:right; line-height:30px;">
+                                    <button class="btn gray">
+                                        <i class="fa fa-plus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                    <button class="btn gray">
+                                        <i class="fa fa-minus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <hr>
+                    </div>
+
+                    <div class="row">
+                        <table class="title" style="list-style:none; width:95%">
+                            <tr>
+                                <td style="line-height:45px;"><img class="table_icon" src="images/icon6_ssd.png">&nbsp;
+                                    <a href="" data-toggle="modal" data-target="#calculate_list"><button class="btn btn-info btn-md" style="font-weight:900; vertical-align:bottom;">規 格<br>比 較</button></a></td>
+                                <td style="text-align:right; line-height:30px;">
+                                    <button class="btn gray">
+                                        <i class="fa fa-plus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                    <button class="btn gray">
+                                        <i class="fa fa-minus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <hr>
+                    </div> 
+
+                    <div class="row">
+                        <table class="title" style="list-style:none; width:95%">
+                            <tr>
+                                <td style="line-height:45px;"><img class="table_icon" src="images/icon7_power.png">&nbsp;
+                                    <a href="" data-toggle="modal" data-target="#calculate_list"><button class="btn btn-info btn-md" style="font-weight:900; vertical-align:bottom;">規 格<br>比 較</button></a></td>
+                                <td style="text-align:right; line-height:30px;">
+                                    <button class="btn gray">
+                                        <i class="fa fa-plus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                    <button class="btn gray">
+                                        <i class="fa fa-minus fa-lg" aria-hidden="true"></i>&nbsp;商品</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <hr>
+                    </div> 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- 規格比較 modal fade -->
+    <div class="modal fade" id="calculate_list">
+      <div class="modal-dialog xl" role="document">
+        <div class="modal-content">
+          <div class="modal-head">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <table class="table-spec">
+                    <thead>
+                        <tr>
+                            <th colspan="4" style="font-size:20px;">規格比較表</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th width="16%"><div class="border-right" style="text-align: left;"></div></th>
+                            <td width="28%"><div class="border-right"><img src="images/product.jpg" width="70%"></div></td>
+                            <td width="28%"><div class="border-right"><img src="images/product.jpg" width="70%"></div></td>
+                            <td width="28%"><div class="border-right"><img src="images/product.jpg" width="70%"></div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU品牌</div></th>
+                            <td><div class="border-right">英特爾intel</div></td>
+                            <td><div class="border-right">英特爾intel</div></td>
+                            <td><div class="border-right org">英特爾intel</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU核心數</div></th>
+                            <td><div class="border-right">2核</div></td>
+                            <td><div class="border-right">2核</div></td>
+                            <td><div class="border-right org">4核</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU處理器系列</div></th>
+                            <td><div class="border-right">Celeron G1840</div></td>
+                            <td><div class="border-right">Celeron G1840</div></td>
+                            <td><div class="border-right org">Core i5 4460</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU Socket</div></th>
+                            <td><div class="border-right">1150</div></td>
+                            <td><div class="border-right">1150</div></td>
+                            <td><div class="border-right org">1150</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 時脈</div></th>
+                            <td><div class="border-right">2.8 GHz</div></td>
+                            <td><div class="border-right">2.9 GHz</div></td>
+                            <td><div class="border-right org">3.2 GHz</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 快取</div></th>
+                            <td><div class="border-right">2M</div></td>
+                            <td><div class="border-right">2M</div></td>
+                            <td><div class="border-right org">6M</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 顯示晶片</div></th>
+                            <td><div class="border-right">HD Graphics</div></td>
+                            <td><div class="border-right">HD Graphics</div></td>
+                            <td><div class="border-right org">HD 4600</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 瓦數</div></th>
+                            <td><div class="border-right">35W</div></td>
+                            <td><div class="border-right">35W</div></td>
+                            <td><div class="border-right org">35W</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 製程</div></th>
+                            <td><div class="border-right">22 nm</div></td>
+                            <td><div class="border-right">22 nm</div></td>
+                            <td><div class="border-right org">22 nm</div></td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="border-right" style="text-align: left;">CPU 保固</div></th>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right">3Y</div></td>
+                            <td><div class="border-right org">3Y</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+          </div>
+        </div>
+      </div>
+    </div><!-- 規格比較 modal fade end -->
+    
+    <!-- 價格說明 modal fade -->
+    <div class="modal fade" id="ShareModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog login-xs" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="font-bold">iPCE價格說明</div>
+                    <br/>
+                    iPCE平台的價格乃是依照各門市當日網站價格、門市報價單、門市張貼報價等公開可查證的價格參考更新刊登。若是發現iPCE價格與實際售價有誤差， 則請依照門市實際面售價為主。
+                    <br/><br/>
+                    也歡迎各位 i 粉察覺有價格誤差可透過 i 唉叫 或留言門市系統回報，讓我們改進與提供更好的服務。
+                </div>
+            </div>
+        </div>
+    </div><!-- 價格說明 modal fade end -->
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+</body>
+
+</html>

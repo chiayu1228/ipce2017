@@ -1,0 +1,1159 @@
+@media only screen and (max-width:768px){
+/*--首頁分區CSS--*/
+.contact {
+    display: block;
+    }
+.contact .left.list .pc-list1{
+    display: none;
+    }
+
+.contact .left.list .pc-list2{
+    height: 74vh;
+    max-height: 420px;
+    }
+
+.contact .right.list {
+    margin:0 10px;
+    }
+
+    
+.video-container{
+
+position:relative;
+
+padding-bottom:56.25%;
+
+padding-top:30px;height:0;overflow:hidden;
+
+}
+
+.video-container iframe,
+
+.video-container object,
+
+.video-container embed{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+}
+   
+/*
+.right .movie.pc{
+    display: none;
+}
+.right .movie.mobile{
+    display: block;
+    width: 100%;
+}
+*/
+
+.right.list .nav-tabs{
+    width: 100%;
+}
+   
+.nav-tabs .nav>li>a {
+    padding: 6px 10px;
+}
+
+.panel-default .table td{
+    font-size: 12px;
+    height: 35px;
+}
+
+.icon_like {
+  color:#0071BC;
+  vertical-align: middle;
+  margin: 0 3px;
+}
+    
+.mv_list {
+    display: block;
+}
+
+.carousel_board{
+    width:100%;
+}
+
+.bottom-menu .li2.top, .bottom-menu .bottom {
+    padding: 0 0 0 10px;
+    }
+
+.bottom-menu li {
+    line-height: 26px;
+    }    
+
+.modal-dialog.lg, .modal-dialog.xl{
+    width: 100%;
+}
+.modal-dialog.xl{
+    margin: 0 auto;
+}
+
+.modal-dialog.lg .modal-content{
+    width:95%;
+    margin: initial;
+}
+    
+.modal-dialog.login-xs, .modal-dialog.logout-xs{
+    width: auto;
+}
+
+/*--說明頁LOGO CSS--*/
+.title_logo {
+    font-size: 20px;
+} 
+.title_logo img {
+    width:40% !important;
+}
+
+/*---------*/
+
+/*--i比較頁面CSS--*/
+.contact {
+    display: block;
+    }
+.left_sm{
+    display: none;
+}
+    
+.slider_content{
+    width: 250px;
+    height: 100%;
+    float: right;
+    top: -5px;
+}
+
+.contact .slider_scroll {
+    margin-left: 0px;
+    left: 100%;
+    width: 560px;
+    height: 94%;
+    z-index: 8;
+    padding-bottom: 0px;
+    top: 50px;
+}
+.icon-arrow-out.active {
+  left: -290px;
+}
+.icon-arrow-out {
+    position: absolute;
+    top: 75px;
+    left: -35px;
+    font-size: 16pt;
+    font-weight: 400;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: block;
+    height: 70px;
+    padding: 5px;
+    color: #fff;
+    background-color: #2283c5;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border: 0;
+    box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
+}
+
+.icon-arrow-out p {
+    font-size: 14px;
+}
+
+.contact .right1 {
+	margin-top: -20px;
+	right: 0;
+	margin-right: 0;
+	width: 100%;
+	box-shadow: -1px 4px 12px 4px rgba(20%,20%,20%,0.4);
+	padding: 10px 10px;
+	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(80%, #ffffff), color-stop(100%, #e1f4fd));
+	background: -moz-linear-gradient(top, #ffffff 80%, #e1f4fd);
+	background: -webkit-linear-gradient(top, #ffffff 80%, #e1f4fd);
+	background: linear-gradient(to bottom, #ffffff 80%, #e1f4fd);
+	position: absolute;
+	min-height: 100%;
+    overflow-x: hidden;
+}
+
+.right1 .row .table_icon {
+    width: 50px;
+    margin-right: 2px;
+}
+.right1 .row .product_icon {
+    width: 75px;
+}
+    
+.input-group .search_box{
+    height: 25px;
+    font-size: 8px;
+    padding-left: 10px;
+    width: 60px;
+    }
+    
+.form-control.size{
+    width: 15vw;
+    height: 26px;
+    padding: 3px 3px;
+    font-size: 8px;
+}
+.right1 .btn.btn-default.size{
+    vertical-align: bottom;
+    width: 25px;
+    height: 25px;
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+.right1 .row{
+    left: 3px;
+    }
+.right1 .row .price {
+    font-size: 8px;
+    }
+.right1 .row .price.title {
+    width:15%;
+    }
+    
+.right1 .row .span-xs {
+    font-size: 8px;
+    }
+.right1 .row table {
+    margin: 10px 5px;
+}
+.right1 .col.th-large{
+    margin: 5px 5px;
+    }
+.right1 .col{
+    width: 30%;
+    }
+.right1 .col.th-large h3{
+    font-size: 12px;
+    line-height: 20px;
+    }
+.col-img{
+    height: 60px;
+}
+.col-img img{
+    width: 60px;
+    padding: 2.5px;
+    }
+.col.th-large h3{
+    padding: 10px 10px 5px 5px;
+    height: 50px;
+    }
+.right1 .font-date, .right1 .font-price {
+    font-size: 8px;
+    }
+.right1 p {
+    margin: 0;
+    }
+.right1 .font-bold {
+    font-size: 10px;
+}
+.right1 .font-red {
+    font-size: 10px;
+}
+.swich-btn{
+    padding: 4px 0;
+    margin: 0 5px;
+    }
+.swich-btn .btn_plus {
+    background-size: cover;
+    width: 60px;
+    height: 19px;
+    }
+.swich-btn .btn_plus2 {
+    background-size: cover;
+    width: 60px;
+    height: 19px;
+    }
+
+
+.showrooms ul{
+    width:400px;
+    }
+.showrooms .five_icon{
+    padding-left: 25px;
+    }
+.arrowleft, .arrowright {
+    position:absolute;
+    top:30%;
+    cursor:pointer;
+    display:inline-block;
+    padding:10px;
+    color:#fff;
+    text-shadow: rgb(224, 224, 224) 1px 1px 0px;
+    }
+.arrowleft {
+    left:0;
+    }
+.arrowright {
+    right:0;
+    }
+.btnlist_v2 a:visited {
+    color:#fff;
+    text-shadow: rgb(224, 224, 224) 1px 1px 0px;
+    }
+.btnlist_v2 a:hover {
+    color:#fff;
+    text-shadow: rgb(224, 224, 224) 1px 1px 0px;
+    }
+.btnlist_v2 a:active {
+    color: rgba(0,0,0,0.6);
+    text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 10px #fff;
+    }
+/*---------*/
+
+/*--i比較篩選選單--*/
+.slider_content.v2 {
+    width: 250px;
+    top: 90px;
+}
+.contact .slider_scroll.v2 {
+    height: 81%;
+}
+.icon-arrow-out.active.v2 {
+    left: -290px;
+    display: block;
+}
+.icon-arrow_v2{
+    display: none;
+}
+
+/*--i比較DIY--*/
+.progress{
+    margin-top:15px;
+    }
+
+.choice {
+    font-size: 8px;
+    line-height: 30px;
+    padding: 6px 4px;
+    }
+.choice1 {
+	margin-left: -5px;
+    }
+.choice2 {
+	margin-left: -5px;
+    }
+
+/*--i比較商品頁--*/
+.contact .right1 h4 {
+    font-size:12px;
+}
+.contact .right1 h3 {
+    font-size: 14pt;
+}
+.detail-table .button-list{
+    display: block;
+}
+.detail-table .btn_plus {
+    width: 70px;
+    height: 22px;
+    margin: 0 0 5px 0;
+}
+.detail-table .btn_plus2 {
+    width: 70px;
+    height: 22px;
+    margin: 0 0 5px 0;
+}
+.detail-table .btn_feedback {
+    width: 70px;
+    height: 22px;
+}
+.detail-table table thead tr th{
+    font-size: 10pt;
+}
+.detail-table table thead tr .price {
+    width: 20%;
+}
+.detail-table table tbody tr td {
+    font-size: 9pt;
+    padding: 5px;
+}
+.product_table .font-date{
+    top: -10px;
+    }
+
+/*--i比較商品介紹 modal--*/
+.article .text-content {
+    height: auto;
+    overflow-y: hidden;
+}
+
+.article .text-content img {
+    max-width: 340px;
+    margin: 10px 0;
+}
+/*---------*/
+
+/*--i計較頁面CSS--*/
+.list-inline.btn-list{
+    line-height: 40px;
+}
+.list-inline.btn-list .li2{
+    width: 100%;
+    text-align: left;
+}
+.th-large .border .btn-close{
+    font-size: 12pt;
+    z-index: 1;
+    }
+.right1 .toggle.btn{
+    min-width: 12vw;
+    min-height: 4vh;
+    }
+.right1 .toggle-off.btn{
+    padding-left: 5px;
+    }
+.font-bold.price {
+    line-height:14px;
+}
+/*---------*/
+
+/*--經銷商頁面CSS--*/
+.store-list .panel-body li {
+	width: 100%;
+	background-color: #FFFFFF;
+	padding: 15px 15px;
+	clear: both;
+	overflow: auto;
+	color: #000;
+	height: 85px;
+	border-bottom: 1px solid #fff;
+}
+
+.container .center{
+    display: block;
+    padding: 10px;
+}
+
+.store_msg.top .msg_span {
+    font-size: 8px;
+    margin-top: 5px;
+    float: left;
+    }
+.store_msg {
+    margin-bottom: 0;
+}
+    
+.store_msg h2{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.store_msg .store_photo table tr td{
+    line-height: 30px;
+}
+    
+.store_msg .store_photo img {
+    width: 40vw;
+}
+
+.store_msg .info{
+    line-height: 18px;
+    font-size: 10px;
+}
+    
+.store-msg-box{
+    font-size: 10px;
+    
+}
+
+.store_tabs .panel-bg{
+    padding: 15px;
+}
+
+.left_store {
+    width: auto;
+}
+    
+.left_store .panel-body li {
+    padding: 10px 10px;
+}
+.left_store .panel-body li a {
+    font-size: 10px;
+}
+
+.left_store .panel-img {
+    margin-right: 3px;
+}
+
+.left_store .panel-img img {
+    width: 30px;
+}
+.left_store .panel-title .top {
+    font-size: 5px;
+}
+.left_store .panel-title .top .store-title{
+    width: 67%;
+    padding-right: 2.5px;
+}
+.left_store .panel-title .top .store-price{
+    width: 33%;
+    padding-left: 2.5px;
+}
+
+.left_store .panel-title .bottom {
+    width: 100%;
+    font-size: 5pt;
+    line-height: 15px;
+    padding-top: 15px;
+}
+
+.top ul .li1, .top ul .li2, .bottom ul .li3{
+    font-size: 10px;
+    }
+.panel-title .bottom .bottom-btnr img {
+    width: 15vw;
+    }
+.bottom ul .li3 {
+    width: auto;
+    }
+.bottom .list-inline {
+    margin-bottom: 0;
+    }
+.panel-title{
+    margin-left: 0;
+    }
+.tabs .menu_ul{
+    top: 40px;
+    }
+.tabs .list-inline, .tabs .store-msg-box2 ul, .panel-collapse .panel-body{
+    top: 0;
+    }
+.tabs ul li label span {
+    display: block;
+    top: -15px;
+    font-size: 12px;
+}
+.tabs ul li label {
+    padding: 5px;
+    border-radius: 0;
+}
+.tabs input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label{
+    border-top-width: 5px;  
+    }
+.tabs input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label{
+    border-top-width: 5px;  
+    }
+.tabs input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label{
+    border-top-width: 5px;  
+    }
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label{
+    border-top-width: 5px;  
+    }
+.tabs input[name="tab-control"]:nth-of-type(5):checked ~ ul > li:nth-child(5) > label{
+    border-top-width: 5px;  
+    }
+
+.fixed2 {
+	width: 100%;
+	text-align: center;
+	padding-left: 0;
+}
+
+.fixed2 .ad2{
+ width: auto;
+ height: 660px;
+ margin:20px 0;
+ margin-left: 0;
+}
+
+.fixed2 .ad3{
+ width: auto;
+ height: 200px;
+ margin:20px 0;
+ margin-left: 0;
+}
+.cf .btn-info.blue3 {
+    width: 100%;
+    height: 80%;
+    font-size: 10px; 
+}
+    
+/*--商品規格比較 CSS--*/
+.panel-title.clearfix .cf {
+    margin-bottom: 0;
+}
+.panel-title.clearfix table{
+    width: 50%;
+}
+.col.th-large.product{
+    margin: 2px 2px;
+}
+.col.th-large.product.space{
+    min-height: 63px;
+    }
+.col.th-large.product h3{
+    padding: 0 0.25px;
+    font-size: 8px;
+    height: 15px;
+    line-height: 15px;
+    }
+.col.th-large.product h5{
+    font-size: 10px;
+    margin-top:70%;
+    }
+.col.th-large.product .border.box{
+    padding: 2.5px;
+    }
+.col h3{
+    background-position: right 3px top 5px;
+    background-size: 6px 4px;
+    }
+
+.panel-heading{
+    padding: 5px !important; 
+    }
+.panel-title{
+    font-size: 8px !important;
+    }
+.panel-title .cp_box {
+    width:50%;
+    padding: 2.5px;
+
+}
+.panel-body table tr td {
+    padding: 0 2.5px;
+    font-size: 10px;
+}
+.panel-body table tr td img{
+    width: 60px;
+    }
+.panel-body .date {
+    font-size: 8pt;
+}
+.panel-body-price{
+    width: 30%;
+}
+
+.border.box .btn-close.xs{
+    transform: scale(1);
+    top: -7px;
+    left: 25px;
+}
+.col-img.img_xs img{
+    width: 30px;
+}
+.font-red.font-red2{
+    font-size: 5pt;
+}
+    
+/*---------*/
+
+/*--i優惠頁面CSS--*/
+.ad {
+    top: -12px;
+}
+.ad .ad-list1{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+.adpop button.close {
+    position: absolute;
+    right: 5px;
+    background-color: #fff;
+    z-index: 999;
+    }
+.ad-share {
+    font-size: 14px;
+    background-color: #FFF;
+    width: 100%;
+    top: 10px;
+    }
+.ad .btn-share {
+  margin: 0 5px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  color: #000;
+  text-align: center;
+  line-height: 28px;
+  box-shadow: 0 0 2px #333;
+}
+.ad table {
+    width: 100%;
+    margin: 10px 0;
+}
+.ad table tr td {
+    padding: 5px 10px;
+    background-color: #f7f7f7;
+}
+.ad .dropdown .dropdown-menu {
+    min-width: 125px;
+}
+
+.list-inline>li{
+    padding-right: 0;
+    padding-left: 0;
+    }
+.dropdown-menu>li>a{
+    padding: 3px !important;
+    }
+/*---------*/
+
+/*--i訊息頁面CSS--*/
+/* line 1665, ../sass/_main.scss */
+.ad .ad-list1 li {
+  width: 100%;
+  margin: 0px auto;
+}
+/* line 1670, ../sass/_main.scss */
+.ad img .modal-body img {
+  max-width: 1040px;
+}
+/* line 1673, ../sass/_main.scss */
+.ad table {
+  width: 100%;
+  margin: 10px 0;
+}
+/* line 1676, ../sass/_main.scss */
+.ad table tr td {
+  padding: 5px 10px;
+  background-color: #f7f7f7;
+}
+
+.ad table tr td a {
+	color: #080403;
+}
+.ad table tr td a:hover{
+	text-decoration:underline;
+}	
+/* line 1680, ../sass/_main.scss */
+.ad table tr.odd td {
+  background-color: #e5e6e6;
+}
+    
+/*--i訊息內容頁CSS--*/
+.ad.message .article {
+    padding: 15px;
+}
+.article h4 {
+    font-size: 16pt;
+    line-height: 25px;
+}
+.article .btn_like {
+    font-size: 12pt;
+}
+.article .btn_like2 a {
+    height: 30px;
+    font-size: 14pt;
+}
+.article .btn_share3{
+    height: 30px;
+    font-size: 14pt;
+    padding: 0 5px;
+}
+.article .btn_share3 .dropdown {
+    width: 40px;
+}
+.article .btn_share3 .share {
+    bottom: 3px;
+}
+
+.ad.message .dropdown .dropdown-menu{
+    left: 0;
+}
+.article .date{
+    margin-right: 0;
+    font-size: 10pt;
+}
+.ad.message img {
+    max-width: 320px;
+    width: 100%;
+}
+/*---------*/
+
+/*--i兌換頁面CSS--*/
+.container.mobile {
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+}
+.tab-group-product{
+    width: 31.25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tab-group-product .title {
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+}
+.tab-group-product .date2 {
+    margin-top: 0;
+    text-align: left;
+    float: none;
+}
+#exTab1 .tab-content {
+    padding : 5px 3px;  
+}
+.tab-group-product .date-end,
+.tab-group-product .date-chang {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0; 
+    font-size: 8px;
+}
+    
+.event_list_m {
+    height: 300px;
+}
+    
+.event_list_m .right_ad {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.event_list_m .people99 {
+    width: 90%;
+}
+.event_list_m .people99 .right {
+    padding-left: 0;
+    text-align: center;
+}
+
+.tcdPageCode.lg {
+    padding-top: 410%;
+}
+
+/*---------*/
+
+/*-- 估價單 CSS --*/
+.valuation_list .purchase_list{
+    padding: 15px;
+    font-size: 11px; 
+    }
+.valuation_list .purchase_list text-content{
+    margin-top: 30px;
+    }
+.valuation_list .purchase_list .btn-list, .valuation_list .purchase_list .text_right {
+    float: none; 
+    text-align: right;
+    margin-top: 10px;
+    }
+table.table-result thead tr th {
+    padding: 5px 2.5px;
+    font-size: 10pt;
+}
+table.table-result tbody tr td div.border-right,
+table.table-result tbody tr td div.border {
+    padding: 1.5px 2.5px;
+    font-size: 11px;
+}
+
+table.table-result tbody .icon-arrow{
+    background-size: 6px 5px;    
+}
+table.table-result .right_noline{
+    font-size: 11px;
+}
+table.table-result .remind {
+    text-align: left;
+    }
+table.table-result .remind p {
+    font-size: 12px;
+    } 
+
+.border-right total {
+    font-size:12pt;
+}
+    
+.list-inline.input>li{
+    height: 30px;
+    }
+
+.alignment_lg {
+    display: none;
+}
+.alignment_xs {
+    display: block;
+}
+/*---------*/
+
+/*-- 會員中心 CSS --*/   
+.member_list .left_member {
+    width: 95%;
+    float: none;
+}
+.member_list .center_member{
+    width: 100%;
+    max-height: 1000px;
+    min-height: auto;
+    float: none;
+    right: 0;
+}
+   
+.mb_content .mb_table {
+    width: 100%;
+}
+.mb_table .form-control{
+    padding: 3px 6px;
+    font-size: 10px;
+}
+    
+.member_list .center_member .mb_content {
+    width: 100%;
+    right: 0;
+    float: none;
+    left: 0;
+    padding: 0;
+}
+    
+.left_member .mb_middle .mb_img .num-circle {
+    width: 24px;
+    height: 24px;
+    font-size: 12pt;
+
+}
+    
+.member_list .right_member{
+    position: relative;
+    width: 100%;
+    float: none;
+    left: 0;
+    }
+.member_list .left_member {
+    position: relative;  
+}
+
+.left_member .mb_top {
+    width: 50%;
+    padding-left: 3px;
+}
+.left_member .mb_middle {
+    text-align: center;
+}
+.left_member .mb_bottom {
+    position: absolute;
+    width: 47.5%;
+    padding: 5px;
+    top: -5px;
+    left: 53%;
+}
+
+.table.order tr th,
+.table.order tr td {
+    text-align: left;
+}    
+
+/*-- 我的訂單列表 CSS --*/
+#menu1 .form-inline .form-control, #menu2 .form-inline .form-control, #menu3 .form-inline .form-control, #menu4 .form-inline .form-control, #menu5 .form-inline .form-control, #menu6 .form-inline .form-control, #menu7 .form-inline .form-control {
+    width: 100%;
+    margin-bottom: 10px;
+}
+#menu1 .form-inline .form-control.lg, #menu2 .form-inline .form-control.lg,
+#menu3 .form-inline .form-control.lg, #menu4 .form-inline .form-control.lg,
+#menu5 .form-inline .form-control.lg, #menu6 .form-inline .form-control.lg, 
+#menu7 .form-inline .form-control.lg {
+        width: 100%;
+    }
+
+.table-rwd{min-width: 100%;}
+/*針對tr去做隱藏*/
+tr.tr-only-hide {display: none !important;}
+/*讓tr變成區塊主要讓他有個區塊*/
+.table-rwd tr{
+display: block;
+border: 1px solid #ddd;
+}
+.table-rwd td {
+text-align: left;
+font-size: 15px;
+overflow: hidden;
+width: 100%;
+display: block;
+}
+.table-rwd td:before {
+/*最重要的就是這串*/
+content: attr(data-th) " : ";
+/*最重要的就是這串*/
+display: inline-block;
+text-transform: uppercase;
+font-weight: bold;
+  margin-right: 10px;
+color: #D20B2A;
+}
+/*當RWD縮小的時候.table-bordered 會有兩條線，所以針對.table-bordered去做修正*/
+.table-rwd.table-bordered td,.table-rwd.table-bordered th,.table-rwd.table-bordered{border:0;}
+
+/*-- Modal CSS --*/
+.mb_table tr th{
+    width: 25%;
+}    
+
+.modal-body img {
+    max-width:250px;
+}    
+
+/*---------*/
+    
+/*-- i選購頁面 CSS --*/
+.table-result.gray tr th,
+.table-result.gray .font-red-sm {
+    font-size: 11px;
+} 
+    
+.table-result.gray.right .th1 {
+    width:20%;
+}
+.table-result.gray.right .th2 {
+    width:30%;
+}
+.table-result.gray.right .th3 {
+    width:25%;
+}
+.table-result.gray.right .th4 {
+    width:25%;
+}
+    
+.table-result.store .form-control {
+    width: 100%;
+    font-size: 9pt;
+    height: 20px;
+}
+
+.table-result.store .font-red-sm {
+    font-size: 10pt;
+    line-height: 26px;
+}
+
+.text-content .view {
+    margin-top: 0;
+}
+
+.table-result.order .title {
+    width: 15%;
+}
+
+.table.order tbody tr th {
+    padding-left:10px;
+}
+    
+.table.order tbody .btn_list {
+    line-height:36px;
+}
+
+.table-result.shopping tbody tr td {
+    font-size: 8pt;
+}
+    
+.text-box .barcode {
+    margin:-2px 0 0 -20px !important;
+}
+
+.text-box.pay {
+    display:block;
+}
+
+.text-content .success,
+.text-content .failure {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.form-inline .form-control.lg {
+    width: 100%;
+}
+
+.text-box.pay table {
+    margin-left: 45%;
+}
+/*---------*/
+
+/*-- 歷史訂單頁面 CSS --*/
+.record_title .title {
+    font-size:18px;
+    top:8px;
+}    
+
+.valuation_list .purchase_list ul li {
+    width: 100%;
+}
+
+.valuation_list .purchase_list .btn-list.blue {
+    margin-bottom: 15px;
+}
+
+.btn-group-lg>.btn, .btn-lg{
+    padding: 10px 8px !important;
+    font-size: 14px !important; 
+}
+/*---------*/
+    
+/*-- 註冊頁頁面 CSS --*/
+.valuation_list.ms{
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.verification .form-control.input {
+    width:35%;
+}
+/*---------*/
+
+/*-- i環保頁面 CSS --*/
+.recycle_box {
+    padding: 6px 2px;
+    font-size: 8px;
+}
+
+.recycle_box span {
+    font-size: 20px;
+}    
+
+.table-recycle {
+    display:block;
+}
+
+.table-recycle .chevron-right {
+    padding:10px;
+}    
+
+.table-recycle .fa-chevron-right {
+    font-size: 14px;
+}
+    
+.table-recycle .right {
+    left: 10%;
+    right: 10%;
+}
+/*---------*/
+
+}
+
+@media only screen and (max-width:400px){
+    .showrooms img {
+    width:55px;
+    }
+    .showrooms ul {
+    width: 350px;
+    }
+    .btnlist_v2 ul li {
+    padding: 0;
+    }
+}
+
+@media only screen and (max-width:320px){
+    .showrooms ul {
+    right: 7%;
+    }
+}

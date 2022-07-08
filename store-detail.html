@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+    <link href="css/bootstrap-toggle.css" rel="stylesheet">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap-toggle.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $("#show1").click(function () {
+                $("#C1").show();
+                $("#hide1").show();
+                $(this).parent().hide();
+            });
+            $("#hide1").click(function () {
+                $("#C1").hide();
+                $("#show1").parent().show();
+                $("#hide1").hide();
+            });
+            $("#show2").click(function () {
+                $("#C2").show();
+                $("#hide2").show();
+                $(this).parent().hide();
+            });
+            $("#hide2").click(function () {
+                $("#C2").hide();
+                $("#show2").parent().show();
+                $("#hide2").hide();
+            });
+            $("#show3").click(function () {
+                $("#C3").show();
+                $("#hide3").show();
+                $(this).parent().hide();
+            });
+            $("#hide3").click(function () {
+                $("#C3").hide();
+                $("#show3").parent().show();
+                $("#hide3").hide();
+            });
+            $("#show4").click(function () {
+                $("#C4").show();
+                $("#hide4").show();
+                $(this).parent().hide();
+            });
+            $("#hide4").click(function () {
+                $("#C4").hide();
+                $("#show4").parent().show();
+                $("#hide4").hide();
+            });
+            $("#show5").click(function () {
+                $("#C5").show();
+                $("#hide5").show();
+                $(this).parent().hide();
+            });
+            $("#hide5").click(function () {
+                $("#C5").hide();
+                $("#show5").parent().show();
+                $("#hide5").hide();
+            });
+        });
+    </script>
+
+</head>
+    
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+<!--
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+-->
+                
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li class="hover"><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover" style="display:none"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="contact">
+                
+                <div class="left_sm" style="margin:0 auto;">
+                      <div style="display:flex;">
+                        <div class="pc-list1 med" style="height:450px;">
+                            <ul>
+                                <li style="left:80px;"><span class="num-circle gray">3</span><img src="images/pc_icon_1.png"></li>
+                                <li style="left:35px;"><span class="num-circle">1</span><img src="images/pc_icon_2.png"></li>
+                                <li><span class="num-circle">1</span><img src="images/pc_icon_3.png"></li>
+                                <li style="left:35px;"><span class="num-circle">1</span><img src="images/pc_icon_4.png"></li>
+                                <li style="left:80px;"><span class="num-circle">1</span><img src="images/pc_icon_5.png"></li>
+                            </ul>
+                        </div>
+                        <div class="pc-list2" style="height:450px;">
+                            <div class="pc_bg" style="display:flex;">
+                              <div class="pc_icon1 med">
+                                <ul>
+                                    <li><img src="images/pc_icon1-1.png"></li>
+                                    <li><img src="images/pc_icon1-2.png"></li>
+                                    <li><img src="images/pc_icon1-3.png"></li>
+                                </ul>
+                              </div>
+                              <div class="pc_icon2 med">
+                                <ul>
+                                    <li class="li2"><span class="num-circle gray">3</span><img class="img2" src="images/pc_icon2-1.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-2.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-3.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-4.png"></li>
+                                </ul>
+                              </div>
+                              <div class="pc_icon3 med">
+                                <ul>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-5.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-6.png"></li>
+                                    <li class="li2"><span class="num-circle">1</span><img class="img2" src="images/pc_icon2-7.png"></li>
+                                </ul>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right1">
+                    <div class="row detail" style="margin-bottom:0;"> 
+                        <table class="product_table" border="0">
+                             <tr>
+                                 <td rowspan="2"><a href="#" data-toggle="modal" data-target="#product_img"><img class="product_icon" src="images/product.jpg"></a></td>
+                                 <td colspan="2" style="font-weight:900; color:#187fc3;">
+                                     <h4>Intel® Core™ i3-4160 Processor (3M Cache, 3.60 GHz)nklnknklnnklnklknl</h4>
+                                     <span class="news">2016/09/26 Gigabyte即將上市</span>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>
+                                     <span class="font-bold">最低價:</span><span class="font-red">$1000</span><p>
+                                     <span class="font-date">最新更新日期: 2017/04/05</span>
+                                 </td>
+                                 <td style="text-align:right;">
+                                     <a href="#" data-toggle="modal" data-target="#product_desciption">
+                                    <button class="btn btn-info blue3">商 品<br>介 紹</button>
+                                    <button class="btn btn-info blue3">最 新<br>消 息</button>
+                                     </a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <hr class="hr detail">
+                    <div class="detail-table">
+                        <h3>線上</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="align-left" style="width:55%;">經銷商門市</th>
+                                    <th class="price">目前報價</th>
+                                    <th class="price">前次報價</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="article-body">
+                                <tr>
+                                    <td style="text-align:left;">
+                                        <a href="" data-toggle="modal" data-target="#storePopup">德總(A12、A18、A9、A5室)</a>
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true"></i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,6000</td>
+                                    <td><div class="button-list"><a href="" data-toggle="modal" data-target="#change_store" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        coolpc.tw 線上估價系統 - 原價屋
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,6000</td>
+                                    <td><div class="button-list"><a href=""  class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        欣亞排排購| 欣亞數位‧ 買電腦，找欣亞
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        欣亞數位桃園NOVA店(桃園NOVA室216室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                     <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        孟庭資訊(北門商場A13、A14、A18、A19室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                     <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td id="show1" colspan="5" class="read-all"><div><a class="showContent" href="javascript:void(0);"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></div></td>
+                                </tr>
+
+                            </tbody>
+                            <tbody id="C1" class="content">
+                                <tr>
+                                    <td style="text-align:left;">
+                                        紐頓光華第二分公司(光華3F76、77室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        德總孟庭資訊(A12、A18、A9、A5室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        德總孟庭資訊(A12、A18、A9、A5室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td id="hide1" colspan="5" class="hide-main">
+                                        <div><a class="hideContent" href="javascript:void(0);"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a></div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div><!-- detail-table end -->
+                    
+                    <div class="detail-table">
+                        <h3>北區</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="align-left">經銷商門市</th>
+                                    <th class="price">目前報價</th>
+                                    <th class="price">前次報價</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="article-body">
+                                <tr>
+                                    <td style="text-align:left;">
+                                        <a href="" data-toggle="modal" data-target="#storePopup">德總(A12、A18、A9、A5室)</a>
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        coolpc.tw 線上估價系統 - 原價屋
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        欣亞排排購| 欣亞數位‧ 買電腦，找欣亞
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        欣亞數位桃園NOVA店(桃園NOVA室216室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                     <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        孟庭資訊(北門商場A13、A14、A18、A19室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                     <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td id="show2" colspan="5" class="read-all"><div><a class="showContent" href="javascript:void(0);"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></div></td>
+                                </tr>
+
+                            </tbody>
+                            <tbody id="C2" class="content">
+                                <tr>
+                                    <td style="text-align:left;">
+                                        紐頓光華第二分公司(光華3F76、77室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        德總孟庭資訊(A12、A18、A9、A5室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        德總孟庭資訊(A12、A18、A9、A5室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td id="hide2" colspan="5" class="hide-main">
+                                        <div><a class="hideContent" href="javascript:void(0);"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a></div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div><!-- detail-table end -->
+                    
+                    <div class="detail-table">
+                        <h3>桃、竹區</h3>
+                         <table>
+                            <thead>
+                                <tr>
+                                    <th class="align-left">經銷商門市</th>
+                                    <th class="price">目前報價</th>
+                                    <th class="price">前次報價</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="article-body">
+                                <tr>
+                                    <td style="text-align:left;">
+                                        <a href="" data-toggle="modal" data-target="#storePopup">德總(A12、A18、A9、A5室)</a>
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        coolpc.tw 線上估價系統 - 原價屋
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        欣亞排排購| 欣亞數位‧ 買電腦，找欣亞
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        欣亞數位桃園NOVA店(桃園NOVA室216室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                     <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        孟庭資訊(北門商場A13、A14、A18、A19室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                     <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td id="show3" colspan="5" class="read-all"><div><a class="showContent" href="javascript:void(0);"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></div></td>
+                                </tr>
+
+                            </tbody>
+                            <tbody id="C3" class="content">
+                                <tr>
+                                    <td style="text-align:left;">
+                                        紐頓光華第二分公司(光華3F76、77室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        德總孟庭資訊(A12、A18、A9、A5室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        德總孟庭資訊(A12、A18、A9、A5室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td id="hide3" colspan="5" class="hide-main">
+                                        <div><a class="hideContent" href="javascript:void(0);"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a></div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div><!-- detail-table end -->
+                        
+                    <div class="detail-table">
+                        <h3>中區</h3>
+                          <table>
+                            <thead>
+                                <tr>
+                                    <th class="align-left">經銷商門市</th>
+                                    <th class="price">目前報價</th>
+                                    <th class="price">前次報價</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="article-body">
+                                <tr>
+                                    <td style="text-align:left;">
+                                        <a href="" data-toggle="modal" data-target="#storePopup">德總(A12、A18、A9、A5室)</a>
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        coolpc.tw 線上估價系統 - 原價屋
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        欣亞排排購| 欣亞數位‧ 買電腦，找欣亞
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        欣亞數位桃園NOVA店(桃園NOVA室216室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                     <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        孟庭資訊(北門商場A13、A14、A18、A19室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                     <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td id="show4" colspan="5" class="read-all"><div><a class="showContent" href="javascript:void(0);"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></div></td>
+                                </tr>
+
+                            </tbody>
+                            <tbody id="C4" class="content">
+                                <tr>
+                                    <td style="text-align:left;">
+                                        紐頓光華第二分公司(光華3F76、77室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        德總孟庭資訊(A12、A18、A9、A5室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        德總孟庭資訊(A12、A18、A9、A5室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td id="hide4" colspan="5" class="hide-main">
+                                        <div><a class="hideContent" href="javascript:void(0);"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a></div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div><!-- detail-table end -->
+                        
+                    <div class="detail-table">
+                        <h3>南區</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="align-left">經銷商門市</th>
+                                    <th class="price">目前報價</th>
+                                    <th class="price">前次報價</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="article-body">
+                                <tr>
+                                    <td style="text-align:left;">
+                                        <a href="" data-toggle="modal" data-target="#storePopup">德總(A12、A18、A9、A5室)</a>
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        coolpc.tw 線上估價系統 - 原價屋
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        欣亞排排購| 欣亞數位‧ 買電腦，找欣亞
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        欣亞數位桃園NOVA店(桃園NOVA室216室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                     <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        孟庭資訊(北門商場A13、A14、A18、A19室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                     <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td id="show5" colspan="5" class="read-all"><div><a class="showContent" href="javascript:void(0);"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></div></td>
+                                </tr>
+
+                            </tbody>
+                            <tbody id="C5" class="content">
+                                <tr>
+                                    <td style="text-align:left;">
+                                        紐頓光華第二分公司(光華3F76、77室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        德總孟庭資訊(A12、A18、A9、A5室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        德總孟庭資訊(A12、A18、A9、A5室)
+                                        <span class="like">
+                                            <i class="fa fa-thumbs-up icon_like" aria-hidden="true">
+                                            </i>56</span>
+                                    </td>
+                                    <td>$3,550</td>
+                                    <td class="gray">$3,600</td>
+                                    <td><div class="button-list"><a href="" class="btn_plus"></a>
+                                        <a href="" data-toggle="modal" data-target="#feedbackPOP" class="btn_feedback"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td id="hide5" colspan="5" class="hide-main">
+                                        <div><a class="hideContent" href="javascript:void(0);"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a></div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div><!-- detail-table end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 商品圖放大 modal fade -->
+    <div class="modal fade" id="product_img">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-head">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body" style="text-align:center;">
+              <img src="images/cpu_sample.jpg" style="width:100%">
+          </div>
+        </div>
+      </div>
+    </div><!-- 商品圖放大 modal fade end -->
+                
+    <!-- 商品介紹 modal fade -->
+    <div class="modal fade adpop" id="product_desciption">
+        <div class="modal-dialog lg" role="document">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <div class="article">
+                    <h4>
+                        【商品介紹】Celeron G1840
+                        <hr>
+                    </h4>
+                    <span class="btn_like">
+                        <i class="fa fa-thumbs-up fa-lg icon_like" aria-hidden="true"></i>500</span>
+                    &nbsp;
+                    <span class="btn_like2"><a href="#">讚</a></span>
+                    <span class="date">2016.10.03</span>
+                    <span class="btn_share3">
+                        <div class="dropdown">
+                            <a id="dLabel" onclick="return false;" href="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="share">分享</a>
+                            <!-- ngIf: IsAuthorized == false --><ul class="dropdown-menu ng-scope text" ng-if="IsAuthorized == false" aria-labelledby="dLabel">
+                                        <li><a href=""><img src="images/icon_fb3.png" alt="" class="a2a_s_facebook"></a></li>
+                                        <li><a href=""><img src="images/icon_line2.png" alt="" class="a2a_s_line"></a></li>
+                                        <li><a href=""><img src="images/icon_wechat.png" alt="" class="a2a_s_wechat"></a></li>
+                            </ul><!-- end ngIf: IsAuthorized == false -->
+                        </div>
+                      </span>
+                      
+                      
+                      <div class="text-content">
+                          <img src="images/ad_img.jpg"><br>
+                          是聽乎時際許也 美人大少參年費經流生因動上如社。母雙社是無相麼定須標！題處飯奇，縣學論度。能不預不，心這推這充其、一取特說，素醫聲而過媽最情！出顯治年視。點停兒人華了我如金在鄉父構看合買嗎金乎子品然比強結裝於下加印爭品受市超來行會母確親國緊怕？隊成營合專然友。 問時叫讀中了權絕、經師入比年主食不，不氣以。提無國接病切死因？小精在刻說他出；改汽及不平子局喜人源？子李什所國投今訴外管，原人斷是們本，知地面一一……死們母的！ 差們為？人在腦臺與口多明土洲在能。 這想人兒、多下票像家費直張怎她處來石結我讀總作一業把，出整港改力教生容但，看定容終旅成了提成，建造造題話間；物心散落說言認放決坐，教只全坡行們背士時，光速友長實非然形我三真答市視個黨施同了經。 少係女紙優前事樂資：然給比下劇總求高建好、況那角告升為去包。 件老絕再而的年我和入傳臺有，發天且清只慢做今長我進信多國象機力活異有美受我類目重市樓面上人北，部步發？岸印不了轉原持金買亮過感要著的以最上然上中無苦法有著看高？通望回！自資氣石類為是效正部濟意到美上信業花熱嚴要北一……資黨費地通的有力由速日可經過沒，特通處不司了單益題參這求靈三慢務美，言了各調。隨光速相半相我底標半生車滿。那充政處歡太！企來不然不病具樹？造子馬手臺北力？生無件她呢劇！一源然……麗也人自合道求子令員人亮，過動目內子度世了般。應證港好是沒演經書小況軍國冷下深心我覺人也里事課友安一光業選才不！ 合開接很眾兒？ 長不政物不水長話的不身刻思行養電一：生石女不友意明上說雲我路，否組元飛開起了表了用交了，低什義全破，定那白活如動表研另續；來算可。此代開發以。時投經交？深史值，各老顯這的給調：後育門教場覺接。 作是次沒？沒消育不親在，化原友委能小有內有市海大小一身所司房首維共對學器們離自校說，聽子細天處到馬的加。男意為，醫建天成。次羅高去衣；如連義成影也把交臺注歷水大他，答提致也足達考在。分東子兩軍說對決、住企新座求話麼統果感會出子極人心再樂似八：來絕兒出是上常麼不我業小眾去體司。的室牛發年條山被太定不是，那手候雙方不收山年減系文發、上住麼中大傷無靈，成界同了票的在演有以國和過、國可明山管境量，方影會愛理英心這前雜心大母同角助我花信通型教上人我會畫好母要。不們企人目分不利團一獎美我有正現很，溫有力報現回！舞有有在上只出修；什北公了的價。很入是我著亞少許王修更個招指接發且環們了安我本聞縣一課舉面，要林突好情角目事？工著演平物勢你，方水方情則一光足覺是方球落明告加說破議會各果行開！反去科眼國主寫裡爭人也車開是表排幾出相相的世重。正領總庭一，著關寫在有史適代益我才風計景中教的部明，助沒竟，行道費。長面那小而手……孩士時式說……進整品八看，比一大一還間生教人因面常要子邊間案走屋。在兒也下以？統出雖寶的委一，球代安。委以座，他跑我長爸在可小組黨理？
+                          是聽乎時際許也 美人大少參年費經流生因動上如社。母雙社是無相麼定須標！題處飯奇，縣學論度。能不預不，心這推這充其、一取特說，素醫聲而過媽最情！出顯治年視。點停兒人華了我如金在鄉父構看合買嗎金乎子品然比強結裝於下加印爭品受市超來行會母確親國緊怕？隊成營合專然友。 問時叫讀中了權絕、經師入比年主食不，不氣以。提無國接病切死因？小精在刻說他出；改汽及不平子局喜人源？子李什所國投今訴外管，原人斷是們本，知地面一一……死們母的！ 差們為？人在腦臺與口多明土洲在能。 這想人兒、多下票像家費直張怎她處來石結我讀總作一業把，出整港改力教生容但，看定容終旅成了提成，建造造題話間；物心散落說言認放決坐，教只全坡行們背士時，光速友長實非然形我三真答市視個黨施同了經。 少係女紙優前事樂資：然給比下劇總求高建好、況那角告升為去包。 件老絕再而的年我和入傳臺有，發天且清只慢做今長我進信多國象機力活異有美受我類目重市樓面上人北，部步發？岸印不了轉原持金買亮過感要著的以最上然上中無苦法有著看高？通望回！自資氣石類為是效正部濟意到美上信業花熱嚴要北一……資黨費地通的有力由速日可經過沒，特通處不司了單益題參這求靈三慢務美，言了各調。隨光速相半相我底標半生車滿。那充政處歡太！企來不然不病具樹？造子馬手臺北力？生無件她呢劇！一源然……麗也人自合道求子令員人亮，過動目內子度世了般。應證港好是沒演經書小況軍國冷下深心我覺人也里事課友安一光業選才不！ 合開接很眾兒？ 長不政物不水長話的不身刻思行養電一：生石女不友意明上說雲我路，否組元飛開起了表了用交了，低什義全破，定那白活如動表研另續；來算可。此代開發以。時投經交？深史值，各老顯這的給調：後育門教場覺接。 作是次沒？沒消育不親在，化原友委能小有內有市海大小一身所司房首維共對學器們離自校說，聽子細天處到馬的加。男意為，醫建天成。次羅高去衣；如連義成影也把交臺注歷水大他，答提致也足達考在。分東子兩軍說對決、住企新座求話麼統果感會出子極人心再樂似八：來絕兒出是上常麼不我業小眾去體司。的室牛發年條山被太定不是，那手候雙方不收山年減系文發、上住麼中大傷無靈，成界同了票的在演有以國和過、國可明山管境量，方影會愛理英心這前雜心大母同角助我花信通型教上人我會畫好母要。不們企人目分不利團一獎美我有正現很，溫有力報現回！舞有有在上只出修；什北公了的價。很入是我著亞少許王修更個招指接發且環們了安我本聞縣一課舉面，要林突好情角目事？工著演平物勢你，方水方情則一光足覺是方球落明告加說破議會各果行開！反去科眼國主寫裡爭人也車開是表排幾出相相的世重。正領總庭一，著關寫在有史適代益我才風計景中教的部明，助沒竟，行道費。長面那小而手……孩士時式說……進整品八看，比一大一還間生教人因面常要子邊間案走屋。在兒也下以？統出雖寶的委一，球代安。委以座，他跑我長爸在可小組黨理？
+                      </div>
+
+                  </div>    
+                </div>
+            </div>
+        </div>
+    </div><!-- 商品介紹 modal fade end -->
+
+    <!-- i唉叫 modal fade -->
+    <div class="modal fade" id="feedbackPOP">
+      <div class="modal-dialog lg" role="document">
+        <div class="modal-content">
+          <div class="modal-head">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body detail-table">
+              <table style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>區域</th>
+                        <th>經銷商門市</th>
+                        <th>目前報價</th>
+                        <th>回報價格</th>
+                        <th>上傳圖片</th>
+                    </tr>
+                </thead>
+                <tbody class="article-body">
+                    <tr>
+                        <td>線上</td>
+                        <td>欣亞排排購| 欣亞數位‧ 買電腦，找欣亞</td>
+                        <td class="gray">$3,600</td>
+                        <td><input type="text" class="form-control" id=""></td>
+                        <td><button type="submit" class="btn btn-primary">
+                            上傳圖片</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            *圖檔須為JPG檔，並大小須小於6M<br>
+                            *i唉叫上傳照片內需要有以下資訊-<br>
+                            門市(線上商城)名稱、商品名稱、商品價格，便於確認價格
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <img src="images/ipce_page.jpg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <ul class="list-inline">
+                                <li><span>驗證碼</span></li>
+                                <li><input type="text" class="form-control" id=""></li>
+                                <li>
+                                <span>
+                                    <img style="width:87px;height:30px" src="images/verification%20code.jpeg">&nbsp;
+                                    <i class="fa fa-repeat" aria-hidden="true"> 不分大小寫</i></span>&nbsp;
+                                <a href="" data-toggle="modal" data-target="#feedback_done"><button type="submit" class="btn btn-primary">
+                                    確定送出</button></a></li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div><!-- i唉叫 modal fade end -->
+    
+    <!-- i唉叫 送出完成 -->
+    <div class="modal fade" id="feedback_done">
+      <div class="modal-dialog login-xs" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="padding:5px 10px 0 0; border:0;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="height:90px; text-align:center;">
+              送出完成，系統確認中
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- i唉叫 送出完成 end -->
+
+    <!-- 替換門市 modal fade -->
+    <div class="modal fade" id="change_store">
+      <div class="modal-dialog login-xs" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="padding:5px 10px 0 0; border:0;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="height:90px;">
+              此商品您已選擇其他家門市，是否替換為此家門市？
+          </div>
+            <div class="modal-footer">
+				<button type="submit" class="btn btn-primary btn-login">取消</button>
+                <button type="submit" class="btn btn-primary btn-login">確定替換</button>
+			</div>
+        </div>
+      </div>
+    </div><!-- 替換門市 modal fade end -->
+        
+        
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+</body>
+
+</html>

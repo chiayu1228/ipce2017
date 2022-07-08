@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+
+</head>
+    
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+<!--
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+-->
+                
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li class="hover"><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover" style="display:none"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="ad">
+                <ul class="ad-list1">
+                    <li><a href="" data-toggle="modal" data-target="#adPOP"><img src="images/ad1-0.jpg" alt="" style="max-width:1140px; width:100%;"></a></li>
+                    <li>
+                <table>
+                    <tbody>
+                        <tr class="odd">
+                            <td style="width:10%;">2016.10.03</td>
+                            <td><a href="event-3.html">iPhone 7 Plus 性能奪冠、Note 7 吊車尾iPhone 7 Plus 性能奪冠、Note 7 吊車尾</a></td>
+                            <td align="right" style="width:10%;">
+                                <div class="dropdown">
+                                    <a id="dLabel" href="" class="btn-share" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu pull-right" aria-labelledby="dLabel">
+                                        <li><a href=""><img src="images/icon_fb3.png" alt=""></a></li>
+                                        <li><a href=""><img src="images/icon_line2.png" alt=""></a></li>
+                                        <li><a href=""><img src="images/icon_wechat.png" alt=""></a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2016.10.03</td>
+                            <td><a href="event-3.html">iPhone 7 Plus 性能奪冠、Note 7 吊車尾iPhone 7 Plus 性能奪冠、Note 7 吊車尾iPhone 7 Plus 性能奪冠、Note 7 吊車尾</a></td>
+                            <td align="right">
+                                <div class="dropdown">
+                                    <a id="dLabel" href="" class="btn-share" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu pull-right" aria-labelledby="dLabel">
+                                        <li><a href=""><img src="images/icon_fb3.png" alt=""></a></li>
+                                        <li><a href=""><img src="images/icon_line2.png" alt=""></a></li>
+                                        <li><a href=""><img src="images/icon_wechat.png" alt=""></a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>2016.10.03</td>
+                            <td><a href="event-3.html">iPhone 7 Plus 性能奪冠、Note 7 吊車尾</a></td>
+                            <td align="right">
+                                    <div class="dropdown">
+                                    <a id="dLabel" href="" class="btn-share" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu pull-right" aria-labelledby="dLabel">
+                                        <li><a href=""><img src="images/icon_fb3.png" alt=""></a></li>
+                                        <li><a href=""><img src="images/icon_line2.png" alt=""></a></li>
+                                        <li><a href=""><img src="images/icon_wechat.png" alt=""></a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2016.10.03</td>
+                            <td><a href="event-3.html">iPhone 7 Plus 性能奪冠、Note 7 吊車尾</a></td>
+                            <td align="right">
+                                <div class="dropdown">
+                                    <a id="dLabel" href="" class="btn-share" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu pull-right" aria-labelledby="dLabel">
+                                        <li><a href=""><img src="images/icon_fb3.png" alt=""></a></li>
+                                        <li><a href=""><img src="images/icon_line2.png" alt=""></a></li>
+                                        <li><a href=""><img src="images/icon_wechat.png" alt=""></a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <footer class="container">
+            <hr>
+            <div class="copyright">
+            <div class="left">
+                Copyright © 2016 Saintmen IPCE All rights reserved. &nbsp; &nbsp;<a href="PrivacyPolicy.html">| 隱私權政策 |  </a>
+                <a href="UseTerms.html">| 使用條款 |  </a>
+            </div>
+            <div class="right">
+                <strong>客服專線：0800-000-234&nbsp;&nbsp;&nbsp;客服信箱: <a href="mailto:ipce@saintmen.com">iPCE@saintmen.com</a></strong>
+            </div>
+            </div>
+    </footer>
+    <br>
+    </div>
+    
+    <!--modal彈跳視窗-->
+    <div class="modal fade adpop" tabindex="-1" role="dialog" id="adPOP">
+        <div class="modal-dialog lg" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <img style="width:100%;" src="images/ad5.jpg" alt="">
+                <div class="ad-share ad ad-list1"><!-- ad-share -->
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>2016.10.03</td>
+                                <td>iPhone 7 Plus 性能奪冠、Note 7 吊車尾</td>
+                                <td align="right">
+                                    <div class="dropdown">
+                                        <a id="dLabel" href="" class="btn-share" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                                        <ul class="dropdown-menu pull-right list-inline" aria-labelledby="dLabel">
+                                            <li><a href=""><img src="images/icon_fb3.png" alt=""></a></li>
+                                            <li><a href=""><img src="images/icon_line2.png" alt=""></a></li>
+                                            <li><a href=""><img src="images/icon_wechat.png" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- ad-share -->
+            </div>
+        </div>
+    </div><!--modal彈跳視窗-->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+                
+</body>
+</html>

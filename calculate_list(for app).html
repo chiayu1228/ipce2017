@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+
+</head>
+    
+<body style="background-color:#DCDCDC">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+<!--
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+-->
+                
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li class="hover"><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover" style="display:none"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="valuation_list" style="top:-20px; padding:25px;">
+                <table class="table-spec">
+                        <thead>
+                            <tr>
+                                <th colspan="4" style="font-size: 20px;">規格比較表</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th width="25%"><div class="border-right" style="text-align: left;"></div></th>
+                                <td width="25%"><div class="border-right"><img src="images/product.jpg" width="70%"></div></td>
+                                <td width="25%"><div class="border-right"><img src="images/product.jpg" width="70%"></div></td>
+                                <td width="25%"><div class="border-right"><img src="images/product.jpg" width="70%"></div></td>
+                            </tr>
+
+                            <tr>
+                                <th><div class="border-right" style="text-align: left;">CPU品牌</div></th>
+                                <td><div class="border-right">英特爾intel英特爾intel英特爾intel</div></td>
+                                <td><div class="border-right">英特爾intel英特爾intel英特爾intel</div></td>
+                                <td><div class="border-right org">英特爾intel英特爾intel英特爾intel</div></td>
+                            </tr>
+
+                            <tr>
+                                <th><div class="border-right" style="text-align: left;">CPU核心數</div></th>
+                                <td><div class="border-right">2核</div></td>
+                                <td><div class="border-right">2核</div></td>
+                                <td><div class="border-right org">4核</div></td>
+                            </tr>
+
+                            <tr>
+                                <th><div class="border-right" style="text-align: left;">CPU處理器系列</div></th>
+                                <td><div class="border-right">Celeron G1840</div></td>
+                                <td><div class="border-right">Celeron G1840</div></td>
+                                <td><div class="border-right org">Core i5 4460</div></td>
+                            </tr>
+
+                            <tr>
+                                <th><div class="border-right" style="text-align: left;">CPU Socket</div></th>
+                                <td><div class="border-right">1150</div></td>
+                                <td><div class="border-right">1150</div></td>
+                                <td><div class="border-right org">1150</div></td>
+                            </tr>
+
+                            <tr>
+                                <th><div class="border-right" style="text-align: left;">CPU 時脈</div></th>
+                                <td><div class="border-right">2.8 GHz</div></td>
+                                <td><div class="border-right">2.9 GHz</div></td>
+                                <td><div class="border-right org">3.2 GHz</div></td>
+                            </tr>
+
+                            <tr>
+                                <th><div class="border-right" style="text-align: left;">CPU 快取</div></th>
+                                <td><div class="border-right">2M</div></td>
+                                <td><div class="border-right">2M</div></td>
+                                <td><div class="border-right org">6M</div></td>
+                            </tr>
+
+                            <tr>
+                                <th><div class="border-right" style="text-align: left;">CPU 顯示晶片</div></th>
+                                <td><div class="border-right">HD Graphics</div></td>
+                                <td><div class="border-right">HD Graphics</div></td>
+                                <td><div class="border-right org">HD 4600</div></td>
+                            </tr>
+
+                            <tr>
+                                <th><div class="border-right" style="text-align: left;">CPU 瓦數</div></th>
+                                <td><div class="border-right">35W</div></td>
+                                <td><div class="border-right">35W</div></td>
+                                <td><div class="border-right org">35W</div></td>
+                            </tr>
+
+                            <tr>
+                                <th><div class="border-right" style="text-align: left;">CPU 製程</div></th>
+                                <td><div class="border-right">22 nm</div></td>
+                                <td><div class="border-right">22 nm</div></td>
+                                <td><div class="border-right org">22 nm</div></td>
+                            </tr>
+
+                            <tr>
+                                <th><div class="border-right" style="text-align: left;">CPU 保固</div></th>
+                                <td><div class="border-right">3Y</div></td>
+                                <td><div class="border-right">3Y</div></td>
+                                <td><div class="border-right org">3Y</div></td>
+                            </tr>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+                
+</body>
+</html>

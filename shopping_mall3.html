@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+
+</head>
+    
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+<!--
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+-->
+                
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li class="hover"><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover" style="display:none"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="valuation_list">
+                <div class="purchase_list">
+                    <h2 style="margin:0;">
+                        <br><br>
+                        <img src="images/login_logo.png" alt="">
+                        <span style="color:#187fc3;font-size:14px;">iPCE-比產品 找便宜 選購電腦 我幫你</span>
+                        <hr>
+                    </h2>
+                                          
+                    <div class="text-content">
+                        <div class="view">其它訂單請至『<a href="member_%20record.html">會員中心→我的訂單</a>』查看</div>
+                        
+                        <!-- 付款成功 -->
+<!--
+                        <div class="success">
+                            <div><h2 style="font-weight:900;">
+                                <i class="fa fa-check-circle fa-lg" aria-hidden="true" style="color:#8cc63f"></i> 付款成功</h2></div>
+                            <br>
+                            <div class="font-red-sm" style="font-weight:900;">
+                                親愛的顧客您好，我們已經收到您的訂購資訊!<br>
+                                您的訂單編號為 <span class="font-bold" style="color:#000;">720170223000013</span>
+                            </div><br></div>
+-->
+                        <!-- 付款成功 end -->
+                        
+                        <!-- 訂單成功 -->
+                        <div class="success">
+                            <div><h2 style="font-weight:900;">
+                                <i class="fa fa-check-circle fa-lg" aria-hidden="true" style="color:#8cc63f"></i> 訂單成功</h2></div>
+                            <br>
+                            <div class="font-red-sm" style="font-weight:900;">
+                                親愛的顧客您好，請至"會員中心→我的訂單"裡完成訂單付款!<br>
+                                您的訂單編號為 <span class="font-bold" style="color:#000;">720170223000013</span>
+                            </div><br></div>
+                        <!-- 訂單成功 end -->
+                        
+                        <!-- 付款失敗 -->
+<!--
+                        <div class="failure">
+                            <div><h2 style="font-weight:900;">
+                                <i class="fa fa-times-circle fa-lg" aria-hidden="true" style="color:#c1272d"></i> 付款失敗</h2></div>
+                            <br>
+                            <div class="font-red-sm" style="font-weight:900;">
+                                請返回結帳頁面，嘗試其它付款方式!<br><br>
+                                <a href="shopping_mall1.html"><button class="font-bold" style="color:#000;">返回結帳頁面</button></a>
+                        </div><br></div>
+-->
+                        <!-- 付款失敗 end -->
+                        
+                        <!-- 訂單失敗 -->
+                        <div class="failure">
+                            <div><h2 style="font-weight:900;">
+                                <i class="fa fa-times-circle fa-lg" aria-hidden="true" style="color:#c1272d"></i> 訂單失敗</h2></div>
+                            <br>
+                            <div class="font-red-sm" style="font-weight:900;">
+                                請回到購物車裡重新選擇商品結帳!<br><br>
+                                <a href="shopping_mall1.html"><button class="font-bold" style="color:#000;">返回購物車</button></a>
+                        </div><br></div>
+                        <!-- 訂單失敗 end -->
+                        
+                        <div class="reminder_box">
+                            <div style="padding:10px 15px;"><i class="fa fa-exclamation-triangle fa-5x" aria-hidden="true" style="color:#f7931e;"></i></div>
+                            <div style="padding:15px; font-weight:900; color:#666;">提醒您，iPCE資訊平台絕不會主動以電話或簡訊通知顧客變更付款方式！<br>
+                            如接獲任何電話號碼之來電，要求變更付款方式或ATM任何操作等，請不要理會該通電話！<br>
+                            若有任何問題，歡迎您撥打iPCE資訊平台客服專線 <span class="font-bold" style="color:#000;">0800-000-234</span></div>
+                        </div>
+                        <br><br>
+                        
+                        <div class="button-box">
+                            <a href="member_%20record.html"><button type="button" class="btn-info btn-lg button">我的訂單</button></a>&nbsp;&nbsp;&nbsp;
+                            <a href="index.html"><button type="button" class="btn-primary btn-lg button">回到首頁</button></a>
+                        </div>
+                    </div>
+                    
+                </div>  
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+    });
+    </script>
+                
+</body>
+</html>

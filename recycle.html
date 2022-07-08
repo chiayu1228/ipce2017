@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+
+</head>
+    
+<body style="background:linear-gradient(#FFF,#CCEEFF); background-repeat:no-repeat; background-attachment:fixed;">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+<!--
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+-->
+                
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li class="hover"><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover" style="display:none"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="valuation_list">
+                <div class="purchase_list" style="padding-top:30px">
+                    <h1 style="font-weight: bold; color:#337ab7;"><i class="fa fa-recycle" aria-hidden="true" style="color:#99CC33"></i>&nbsp;<span style="font-family:serif;">i</span>&nbsp;<span>環保</span></h1>
+                    <hr>
+                    <table class="table-result store">
+                        <thead>
+                            <tr>
+                                <th width="20%" style="text-align:center;">類別</th>
+                                <th width="40%" style="text-align:center;">說明</th>
+                                <th width="10%" style="text-align:center;">回收價</th>
+                                <th width="15%" style="text-align:center;">回收數量</th>
+                                <th width="15%" style="text-align:center;">預估金額</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><div class="border-right font-bold" style="text-align: center;">電腦完整主機</div></th>
+                                <td>
+                                    <div class="border-right" style="padding:10px; text-align:left; line-height:20px;">
+                                        <div class="font-bold">回收時需要提供以下項目，才視為完整電腦</div>
+                                        1. 機殼、2. 處理器、3. 主機板、4. 記憶體、5. 硬碟、6. 顯示卡 7. 電源供應器<br>
+                                        <div class="font-red" style="margin-left:0;">＊缺少以上任一項目將視為不完整電腦，實際回收價格將依照現場估價為主。</div>
+                                    </div>
+                                </td>
+                                <td><div class="border-right font-red-sm">$100</div></td>
+                                <td>
+                                    <div class="border-right">
+                                        <ul class="list-inline input" style="left:20%; right:20%;">
+                                            <li>
+                                                <div class="alignment_lg"
+                                                     style="overflow:hidden;width: 100px;height:35px;border: 1px solid #CCC; right: 50px;">
+                                                    <div id="3l" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width: 30px;height:35px;line-height:35px;border-right: 1px solid #CCC;float:left;">-</div>
+                                                    <div id="3r" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width: 30px;height:35px;line-height:35px;border-left: 1px solid #CCC;float:right;"> + </div></div>
+                                                <div class="alignment_xs"
+                                                     style="overflow:hidden;width: 55px;height:25px;border: 1px solid #CCC;    right: 13px;">
+                                                    <div id="3l" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width:15px;height:25px;line-height:25px;border-right: 1px solid #CCC;float:left;">-</div>
+                                                    <div id="3r" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width:15px;height:25px;line-height:25px;border-left: 1px solid #CCC;float:right;"> + </div></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><div class="border right_noline font-red-sm" style="text-align:center;">$200</div></td>
+                            </tr>
+                            <tr>
+                                <th><div class="border-right font-bold" style="text-align: center;">電腦不完整主機</div></th>
+                                <td>
+                                    <div class="border-right" style="padding:10px; text-align:left; line-height:20px;">
+                                        <div class="font-bold">回收需要提供以下項目</div>
+                                        1. 機殼、2. 主機板、3. 電源供應器<br>
+                                        <div class="font-red" style="margin-left:0;">＊缺少上述其中一項商品將不予以回收，實際回收價格將依照現場估價為主。</div>
+                                    </div>
+
+                                </td>
+                                <td><div class="border-right font-red-sm">$50</div></td>
+                                <td>
+                                    <div class="border-right">
+                                        <ul class="list-inline input" style="left:20%; right:20%;">
+                                            <li>
+                                                <div class="alignment_lg"
+                                                     style="overflow:hidden;width: 100px;height:35px;border: 1px solid #CCC; right: 50px;">
+                                                    <div id="3l" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width: 30px;height:35px;line-height:35px;border-right: 1px solid #CCC;float:left;">-</div>
+                                                    <div id="3r" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width: 30px;height:35px;line-height:35px;border-left: 1px solid #CCC;float:right;"> + </div></div>
+                                                <div class="alignment_xs"
+                                                     style="overflow:hidden;width: 55px;height:25px;border: 1px solid #CCC;    right: 13px;">
+                                                    <div id="3l" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width:15px;height:25px;line-height:25px;border-right: 1px solid #CCC;float:left;">-</div>
+                                                    <div id="3r" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width:15px;height:25px;line-height:25px;border-left: 1px solid #CCC;float:right;"> + </div></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><div class="border right_noline font-red-sm" style="text-align:center;">$50</div></td>
+                            </tr>
+                            <tr>
+                                <th><div class="border-right font-bold" style="text-align: center;">液晶螢幕</div></th>
+                                <td>
+                                    <div class="border-right" style="padding:10px; text-align:left; line-height:20px;">
+                                        <div class="font-bold">注意事項</div>
+                                        <div class="font-red" style="margin-left:0;">＊背面需有繁體中文字樣，外觀完整、無破裂，不可露液、不可焦化、無拆解過。</div>
+                                    </div>
+                                </td>
+                                <td><div class="border-right font-red-sm">$50</div></td>
+                                <td>
+                                    <div class="border-right">
+                                        <ul class="list-inline input" style="left:20%; right:20%;">
+                                            <li>
+                                                <div class="alignment_lg"
+                                                     style="overflow:hidden;width: 100px;height:35px;border: 1px solid #CCC; right: 50px;">
+                                                    <div id="3l" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width: 30px;height:35px;line-height:35px;border-right: 1px solid #CCC;float:left;">-</div>
+                                                    <div id="3r" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width: 30px;height:35px;line-height:35px;border-left: 1px solid #CCC;float:right;"> + </div></div>
+                                                <div class="alignment_xs"
+                                                     style="overflow:hidden;width: 55px;height:25px;border: 1px solid #CCC;    right: 13px;">
+                                                    <div id="3l" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width:15px;height:25px;line-height:25px;border-right: 1px solid #CCC;float:left;">-</div>
+                                                    <div id="3r" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width:15px;height:25px;line-height:25px;border-left: 1px solid #CCC;float:right;"> + </div></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+
+                                <td><div class="border right_noline font-red-sm" style="text-align:center;">$50</div></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="5" style="text-align:right; padding-right:30px;">
+                                    <div class="font-bold" style="font-size:20px">目前回收預估金額：
+                                        <span class="font-red-sm" style="top:-3px;"> $999,999 </span></div></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <br>
+                    <table>
+                        <tr>
+                            <th style="width:60%">
+                                <div class="font-red" style="margin-left:0;">注意事項：</div>
+                                <div style="font-size:12px">
+                                    為保障雙方之權利義務，本公司收購之二手電腦主機及螢幕來源之合法性，本公司服務員將於現場交易時，提供切結書填寫。<br>
+                                    若無法填寫切結書，本公司有權拒絕收購本次交易，感謝您的合作！</div>
+                                <p>
+                                <div style="font-size:12px; color:#FE8601;">公司行號、政府機關、學校、銀行、證券公司、網咖或是社區等，如需大量回收或是有任何疑問，歡迎您與我們聯繫。<br>
+                                客服專線：0800-000-234 服務時間：每日09:30~21:30。</div>
+                            </th>
+                            <td style="text-align:right; vertical-align:text-top; line-height:55px;">
+                                <a><button type="button" class="btn btn-lg" style="margin:0; background: linear-gradient(to bottom, #ffffff, #c9c9ca);border: 1px solid #afafaf;">清除重填</button></a>
+                                <a data-toggle="modal" data-target="#recycle_form"><button type="button" class="btn btn-lg" style="margin:0; background: linear-gradient(to bottom, #ffffff, #99CC33);border: 1px solid #afafaf;">確&emsp;&nbsp;&emsp;認</button></a>
+                            </td>
+                        </tr>
+                    </table>
+                    <h2 style="font-weight: bold; color:#337ab7;"><i class="fa fa-recycle" aria-hidden="true" style="color:#99CC33"></i>&nbsp;<span style="font-family:serif;">i</span><span>&nbsp;環保回收流程</span></h2>
+                    <hr>
+                    <div class="table-recycle">
+                        <table class="left">
+                            <tr>
+                                <td>
+                                    <div class="recycle_box">
+                                        <span>1</span>&nbsp;確認回收內容</div>
+                                </td>
+                                <td>
+                                    <div class="chevron-right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></div></td>
+                                <td>
+                                    <div class="recycle_box">
+                                        <span>2</span>&nbsp;線上填寫回收</div>
+                                </td>
+                                <td>
+                                    <div class="chevron-right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></div></td>
+                                <td>
+                                    <div class="recycle_box">
+                                        <span>3</span>&nbsp;客服電話預約</div>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <table class="right">
+                            <tr>
+                                <td>
+                                    <div class="chevron-right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></div></td>
+                                <td>
+                                    <div class="recycle_box">
+                                        <span>4</span>&nbsp;到府回收兌現</div>
+                                </td>
+                                <td>
+                                    <div class="chevron-right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></div></td>
+                                <td>
+                                    <div class="recycle_box">
+                                        <span>5</span>&nbsp;回收交易完成</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="container">
+            <div class="row footer_menu">
+                <div class="left">
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">
+                            &nbsp;操作說明</li>
+                        <li  class="li2" >
+                            <a href="#" data-toggle="modal" data-target="#CS00">經銷商搜尋</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#RP00">i比較</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#CP00">i計較</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#UO00">i優惠</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#FR00">i環保</a></li>
+                        <li style="display:inline; padding:10px; position:relative;">
+                            <span style="color:#ed1b23; font-size:8pt; font-weight:bold; position:absolute; top:-5px; left:-3px; text-shadow: 0px 0px 10px yellow;">New!</span>
+                            <a href="#" data-toggle="modal" data-target="#DP00">經銷商頁面</a></li>
+                    </ul>
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">&nbsp;兌換中心</li>
+                        <li class="li2"> <a href="event-4.html">兌換中心</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">
+                            &nbsp;帳戶管理</li>
+                        <li class="li2"><a href="member_%20record.html">會員中心</a></li>
+                        <li><a href="member_%20UserQA.html">問與答</a></li>
+                    </ul>
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">
+                            &nbsp;網站介紹</li>
+                        <li class="li2"><a href="About.html">何謂iPCE</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#HowiPCE">如何使用iPCE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+            <div class="left">
+                Copyright © 2016 Saintmen iPCE All rights reserved. &nbsp; &nbsp;<a href="PrivacyPolicy.html">| 隱私權政策 |  </a>
+                <a href="UseTerms.html">| 使用條款 |  </a>
+            </div>
+            <div class="right">
+                <strong>客服專線：0800-000-234&nbsp;&nbsp;&nbsp;客服信箱: <a href="mailto:ipce@saintmen.com">iPCE@saintmen.com</a></strong>
+            </div>
+            </div>
+    </footer>
+    <br>
+    
+    <!-- i環保表格 model -->
+    <div class="modal fade" id="recycle_form">
+      <div class="modal-dialog login-xs" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="padding:5px 10px 0 0; border:0;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table-result">
+                <thead>
+                    <tr>
+                        <th>類別</th>
+                        <th>回收數量</th>
+                        <th>預估金額</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="border-right" style="text-align:left; line-height:26px;">電腦完整主機</div></td>
+                        <td><div class="border-right">1</div></td>
+                        <td><div class="border">$100</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="border-right" style="text-align:left;">電腦不完整主機</div></td>
+                        <td><div class="border-right">1</div></td>
+                        <td><div class="border">$50</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="border-right" style="text-align:left;">液晶螢幕</div></td>
+                        <td><div class="border-right">1</div></td>
+                        <td><div class="border">$50</div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><div class="border-right" style="text-align:center; font-weight:900;">估價金額</div></td>
+                        <td><div class="border font-red">$200</div></td>
+                    </tr>
+                </tbody>
+            </table> 
+            <br>
+            <table class="contact_info">
+                <tr>
+                    <th>回收所在區域</th>
+                    <td><select class="selectpicker" id="inlineFormCustomSelect" style="width:100%;">
+                                    <option selected>請選擇</option>
+                                    <option value="">台北市</option>
+                                    <option value="">新北市</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <th>方便聯絡時間</th>
+                    <td><select class="selectpicker" id="inlineFormCustomSelect" style="width:100%;">
+                                    <option selected>請選擇</option>
+                                    <option value="">10:00~12:00</option>
+                                    <option value="">13:00~17:00</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <th>聯絡人:</th>
+                    <td><input type="text" class="form-control" id="name" placeholder="Ex: 王小明"></td>
+                </tr>
+                <tr>
+                    <th>電子信箱:</th>
+                    <td><input type="text" class="form-control" id="email" placeholder="Ex: iPCE@saintmen.com"></td>
+                </tr>
+                <tr>
+                    <th>連絡電話:</th>
+                    <td><input type="text" class="form-control" id="mobile" placeholder="Ex: 0900000000"></td>
+                </tr>
+                <tr>
+                    <th>回收地址:</th>
+                    <td><input type="text" class="form-control" id="address" placeholder="Ex: 台北市中正區八德路一段00號"></td>
+                </tr>
+            </table>
+            <br>
+            <div align="left"><img src="images/ad1.jpg" style="max-width:100%"></div>
+            <br>
+            <button type="button" class="btn btn-lg btn-block" style="margin:0; background: linear-gradient(to bottom, #ffffff, #99CC33);border: 1px solid #afafaf;" data-toggle="modal" data-target="#recycle_done">送出</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- i環保表格 model end -->
+    
+    <!-- i環保表格 model -->
+    <div class="modal fade" id="recycle_done">
+      <div class="modal-dialog login-xs" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="padding:5px 10px 0 0; border:0;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              
+              <div class="font-bold">用戶 使用者名稱</div>
+              <hr>
+              <h3 class="font-red-sm2" style="font-weight:900;">恭喜您！完成 i 環保回收</h3>
+              請您耐心等候！<br><p>
+              我們將會在24小時內於您設定的「方便聯絡時間」內與您連絡。<br><br>
+               <div class="font-bold">完成表單紀錄請至『<a href="">會員中心→公事包</a>』查看</div>
+              
+          </div>
+        </div>
+      </div>
+    </div><!-- i環保表格 model end -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+                
+</body>
+</html>

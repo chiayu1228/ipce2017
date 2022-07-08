@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+
+</head>
+    
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+<!--
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+-->
+                
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li class="hover"><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover" style="display:none"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="valuation_list">
+                <div class="purchase_list">
+                    <h2 style="margin:0;">
+                        <br><br>
+                        <img src="images/login_logo.png" alt="">
+                        <span style="color:#187fc3;font-size:14px;">iPCE-比產品 找便宜 選購電腦 我幫你</span>
+                        <hr>
+                    </h2>
+                                          
+                    <div class="text-content">
+                        <table class="table-result gray">
+                            <thead>
+                                <tr>
+                                  <th style="width:10%;">
+                                      <i class="fa fa-paperclip" aria-hidden="true" style="vertical-align:initial;"></i> 類別</th>
+                                  <th style="width:40%;">
+                                      <i class="fa fa-shopping-cart" aria-hidden="true" style="vertical-align:initial;"></i> 商品名稱</th>
+                                  <th style="width:15%;">
+                                      <i class="fa fa-usd" aria-hidden="true" style="vertical-align:initial;"></i> 單價(元)</th>
+                                  <th style="width:20%;">
+                                      <i class="fa fa-plus" aria-hidden="true" style="vertical-align:initial;"></i> 數量</th>
+                                  <th style="width:15%;">
+                                      <i class="fa fa-calculator" aria-hidden="true" style="vertical-align:initial;"></i> 小計(元)</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        
+                        <table class="table-result store">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" name="">
+                                        &nbsp;720170210000003&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;經銷商店家名稱1</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table class="table-result store" style="margin:0">
+                            <tbody>
+                                <tr>
+                                    <th style="width:10%"><div class="border-right">&nbsp;印表機</div></th>
+                                    <th style="width:40%"><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="[惠普HP] LaserJet Pro CP1025nw (CE914A) 彩色雷射印表機 黑白600x600 dpi, 彩色600x600 dpi, 黑白16 ppm,彩色4 ppm, 1Y保固," class="gray-tooltip icon-arrow">[惠普HP] LaserJet Pro CP1025nw (CE914A) 彩色雷射印表機</span></div>
+                                    </th>
+                                    <td style="width:15%;"><div class="border-right">$99,999</div></td>
+                                    <td style="width:20%;"><div class="border-right">00</div></td>
+                                    <td style="width:15%;"><div class="border font-red-sm">$99,999</div></td>
+                                </tr>
+                                <tr>
+                                    <th><div class="border-right">&nbsp;印表機</div></th>
+                                    <th><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="[愛普生EPSON] WorkForce Pro WF-M5191 彩色噴墨印表機 1200x2400 dpi, 黑白34 ppm, 彩色34 ppm, 2Y保固," class="gray-tooltip icon-arrow">[愛普生EPSON] WorkForce Pro WF-M5191 彩色噴墨印表機</span></div>
+                                    </th>
+                                    <td><div class="border-right">$99,999</div></td>
+                                    <td style="width:20%;"><div class="border-right">00</div></td>
+                                    <td><div class="border font-red-sm">$99,999</div></td>
+                                </tr>
+                                <tr>
+                                    <th><div class="border-right">&nbsp;CPU</div></th>
+                                    <th><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="[超微AMD] Ryzen 7 1800x 8核, 3.6GHz, 16M快取," class="gray-tooltip icon-arrow">[超微AMD] Ryzen 7 1800x 8核</span>
+                                        </div></th>
+                                    <td>
+                                        <div class="border-right">$999,999</div>
+                                    </td>
+                                    <td><div class="border-right">00</div></td>
+                                    <td><div class="border font-red-sm">$999,999</div></td>
+                                </tr>
+                                <tr>
+                                    <th><div class="border-right">&nbsp;記憶體</div></th>
+                                    <th><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="[威剛ADATA] DDR4 2400 16G 單通道, 終身保固," class="gray-tooltip icon-arrow">[威剛ADATA] DDR4 2400 16G 單通道, 終身保固,</span>
+                                    </div></th>
+                                    <td><div class="border-right">$9,999</div></td>
+                                    <td><div class="border-right">00</div></td>
+                                    <td><div class="border font-red-sm">$9,999</div></td>
+                                </tr>
+                                <tr>
+                                    <th><div class="border-right">顯示卡</div></th>
+                                    <th><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="[華碩ASUS] GTX1080-8G NVIDIA, GTX1080, DDR5X, 8G, 3Y保固," class="gray-tooltip icon-arrow">[華碩ASUS] GTX1080-8G NVIDIA, GTX1080, DDR5X, 8G,</span></div>
+                                    </th>
+                                    <td><div class="border-right">$9,999</div></td>
+                                    <td><div class="border-right">00</div></td>
+                                    <td><div class="border font-red-sm">$9,999</div></td>
+                                </tr>
+                                <tr>
+                                    <th><div class="border-right">優惠專區</div></th>
+                                    <th><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="維京戰魂機 I7 7700K GTX 1060 6G 榮耀戰魂 電競主機 [英特爾intel] Core i7 7700K,[華碩ASUS] ROG STRIX H270F GAMING,[美光Micron] DDR4 2400 16G(8Gx2),[威剛ADATA] Premier SP550 240G 2.5吋SATA3,[華碩ASUS] ROG STRIX-GTX1060-O6G-GAMING,[振華SuperFlower] LEADEX Gold 650W" class="gray-tooltip icon-arrow">維京戰魂機</span></div>
+                                    </th>
+                                    <td><div class="border-right">$999,999</div></td>
+                                    <td><div class="border-right">00</div></td>
+                                    <td><div class="border font-red-sm">$999,999</div></td>
+                                </tr>
+                                <tr>
+                                    <th><div class="border-right">門市商品</div></th>
+                                    <th><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="羅技滑鼠MX900" class="gray-tooltip icon-arrow">羅技滑鼠MX900</span></div>
+                                    </th>
+                                    <td><div class="border-right">$999,999</div></td>
+                                    <td><div class="border-right">00</div>
+                                    </td>
+                                    <td><div class="border font-red-sm">$999,999</div></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="3">
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label for="store">給店家的話：</label>
+                                                <input type="text" class="form-control lg" placeholder="購物注意事項，留給店家的說明">
+                                            </div>
+                                        </form>
+                                    </th>
+                                    <th colspan="2" style="text-align:right; padding-right:5px;">店家小計：<span class="font-red-sm"> $999,999 </span></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <br>
+                        <table class="table-result store">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" name="">
+                                        &nbsp;720170210000003&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;經銷商店家名稱2</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table class="table-result store" style="margin:0">
+                            <tbody>
+                                <tr>
+                                    <th style="width:10%"><div class="border-right">&nbsp;LCD</div></th>
+                                    <th style="width:40%"><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="[優派ViewSonic] XG3202-C 32吋 16:9, 1920x1080, 178°/178° , D-sub, DVI, HDMI, DisplayPort, 3Y保固," class="gray-tooltip icon-arrow">[優派ViewSonic] XG3202-C 32吋 16:9, 1920x1080,</span> </div>
+                                    </th>
+                                    <td style="width:15%;"><div class="border-right">$999,999</div></td>
+                                    <td style="width:20%;"><div class="border-right">00</div></td>
+                                    <td style="width:15%;"><div class="border font-red-sm">$999,999</div></td>
+                                </tr>
+                                <tr>
+                                    <th><div class="border-right">&nbsp;CPU</div></th>
+                                    <th><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="[英特爾intel] Core i7 5820K 6核, 3.3GHz, 15M快取," class="gray-tooltip icon-arrow">[英特爾intel] Core i7 5820K 6核</span>
+                                        </div></th>
+                                    <td>
+                                        <div class="border-right">$999,999</div>
+                                    </td>
+                                    <td><div class="border-right">00</div></td>
+                                    <td><div class="border font-red-sm">$999,999</div></td>
+                                </tr>
+                                <tr>
+                                    <th><div class="border-right">&nbsp;CPU</div></th>
+                                    <th><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="[超微AMD] Ryzen 7 1800x 8核, 3.6GHz, 16M快取," class="gray-tooltip icon-arrow">[超微AMD] Ryzen 7 1800x 8核</span>
+                                        </div></th>
+                                    <td>
+                                        <div class="border-right">$999,999</div>
+                                    </td>
+                                    <td><div class="border-right">00</div></td>
+                                    <td><div class="border font-red-sm">$999,999</div></td>
+                                </tr>
+                                <tr>
+                                    <th><div class="border-right">&nbsp;優惠專區</div></th>
+                                    <th><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="維京戰魂機 I7 7700K GTX 1060 6G 榮耀戰魂 電競主機 [英特爾intel] Core i7 7700K,[華碩ASUS] ROG STRIX H270F GAMING,[美光Micron] DDR4 2400 16G(8Gx2),[威剛ADATA] Premier SP550 240G 2.5吋SATA3,[華碩ASUS] ROG STRIX-GTX1060-O6G-GAMING,[振華SuperFlower] LEADEX Gold 650W" class="gray-tooltip icon-arrow">維京戰魂機</span></div>
+                                    </th>
+                                    <td><div class="border-right">$999,999</div></td>
+                                    <td><div class="border-right">00</div></td>
+                                    <td><div class="border font-red-sm">$999,999</div></td>
+                                </tr>
+                                <tr>
+                                    <th><div class="border-right">&nbsp;門市商品</div></th>
+                                    <th><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="羅技滑鼠MX900" class="gray-tooltip icon-arrow">羅技滑鼠MX900</span></div>
+                                    </th>
+                                    <td><div class="border-right">$999,999</div></td>
+                                    <td><div class="border-right">00</div></td>
+                                    <td><div class="border font-red-sm">$999,999</div></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="3">
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label for="store">給店家的話：</label>
+                                                <input type="text" class="form-control lg" placeholder="購物注意事項，留給店家的說明">
+                                            </div>
+                                        </form>
+                                    </th>
+                                    <th colspan="2" style="text-align:right; padding-right:5px;">店家小計：<span class="font-red-sm"> $999,999 </span></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                        <table class="table-result gray right">
+                            <thead>
+                                <tr>
+                                    <th class="th1"></th>
+                                    <th class="th2"></th>
+                                    <th>總件數
+                                        <span class="font-red-sm"> 0 </span>件</th>
+                                    <th>總計：
+                                        <span class="font-red-sm"> $999,999 </span></th>
+                                </tr>
+                            </thead>
+                        </table>
+                
+                        <br>
+                        <div class="title-box">
+                            <div class="trapezoid"></div>
+                            <div class="title" id="title1"><i class="fa fa-minus" aria-hidden="true" style="vertical-align:initial;"></i>&nbsp;訂購人驗證</div>
+                            <div class="title" id="title1_show" style="display:none"><i class="fa fa-plus" aria-hidden="true" style="vertical-align:initial;"></i>&nbsp;訂購人驗證</div>
+                        </div>
+                        <div class="text-box" id="text-box1">
+                            <form class="form-inline">
+                              <div class="form-group">
+                                <label for="account">帳　　號：</label>
+                                <input type="account" class="form-control" id="account" placeholder="Ex: iPCE@saintmen.com">
+                              </div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                              <button class="btn btn-primary btn-md">帳號驗證</button>&nbsp;
+                            </form>
+                        </div>
+                        
+                        <br>
+                        <div class="title-box">
+                            <div class="trapezoid"></div>
+                            <div class="title" id="title2"><i class="fa fa-minus" aria-hidden="true" style="vertical-align:initial;"></i>&nbsp;訂購人資訊</div>
+                            <div class="title" id="title2_show" style="display:none"><i class="fa fa-plus" aria-hidden="true" style="vertical-align:initial;"></i>&nbsp;訂購人資訊</div>
+                        </div>
+                        <div class="text-box" id="text-box2">
+                            <form class="form-inline">
+                              <div class="form-group">
+                                <label for="name">姓　　名：</label>
+                                <input type="name" class="form-control" id="name" placeholder="Ex: 王小明">
+                              </div>
+                                &nbsp;&nbsp;
+                              <div class="form-group">
+                                <label for="mobile">手　　機：</label>
+                                <input type="mobile" class="form-control" id="mobile" placeholder="Ex: 0900000000">
+                              </div>
+                            </form>
+                            <br>
+                             <form class="form-inline">
+                              <div class="form-group">
+                                <label for="email">電子信箱：</label>
+                                <input type="email" class="form-control lg" id="email" placeholder="Ex: iPCE@saintmen.com">
+                              </div>
+                            </form>
+                            <br>
+                            <form class="form-inline">
+                              <div class="form-group">
+                                <label for="id_card">身分證字號：</label>
+                                <input type="id_card" class="form-control lg" id="id_card" placeholder="Ex: A123123123">
+                              </div>
+                            </form>
+                            <br>
+                            <form class="form-inline">
+                                  <div class="form-group">
+                                    <label for="address">收件地址：</label>
+                                    <select class="form-control" id="exampleSelect1">
+                                      <option>台北市</option>
+                                      <option>新北市</option>
+                                    </select>&nbsp;
+                                    <input type="address" class="form-control lg" id="address" placeholder="Ex: 台北市中正區八德路一段00號">
+                                  </div>
+                                </form>
+                        </div>
+                        
+                        <br>
+                        <div class="title-box">
+                            <div class="trapezoid"></div>
+                            <div class="title" id="title3"><i class="fa fa-minus" aria-hidden="true" style="vertical-align:initial;"></i>&nbsp;物流選擇</div>
+                            <div class="title" id="title3_show" style="display:none"><i class="fa fa-plus" aria-hidden="true" style="vertical-align:initial;"></i>&nbsp;物流選擇</div>
+                        </div>
+                        <div class="text-box" id="text-box3">
+                            <ul class="list-inline">
+                                <li>
+                                    <form class="form-inline">
+                                      <div class="form-group font-bold">
+                                        <input type="radio" name="logistics">&nbsp;&nbsp;自取
+                                      </div>
+                                    </form>
+                                    &nbsp;
+                                    <form class="form-inline">
+                                      <div class="form-group font-bold">
+                                        <input type="radio" name="logistics">&nbsp;&nbsp;宅配
+                                        &nbsp;&nbsp;可收件時段&nbsp;
+                                            <select id="disabledSelect" class="form-control">
+                                                <option value="allday" selected="true">全天</option>
+                                                <option value="morning">上午</option>
+                                                <option value="afternoon">下午</option>
+                                            </select>
+                                          <span style="color: red; font-weight: 500;">&nbsp;※宅配費用=門市數×200元</span>
+                                      </div>
+                                    </form>
+                                </li>
+<!--
+                                <li style="text-align:-webkit-right; text-align:-moz-right;">
+                                   <table>
+                                        <tr>
+                                            <th class="font-bold"></th>
+                                            <th class="font-bold">商品總計</th>
+                                            <th class="font-bold">＄999,999</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="font-bold">+</th>
+                                            <th class="font-bold">運費</th>
+                                            <th class="font-bold">＄999,999</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="3"><hr style="border-top:2px solid #4d4d4d; margin:10px 0; text-align:left;"></th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="3"><p class="font-bold">&nbsp;&nbsp;&nbsp;總金額<span class="font-red-sm" style="font-size:18pt;">&nbsp;&nbsp;&nbsp;$999,999</span></p></th>
+                                        </tr>
+                                    </table>
+                                </li>
+-->
+                            </ul>
+                            
+                            <div><hr>
+                                <form class="form-inline">
+                                  <div class="form-group">
+                                    <label for="name">姓　　名：</label>
+                                    <input type="name" class="form-control" id="name" placeholder="Ex: 王小明">
+                                  </div>
+                                    &nbsp;&nbsp;
+                                  <div class="form-group">
+                                    <label for="mobile">手　　機：</label>
+                                    <input type="mobile" class="form-control" id="mobile" placeholder="Ex: 0900000000">
+                                  </div>
+                                </form>
+                                <br>
+                                 <form class="form-inline">
+                                  <div class="form-group">
+                                    <label for="address">收件地址：</label>
+                                    <select class="form-control" id="exampleSelect1">
+                                      <option>台北市</option>
+                                      <option>新北市</option>
+                                    </select>&nbsp;
+                                    <input type="address" class="form-control lg" id="address" placeholder="Ex: 台北市中正區八德路一段00號">
+                                  </div>
+                                </form>
+                            </div>
+                            
+                            <div><hr>
+                                <table>
+                                    <tr>
+                                        <th colspan="3" class="font-bold">【經銷商自取地址與聯絡方式】</th>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px 0px;">欣亞排排購| 欣亞數位‧ 買電腦，找欣亞</td>
+                                        <td><i class="fa fa-map-marker" aria-hidden="true"></i> 台北市中正區市民大道三段8號（光華數位新天地2樓）</td>
+                                        <td>02-23512801</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px 0px;">孟庭資訊(北門商場A13、A14、A18、A19室)</td>
+                                        <td><i class="fa fa-map-marker" aria-hidden="true"></i> 台南市北門路一段218號A13、A14、A18、A19室）</td>
+                                        <td>06-2284621</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="title-box">
+                                <div class="trapezoid"></div>
+                                <div class="title" id="title4"><i class="fa fa-minus" aria-hidden="true" style="vertical-align:initial;"></i>&nbsp;發票資料</div>
+                                <div class="title" id="title4_show" style="display:none"><i class="fa fa-plus" aria-hidden="true" style="vertical-align:initial;"></i>&nbsp;發票資料</div>
+                        </div>
+                        <div class="text-box" id="text-box4">
+                            <table style="width:100%;">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="font-bold">
+                                                發票類型&nbsp;&nbsp;&nbsp;
+                                                <input type="radio" name="invoice">&nbsp;兩聯式電子發票&nbsp;&nbsp;&nbsp;
+                                                <input type="radio" name="invoice">&nbsp;電子發票載具&nbsp;&nbsp;&nbsp;
+                                                <input type="radio" name="invoice">&nbsp;捐贈發票&nbsp;&nbsp;&nbsp;
+                                                <input type="radio" name="invoice">&nbsp;三聯式公司發票&nbsp;&nbsp;&nbsp;
+                                            </div>
+                                            <br>
+                                            <div style="color:#4d4d4d;">
+                                                <input type="checkbox" name="">&nbsp;
+                                                我同意辦理退貨時，由iPCE資訊平台代為處理發票及銷貨退回證明單，以加速退貨退款作業。
+                                            </div>
+                                            <p>
+                                            <div style="font-weight:500; line-height:22px;">
+                                                ※ 紙本發票將於鑑賞期過後寄出。<br>
+                                                ※ 點選〔線上付款〕按鈕後，系統將進入數位鎏平台(代收轉付中心)線上付款頁面。
+                                            </div>
+                                            <p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    <tr>
+                                        <th><hr></th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span style="color:#187fc3">※ 提醒您，兩聯式電子發票一旦開立，不得任意更改或改開三聯式公司發票。</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                
+                                <tbody>
+                                    <tr>
+                                        <th><hr></th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label for="store" class="radio-inline">
+                                                    <input type="radio" name="optradio" class="barcode">手機載具：　</label>
+                                                <input type="text" class="form-control" placeholder="請輸入手機載具條碼">&nbsp;
+                                                <input type="text" class="form-control" placeholder="請再次確認手機載具條碼">
+                                                <span style="color:red;">&nbsp;手機載具格式尚不完整</span>
+                                            </div>
+                                            <p>
+                                            <div class="form-inline">
+                                                <label for="store" class="radio-inline">
+                                                    <input type="radio" name="optradio" class="barcode">自然人憑證：</label>
+                                                <input type="text" class="form-control" placeholder="請輸入自然人憑證">&nbsp;
+                                                <input type="text" class="form-control" placeholder="請再次確認自然人憑證">
+                                                <span style="color:red;">&nbsp;自然人憑證格式尚不完整</span>
+                                            </div>
+                                        </form>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                
+                                <tbody>
+                                    <tr>
+                                        <th><hr></th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <form class="form-inline">
+                                            捐贈單位：
+                                            <select class="form-control">
+                                                <option value="" selected="true">不捐贈</option>
+                                                <option value="">捐贈</option>
+                                            </select>&nbsp;
+                                            <input type="text" class="form-control" placeholder="輸入捐贈單位愛心碼">&nbsp;
+                                            <span style="top: 3px;"><button>查詢愛心碼</button></span>
+                                            </form>
+                                            <br>
+                                            <span style="color:#187fc3">※ 提醒您，捐贈發票後無法變更為開立或索取紙本發票。</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                
+                                <tbody>
+                                    <tr>
+                                        <th><hr></th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label for="store">統一編號：</label>
+                                                <input type="text" class="form-control" placeholder="統一編號">
+                                            </div>
+                                            <p>
+                                            <div class="form-group">
+                                                <label for="store">發票抬頭：</label>
+                                                <input type="text" class="form-control" placeholder="發票抬頭">
+                                            </div>
+                                        </form>
+                                            <br>
+                                            <span style="color:#187fc3">※ 提醒您，三聯式公司發票一旦開立，不得任意更改為兩聯式電子發票。</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <br>
+                        <div class="title-box">
+                                <div class="trapezoid"></div>
+                                <div class="title" id="title5"><i class="fa fa-minus" aria-hidden="true" style="vertical-align:initial;"></i>&nbsp;付款方式</div>
+                                <div class="title" id="title5_show" style="display:none"><i class="fa fa-plus" aria-hidden="true" style="vertical-align:initial;"></i>&nbsp;付款方式</div>
+                        </div>
+                        <div class="text-box pay" id="text-box5">
+                                <form class="form-inline">
+                                  <div class="form-group font-bold">
+                                    <input type="radio" name="optradio" checked="checked">&nbsp;&nbsp;線上付款&nbsp;&nbsp;
+                                      (信用卡、Web ATM)
+                                    <br><br>
+                                    <input type="radio" name="optradio">&nbsp;&nbsp;門市付款&nbsp;&nbsp;
+                                      <select id="disabledSelect" class="form-control">
+                                            <option value="cash" selected="true">現金</option>
+                                            <option value="creditcard">信用卡</option>
+                                      </select>
+                                  </div>
+                                </form>
+                            
+                                <table>
+                                    <tr>
+                                        <th class="font-bold"></th>
+                                        <th class="font-bold">商品總計</th>
+                                        <th class="font-bold">＄999,999</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="font-bold">+</th>
+                                        <th class="font-bold">運費</th>
+                                        <th class="font-bold">＄999,999</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3"><hr style="border-top:2px solid #4d4d4d; margin:10px 0; text-align:left;"></th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3"><p class="font-bold">&nbsp;&nbsp;&nbsp;總金額<span class="font-red-sm" style="font-size:18pt;">&nbsp;&nbsp;&nbsp;$999,999</span></p></th>
+                                    </tr>
+                                </table>
+                        </div>
+
+                        <div class="button-box">
+                            <a href="shopping_mall3.html"><button type="button" class="btn btn-warning btn-lg blue" data-toggle="collapse" data-target="#collapse" style="background: linear-gradient(#f15a24,#fbb03b);">送　出</button></a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>  
+                </div>  
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+            
+            $("#title1").click(function(){
+                $("#text-box1").slideUp(500);
+                $("#title1").hide();
+                $("#title1_show").show();
+            });
+            $("#title1_show").click(function(){
+                $("#text-box1").slideDown(500);
+                $("#title1_show").hide();
+                $("#title1").show();
+            });
+            $("#title2").click(function(){
+                $("#text-box2").slideUp(500);
+                $("#title2").hide();
+                $("#title2_show").show();
+            });
+            $("#title2_show").click(function(){
+                $("#text-box2").slideDown(500);
+                $("#title2_show").hide();
+                $("#title2").show();
+            });
+            
+            $("#title3").click(function(){
+                $("#text-box3").slideUp(500);
+                $("#title3").hide();
+                $("#title3_show").show();
+            });
+            $("#title3_show").click(function(){
+                $("#text-box3").slideDown(500);
+                $("#title3_show").hide();
+                $("#title3").show();
+            });
+            
+            $("#title4").click(function(){
+                $("#text-box4").slideUp(500);
+                $("#title4").hide();
+                $("#title4_show").show();
+            });
+            $("#title4_show").click(function(){
+                $("#text-box4").slideDown(500);
+                $("#title4_show").hide();
+                $("#title4").show();
+            });
+            
+            $("#title5").click(function(){
+                $("#text-box5").slideUp(500);
+                $("#title5").hide();
+                $("#title5_show").show();
+            });
+            $("#title5_show").click(function(){
+                $("#text-box5").slideDown(500);
+                $("#title5_show").hide();
+                $("#title5").show();
+            });
+        });
+    </script>
+                
+</body>
+</html>

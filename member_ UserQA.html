@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+
+</head>
+    
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+<!--
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+-->
+                
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover" style="display:none"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="member_list">
+                <div class="left_member">
+                    <div class="mb_top"><img src="images/member04.png" alt="" width="100%"></div>
+                    <div class="mb_middle">
+                        <ul class="list-inline" style="margin: 10px 0;">
+                            <li class="mb_img" style="padding:0;">
+                                <a href="member_%20record.html"><img src="images/member01.png" alt="" width="100%"></a>
+                            </li>
+                            <li class="mb_img" style="padding:0;">
+                                <span class="num-circle">1</span>
+                                <a href="member_%20mail.html"><img src="images/member03.png" alt="" width="100%"></a>
+                            </li>
+                            <li class="mb_img" style="padding:0;">
+                                <a href="member_%20footprints.html"><img src="images/member02.png" alt="" width="100%"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb_bottom">
+                        <div>
+                            <a href="member_info.html"><img src="images/member05.jpg" alt="" width="100%"></a>
+                        </div>
+                        <img src="images/ad_xs.jpg" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="center_member">
+                    <div class="mb_content">
+                        
+                        <div class="mb_table">
+                            <div style="display:flex;">
+                                <select id="disabledSelect" class="form-control">
+                                    <option value="">註冊及登入問題</option>
+                                </select>
+                            </div>
+                            
+                            <div class="member-list" id="accordion">
+                                <ul>
+                                    <li>
+                                        <div class="mb-msg">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">如何加入會員？</a>
+                                        </div>
+                                        
+                                        <div id="collapse1" class="panel-collapse collapse">
+                                            <hr>
+                                            請到iPCE的官方網站或官方APP註冊頁面，填入註冊資料，就可加入會員。或是您有Facebook、Google的帳號，也可直接點選做快速註冊。
+                                        </div>
+                                        
+                                    </li>
+                                    <li>
+                                       <div class="mb-msg">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">忘記密碼怎麼辦？</a>
+                                        </div>
+                                        
+                                        <div id="collapse2" class="panel-collapse collapse">
+                                            <hr>
+                                            只要到登入頁面點選「忘記密碼」，依照說明的步驟完成，您就可以很快地獲得新的隨機密碼，成功登入後再移至【會員資料】設定新的密碼即可。
+                                        </div>
+                                    </li>
+                                    <li>
+                                       <div class="mb-msg">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">如何修改會員資料？</a>
+                                        </div>
+                                        
+                                        <div id="collapse3" class="panel-collapse collapse">
+                                            <hr>
+                                            您可以從【我的帳戶】進入【會員資料】修改您的個人資料。
+                                        </div>
+                                    </li>
+                                    <li>
+                                       <div class="mb-msg">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">我如何知道我已經註冊成功？</a>
+                                        </div>
+                                        
+                                        <div id="collapse4" class="panel-collapse collapse">
+                                            <hr>
+                                            請至您提供註冊的信箱收取認證信，點擊連結，即註冊成功。
+                                        </div>
+                                    </li>
+                                    <li>
+                                       <div class="mb-msg">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">常收不到訂單確認信、商品到貨通知信、會員電子報？</a>
+                                        </div>
+                                        
+                                        <div id="collapse5" class="panel-collapse collapse">
+                                            <hr>
+                                            若您使用的郵件信箱，經常收不到訂單信函、會員資訊或錯過優惠訊息，可能是被歸類到垃圾郵件。請您先檢視垃圾郵件，並將垃圾郵件內的信件，由上方勾選為非垃圾郵件的設定。
+                                        </div>
+                                    </li>
+                                    <li><button type="button" class="btn btn-primary btn-lg ask" data-toggle="modal" data-target="#question">我要發問</button></li>
+                                </ul>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="right_member"><a href=""><img src="images/ad_vertical.jpg" alt="" width="100%"></a></div>
+            </div>
+        </div>
+        
+        
+    <footer class="container">
+            <div class="row footer_menu">
+                <div class="left">
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">
+                            &nbsp;操作說明</li>
+                        <li  class="li2" >
+                            <a href="#" data-toggle="modal" data-target="#CS00">經銷商搜尋</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#RP00">i比較</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#CP00">i計較</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#UO00">i優惠</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#FR00">i環保</a></li>
+                    </ul>
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">&nbsp;兌換中心</li>
+                        <li class="li2"><a>兌換中心</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">
+                            &nbsp;帳戶管理</li>
+                        <li class="li2"><a>會員中心</a></li>
+                        <li style="padding:0px;"><a>問與答</a></li>
+                    </ul>
+                    <ul class="bottom-menu list-inline">
+                        <li class="li1" style="padding:0 10px 0 0;">
+                            &nbsp;網站介紹</li>
+                        <li class="li2"><a>何謂iPCE</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#HowiPCE">如何使用iPCE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+            <div class="left">
+                Copyright © 2016 Saintmen iPCE All rights reserved. &nbsp; &nbsp;<a href="PrivacyPolicy.html">| 隱私權政策 |  </a>
+                <a href="UseTerms.html">| 使用條款 |  </a>
+            </div>
+            <div class="right">
+                <strong>客服專線：0800-000-234&nbsp;&nbsp;&nbsp;客服信箱: <a href="mailto:ipce@saintmen.com">iPCE@saintmen.com</a></strong>
+            </div>
+            </div>
+    </footer>
+    <br>
+        
+    </div>
+    
+    <!-- 我要發問 model -->
+    <div class="modal fade" id="question">
+      <div class="modal-dialog login-xs" role="document">
+        <div class="modal-content">
+         <div class="modal-header" style="padding:5px 10px 0 0; border:0;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <table class="mb_table" style="width:100%;">
+                <tr>
+                    <th class="justify">
+                       姓名 
+                    </th>
+                    <td>
+                        <input type="name" class="form-control" id="name" placeholder="Ex: 王小明">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="justify">
+                       聯絡電話
+                    </th>
+                    <td>
+                        <input type="tel" class="form-control" id="tel" placeholder="Ex: 02-2391-1761">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="justify">
+                       電子信箱
+                    </th>
+                    <td>
+                        <input type="email" class="form-control" id="email" placeholder="Ex: iPCE@saintmen.com">
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <textarea class="form-control" rows="5" id="comment" placeholder="請輸入問題內容"></textarea><br>
+                        <button style="width:100%; height:40px;">送&nbsp;&nbsp;出</button>
+                    </th>
+                </tr>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div><!-- 我要發問 model end -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+                
+</body>
+</html>

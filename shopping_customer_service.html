@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+
+</head>
+    
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+<!--
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+-->
+                
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li class="hover"><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover" style="display:none"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="valuation_list">
+                <div class="purchase_list">
+                    <br><br>
+                    <div class="record_title blue">
+                        <ul class="list-inline">
+                            <li><img src="images/nav_logo.png" alt="" style="width:60%">&nbsp;&nbsp;
+                                <span class="title">訂單客服</span></li>
+                            <li class="slogan">
+                                <div class="btn-list blue">
+                                <a href="member_%20record.html"><button class="btn btn-info" style="box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);">
+                                    <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;返回訂單列表</button></a>
+                                </div>
+                                <div style="color:#FFF; font-size:14px;">&nbsp;&nbsp;iPCE-比產品 找便宜 選購電腦 我幫你</div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="text-content">
+                        <table class="table-result gray">
+                            <thead>
+                                <tr>
+                                  <th style="width:10%;">
+                                      <i class="fa fa-paperclip" aria-hidden="true" style="vertical-align:initial;"></i> 類別</th>
+                                  <th style="width:40%;">
+                                      <i class="fa fa-shopping-cart" aria-hidden="true" style="vertical-align:initial;"></i> 商品名稱</th>
+                                  <th style="width:15%;">
+                                      <i class="fa fa-usd" aria-hidden="true" style="vertical-align:initial;"></i> 單價(元)</th>
+                                  <th style="width:20%;">
+                                      <i class="fa fa-plus" aria-hidden="true" style="vertical-align:initial;"></i> 數量</th>
+                                  <th style="width:15%;">
+                                      <i class="fa fa-calculator" aria-hidden="true" style="vertical-align:initial;"></i> 小計(元)</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table class="table-result store">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" name="">
+                                        &nbsp;720170210000003&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;經銷商店家名稱1</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table class="table-result store" style="margin:0">
+                            <tbody>
+                                <tr>
+                                    <th style="width:10%"><div class="border-right">
+                                        <input type="checkbox" name="">&nbsp;印表機</div></th>
+                                    <th style="width:40%"><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="[惠普HP] LaserJet Pro CP1025nw (CE914A) 彩色雷射印表機 黑白600x600 dpi, 彩色600x600 dpi, 黑白16 ppm,彩色4 ppm, 1Y保固," class="gray-tooltip icon-arrow">[惠普HP] LaserJet Pro CP1025nw (CE914A) 彩色雷射印表機</span></div>
+                                    </th>
+                                    <td style="width:15%;"><div class="border-right">$99,999</div></td>
+                                    <td style="width:20%;">
+                                        <div class="border-right" style="text-align:-webkit-center;">
+                                            <div class="alignment_lg"
+                                                 style="overflow:hidden;width: 100px;height:35px;border: 1px solid #CCC;">
+                                                <div id="3l" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width: 30px;height:35px;line-height:35px;border-right: 1px solid #CCC;float:left;">-</div>
+                                                <div id="3r" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width: 30px;height:35px;line-height:35px;border-left: 1px solid #CCC;float:right;"> + </div></div>
+                                            <div class="alignment_xs"
+                                                 style="overflow:hidden;width: 55px;height:25px;border: 1px solid #CCC;">
+                                                <div id="3l" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width:15px;height:25px;line-height:25px;border-right: 1px solid #CCC;float:left;">-</div>
+                                                <div id="3r" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width:15px;height:25px;line-height:25px;border-left: 1px solid #CCC;float:right;"> + </div></div>
+                                        </div>
+                                    </td>
+                                    <td style="width:15%;"><div class="border font-red-sm">$99,999</div></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="member-list" style="text-align:left; padding:10px; background-color:#fff4d6; line-height:36px;">
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label for="store">回報內容：</label>
+                                                <input type="text" class="form-control lg" placeholder="請敘述問題，方便客服協助處理">
+                                                <button value="" type="button" class="btn btn-download" style="padding:3px 12px; height:auto; color:#000;">上傳檔案</button>&nbsp;
+                                                最多上傳3個檔案，每個檔案不得超過6mb
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" style="text-align:left; padding:10px;">
+                                        <ul class="list-inline" style="margin:0;">
+                                            <li style="width:auto;">
+                                                <a href="" data-toggle="modal" data-target="#ReminderBox"><div style="position:absolute;"><i class="fa fa-times fa-lg" aria-hidden="true" style="z-index:1; text-shadow:0px 0px 10px #FFF, 0px 0px 10px #FFF; color:#4D4D4D;"></i></div></a>
+                                                <a href="" data-toggle="modal" data-target="#upload"><div class="upload_img"></div></a>
+                                                
+                                            </li>
+                                            <li style="width:auto;">
+                                                <a href="" data-toggle="modal" data-target="#ReminderBox"><div style="position:absolute;"><i class="fa fa-times fa-lg" aria-hidden="true" style="z-index:1; text-shadow:0px 0px 10px #FFF, 0px 0px 10px #FFF; color:#4D4D4D;"></i></div></a>
+                                                <a href="" data-toggle="modal" data-target="#upload"><div class="upload_img"></div></a>
+
+                                            </li>
+                                            <li style="width:auto;">
+                                                <a href="" data-toggle="modal" data-target="#ReminderBox"><div style="position:absolute;"><i class="fa fa-times fa-lg" aria-hidden="true" style="z-index:1; text-shadow:0px 0px 10px #FFF, 0px 0px 10px #FFF; color:#4D4D4D;"></i></div></a>
+                                                <a href="" data-toggle="modal" data-target="#upload"><div class="upload_img"></div></a>
+                                                
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="border-right"><input type="checkbox" name="">
+                                        &nbsp;印表機</div></th>
+                                    <th><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="[愛普生EPSON] WorkForce Pro WF-M5191 彩色噴墨印表機 1200x2400 dpi, 黑白34 ppm, 彩色34 ppm, 2Y保固," class="gray-tooltip icon-arrow">[愛普生EPSON] WorkForce Pro WF-M5191 彩色噴墨印表機</span></div>
+                                    </th>
+                                    <td style="width:15%;"><div class="border-right">$99,999</div></td>
+                                    <td style="width:20%;">
+                                        <div class="border-right" style="text-align:-webkit-center;">
+                                            <div class="alignment_lg"
+                                                 style="overflow:hidden;width: 100px;height:35px;border: 1px solid #CCC;">
+                                                <div id="3l" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width: 30px;height:35px;line-height:35px;border-right: 1px solid #CCC;float:left;">-</div>
+                                                <div id="3r" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width: 30px;height:35px;line-height:35px;border-left: 1px solid #CCC;float:right;"> + </div></div>
+                                            <div class="alignment_xs"
+                                                 style="overflow:hidden;width: 55px;height:25px;border: 1px solid #CCC;">
+                                                <div id="3l" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width:15px;height:25px;line-height:25px;border-right: 1px solid #CCC;float:left;">-</div>
+                                                <div id="3r" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width:15px;height:25px;line-height:25px;border-left: 1px solid #CCC;float:right;"> + </div></div>
+                                        </div>
+                                    </td>
+                                    <td style="width:15%;"><div class="border font-red-sm">$99,999</div></td>  
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="member-list" style="text-align:left; padding:10px 5px; background-color:#fff4d6; line-height:36px;">
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label for="store">回報內容：</label>
+                                                <input type="text" class="form-control lg" placeholder="請敘述問題，方便客服協助處理">&nbsp;&nbsp;
+                                                <button value="" type="button" class="btn btn-download" style="padding:3px 12px; height:auto; color:#000;">上傳檔案</button>&nbsp;
+                                                最多上傳3個檔案，每個檔案不得超過6mb
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="border-right"><input type="checkbox" name="">
+                                        &nbsp;CPU處理器</div></th>
+                                    <th><div class="border-right">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="" placement="auto left" 
+                                            data-original-title="[超微AMD] Ryzen 7 1800x 8核, 3.6GHz, 16M快取," class="gray-tooltip icon-arrow">[超微AMD] Ryzen 7 1800x 8核</span>
+                                        </div></th>
+                                    <td>
+                                        <div class="border-right">$999,999</div>
+                                    </td>
+                                    <td style="width:20%;">
+                                        <div class="border-right" style="text-align:-webkit-center;">
+                                            <div class="alignment_lg"
+                                                 style="overflow:hidden;width: 100px;height:35px;border: 1px solid #CCC;">
+                                                <div id="3l" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width: 30px;height:35px;line-height:35px;border-right: 1px solid #CCC;float:left;">-</div>
+                                                <div id="3r" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width: 30px;height:35px;line-height:35px;border-left: 1px solid #CCC;float:right;"> + </div></div>
+                                            <div class="alignment_xs"
+                                                 style="overflow:hidden;width: 55px;height:25px;border: 1px solid #CCC;">
+                                                <div id="3l" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width:15px;height:25px;line-height:25px;border-right: 1px solid #CCC;float:left;">-</div>
+                                                <div id="3r" onselectstart="return false;" style="-moz-user-select:none;cursor:pointer;text-align:center;width:15px;height:25px;line-height:25px;border-left: 1px solid #CCC;float:right;"> + </div></div>
+                                        </div>
+                                    </td>
+                                    <td><div class="border font-red-sm">$999,999</div></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="member-list" style="text-align:left; padding:10px 5px; background-color:#fff4d6; line-height:36px;">
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label for="store">回報內容：</label>
+                                                <input type="text" class="form-control lg" placeholder="請敘述問題，方便客服協助處理">&nbsp;&nbsp;
+                                                <button value="" type="button" class="btn btn-download" style="padding:3px 12px; height:auto; color:#000;">上傳檔案</button>&nbsp;
+                                                最多上傳3個檔案，每個檔案不得超過6mb
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="3" style="text-align:right; padding-right:5px; background-color:#e6e6e6;">選取件數：<span class="font-red-sm"> 00 </span></th>
+                                    <th colspan="2" style="text-align:right; padding-right:5px; background-color:#e6e6e6;">店家小計：<span class="font-red-sm"> $999,999 </span></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        
+                        <br>
+                        <div class="button-box">
+                            <button type="button" class="btn btn-primary btn-lg blue" data-toggle="collapse" data-target="#collapse" style="width:25%;">送&nbsp;&nbsp;出</button>
+                        </div>
+                    </div>
+                    
+                  </div>  
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- 上傳圖片 model -->
+    <div class="modal fade" id="upload">
+      <div class="modal-dialog login-xs" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="padding:5px 10px 0 0; border:0;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <img src="images/product_img.jpg" style="max-width:450px; width:100%;">
+          </div>
+        </div>
+      </div>
+    </div><!-- 上傳圖片 model end -->
+    
+    <!-- 是否刪除 modal -->   
+    <div class="modal fade" id="ReminderBox">
+      <div class="modal-dialog logout-xs" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+              您確定要刪除嗎?
+          </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-login">是</button>
+                <button type="submit" class="btn btn-primary btn-login" data-dismiss="modal" aria-label="Close">否</button>
+			</div>
+        </div>
+      </div>
+    </div><!-- 是否刪除 modal end -->
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip(); 
+        });
+    </script>
+                
+</body>
+</html>

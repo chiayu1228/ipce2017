@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+
+</head>
+    
+<body style="background:linear-gradient(#FFF,#CCEEFF); background-repeat:no-repeat; background-attachment:fixed;">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a href="#" id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                
+<!--
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+-->
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member" style="display:none"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="valuation_list">
+                <div class="purchase_list" style="padding-top:30px">
+                    <h2 class="title_logo" style="line-height:46px;"><img src="images/login_logo.png">
+                        &nbsp;會員服務使用條款</h2>
+                    <hr>
+                    <div style="font-size:14px; line-height:26px;">
+                        歡迎你加入成為iPCE會員，iPCE會員服務(以下稱會員服務)係由「聖洺國際通路顧問股份有限公司」(以下稱本公司)所建置提供，所有申請使用會員服務之使用者(以下稱會員)，都應該詳細閱讀下列使用條款，這些使用條款訂立的目的，是為了保護會員服務的提供者以及所有使用者的利益，並構成使用者與會員服務提供者之間的契約，使用者完成註冊手續、或開始使用iPCE所提供之會員服務時，即視為已知悉、並完全同意本使用條款的所有約定：
+                    </div>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <div style="width:10px; height:36px; background:#d3441c;"></div>
+                            </td>
+                            <td class="title-box">
+                                <div class="trapezoid2"></div>
+                                <div class="title2">會員服務</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="font-size:14px; line-height:26px;">
+                        1. 一旦本公司完成並確認你的申請後，本公司將提供予你會員服務。<br>
+                        2. 會員服務之期間，係指使用者填妥申請表格並完成註冊程序後，本公司於完成相關系統設定、使會員服務達於可供使用之日。<br>
+                        3. 因會員服務所提供之所有相關網域名稱、網路位址、功能以及其他一切因會員身分得享有之權益，均仍屬本公司或其他合法權利人所有，會員除僅得於服務期間內依本使用條款之約定為使用外，均不得以任何方式將其轉讓、移轉、出租或出借予其他任何第三人。<br>
+                        4. 會員服務僅依當時所提供之功能及狀態提供服務；本公司並保留新增、修改或取消會員服務內相關系統或功能之全部或一部之權利。
+                    </div>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <div style="width:10px; height:36px; background:#d3441c;"></div>
+                            </td>
+                            <td class="title-box">
+                                <div class="trapezoid2"></div>
+                                <div class="title2">帳號、密碼與安全性</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="font-size:14px; line-height:26px;">
+                        1. 在使用會員服務以前，必須經過完整的註冊手續，在註冊過程中你必須填入完整、而且正確的資料。<br>
+                        2. 在註冊過程中你可以自行選擇使用者名稱和密碼，但在使用會員服務的過程中，你必須為經由這個使用者名稱和密碼所進行的所有行為負責。<br>
+                        3. 對於你所取得的使用者名稱和密碼，你必須負妥善保管和保密的義務，如果你發現或懷疑這個使用者名稱和密碼被其他人冒用或不當使用，你必須立即通知iPCE網站管理者，以利本公司儘快採取適當之因應措施，但上述因應措施不得因此解釋為本公司明示或默示對你負有任何形式之賠償或補償之責任或義務。
+                    </div>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <div style="width:10px; height:36px; background:#d3441c;"></div>
+                            </td>
+                            <td class="title-box">
+                                <div class="trapezoid2"></div>
+                                <div class="title2">資料的隱私</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="font-size:14px; line-height:26px;">
+                        1. 本公司會保護每一位會員的隱私，不管是申請帳號、個人資料、郵件內容、或所儲存的網站資料，除了可能涉及違法、侵權、或違反使用條款、或經本人同意以外，本系統不會任意監視、增刪、修改或關閉，或將個人資料及郵件內容交予第三者，包括贊助之廣告廠商。<br>
+                        2. 會員服務中如有部分特定服務是與其他合作廠商或夥伴共同經營，如果你不願將個人資料揭露給其他合作伙伴，可以選擇不使用這些特定服務，但如你開始使用這些特定服務，本公司將在資料蒐集或傳輸前明確告知你後，將你的個人資料揭露給該特定服務之合作廠商或夥伴。<br>
+                        3. 在下列的情況下，本公司有可能會查看或提供你的個人或相關電信資料給有權機關、或主張其權利受侵害並提出適當證明之第三人：<br>
+                        <ul style="list-style:none;">
+                            (1) 依法令規定、或依司法機關或其他有權機關的命令；<br>
+                            (2) 為執行本使用條款、或使用者違反使用條款；<br>
+                            (3) 為保護會員服務系統之安全或經營者之合法權益；<br>
+                            (4) 為保護其他使用者或其他第三人的合法權益；<br>
+                            (5) 為維護會員服務系統的正常運作。
+                        </ul>
+                    </div>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <div style="width:10px; height:36px; background:#d3441c;"></div>
+                            </td>
+                            <td class="title-box">
+                                <div class="trapezoid2"></div>
+                                <div class="title2">搜尋、檢索或找圖</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="font-size:14px; line-height:26px;">
+                        會員服務內所提供之搜尋、檢索或找圖之服務或功能，僅係本公司利用電腦程式系統所提供之自動化服務，由使用者自行依照所選定或設定之條件或內容，進行搜尋或檢索；因此所得之搜尋、檢索或找圖結果及相關之連結，均係由各該來源網站或相關第三人所提供，應分別由各該來源網站自行負完全之責任，與本公司無涉。
+                    </div>
+                    <br>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <div style="width:10px; height:36px; background:#d3441c;"></div>
+                            </td>
+                            <td class="title-box">
+                                <div class="trapezoid2"></div>
+                                <div class="title2">關於iPCE會員服務的廣告</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="font-size:14px; line-height:26px;">
+                        1. 所有於會員服務出現之廣告資訊，均由個別廣告主或贊助廠商自行負完全之責任，與本公司無涉。
+                    </div>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <div style="width:10px; height:36px; background:#d3441c;"></div>
+                            </td>
+                            <td class="title-box">
+                                <div class="trapezoid2"></div>
+                                <div class="title2">使用者的行為</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="font-size:14px; line-height:26px;">
+                        1. 任何未經事前授權的商業行為都是被禁止的。<br>
+                        2. 你必須遵守相關法令規範，並且對於經由使用者名稱和密碼所進行的任何行為、以及所儲存的所有資料負責。你必須同意不從事以下的行為：
+                        <ul style="list-style:none;">
+                            (1) 傳送任何違反中華民國技術資料輸出等相關法令之郵件。<br>
+                            (2) 刊載、傳輸、發送或儲存任何誹謗、詐欺、傷害、猥褻、色情、賭博或其他一切違反法令之郵件、檔案或資料。<br>
+                            (3) 刊載、傳輸、發送或儲存任何侵害他人智慧財產權或其他權益的資料。<br>
+                            (4) 未經同意收集他人電子郵件位址以及其他個人資料。<br>
+                            (5) 未經同意擅自摘錄或使用會員服務內任何資料庫內容之全部或一部。<br>
+                            (6) 刊載、傳輸、發送、儲存病毒、或其他任何足以破壞或干擾電腦系統或資料的程式或訊息。<br>
+                            (7) 破壞或干擾會員服務的系統運作或違反一般網路禮節之行為。<br>
+                            (8) 在未經授權下進入會員服務系統或是與系統有關之網路、或冒用他人帳號或偽造寄件人辨識資料傳送郵件，企圖誤導收件人之判斷。<br>
+                            (9) 任何妨礙或干擾其他使用者使用會員服務之行為。<br>
+                            (10) 傳送幸運連鎖信、垃圾郵件、廣告信或其他漫無目的之郵件。<br>
+                            (11) 任何透過不正當管道竊取會員服務之會員帳號、密碼或存取權限之行為。<br>
+                            (12) 其他不符合會員服務所提供的使用目的之行為。
+                        </ul>
+                        3. 會員服務內之各類文字、圖檔、圖片及其他著作或資料，其著作權或其他相關智慧財產權均仍屬於提供該文字、圖檔、圖片及其他著作或資料之各別廠商或其他合法權利人所有，並由各別廠商或其他合法權利人依照當時所定之授權條件及範圍授權會員使用，但僅限於你個人使用，未經事前授權你不可以將這些文字、圖檔、圖片或其他著作或資料使用於：
+                        <ul style="list-style:none;">
+                            (1) 銷售、轉讓、出租、出借、轉授權、隨書附贈或其他任何形式的商業用途。<br>
+                            (2) 上載於其他任何網站、或以其他方式提供予其他人使用。<br>
+                            (3) 色情、侮辱、誹謗、非法交易、或其他不符合著作權法或其他法令規定之行為。<br>
+                            (4) 為上述使用目的所為之修改或編輯。
+                        </ul>
+                        4. 如果任何文字、圖檔、圖片或其他著作或資料發生權利歸屬或其他合法性爭議，本公司有權隨時不經通知，直接停止提供、或直接刪除、或通知會員停止使用。
+                    </div>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <div style="width:10px; height:36px; background:#d3441c;"></div>
+                            </td>
+                            <td class="title-box">
+                                <div class="trapezoid2"></div>
+                                <div class="title2">責任限制</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="font-size:14px; line-height:26px;">
+                        1. 對於本公司所提供之各項會員服務，均僅依各該服務當時之功能及現況提供使用，對於使用者之特定要求或需求，包括但不限於速度、安全性、可靠性、完整性、正確性及不會斷線和出錯等，本公司不負任何形式或內容之擔保或保證責任。<br>
+                        2. 因本公司所提供的會員服務本身之使用，所造成之任何直接或間接之損害，本公司均不負任何責任，即使係本公司曾明白建議之注意事項亦同。
+                    </div>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <div style="width:10px; height:36px; background:#d3441c;"></div>
+                            </td>
+                            <td class="title-box">
+                                <div class="trapezoid2"></div>
+                                <div class="title2">服務暫停或中斷</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="font-size:14px; line-height:26px;">
+                        1. 在下列情形，本公司將暫停或中斷本服務之全部或一部，且對使用者任何直接或間接之損害，均不負任何責任：
+                        <ul style="list-style:none;">
+                            (1) 對本服務相關軟硬體設備進行搬遷、更換、升級、保養或維修時；<br>
+                            (2) 使用者有任何違反政府法令或本使用條款情形；<br>
+                            (3) 天災或其他不可抗力所致之服務停止或中斷；<br>
+                            (4) 其他不可歸責於本公司之事由所致之服務停止或中斷。
+                        </ul>
+                        2. 會員服務系統或功能『例行性』之維護、改置或變動所發生之服務暫停或中斷，本公司將於該暫停或中斷前以電子郵件、公告或其他適當之方式告知會員。<br>
+                        3. 因使用者違反相關法令或本使用條款、或依相關主管機關之要求、或因其他不可歸責於本公司之事由，而致本服務全部或一部暫停或中斷時，暫停或中斷期間仍照常計費。
+                    </div>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <div style="width:10px; height:36px; background:#d3441c;"></div>
+                            </td>
+                            <td class="title-box">
+                                <div class="trapezoid2"></div>
+                                <div class="title2">終止服務</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="font-size:14px; line-height:26px;">
+                        1. 基於公司的運作，會員服務有可能停止提供服務之全部或一部，使用者不可以因此而要求任何賠償或補償。<br>
+                        2. 如果你違反了本使用條款，本公司保留隨時暫時停止提供服務、或終止提供服務之權利，你不可以因此而要求任何賠償或補償。<br>
+                        3. 如果你在會員服務上所刊載、傳輸、發送或儲存的郵件、檔案或資料，有任何違反法令、違反本使用條款、有侵害第三人權益之虞、或經第三人檢舉有發送垃圾電子郵件之情事者，本公司保留隨時得不經通知直接加以移動、刪除或停止服務提供之權利。若本公司因此受到任何損害，你應對本公司負損害賠償之責。
+                    </div>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <div style="width:10px; height:36px; background:#d3441c;"></div>
+                            </td>
+                            <td class="title-box">
+                                <div class="trapezoid2"></div>
+                                <div class="title2">修改本使用條款的權利</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="font-size:14px; line-height:26px;">
+                        本公司保留隨時修改本會員服務使用規則的權利，修改後的iPCE會員服務使用條款將公佈在iPCE會員服務網站上，不另外個別通知使用者。
+                    </div>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <div style="width:10px; height:36px; background:#d3441c;"></div>
+                            </td>
+                            <td class="title-box">
+                                <div class="trapezoid2"></div>
+                                <div class="title2">準據法及管轄權</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="font-size:14px; line-height:26px;">
+                        1. 本約定條款解釋、補充及適用均以中華民國法令為準據法。<br>
+                        2. 因本約定條款所發生之訴訟，以台灣台北地方法院為第一審管轄法院。
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    <footer class="container">
+            <hr>
+            <div class="copyright">
+            <div class="left">
+                Copyright © 2016 Saintmen iPCE All rights reserved. &nbsp; &nbsp;<a href="PrivacyPolicy.html">| 隱私權政策 |  </a>
+                <a href="UseTerms.html">| 使用條款 |  </a>
+            </div>
+            <div class="right">
+                <strong>客服專線：0800-000-234&nbsp;&nbsp;&nbsp;客服信箱: <a href="mailto:ipce@saintmen.com">iPCE@saintmen.com</a></strong>
+            </div>
+            </div>
+    </footer>
+    <br>
+        
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+                
+</body>
+</html>

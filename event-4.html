@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iPCE 1S</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pc_icon_list.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/mobile_version.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+    
+        <script src="js/jquery.page.js"></script>
+
+</head>
+    
+<body style="background-color:#DCDCDC">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top height" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- 手機版搜尋與會員鈕 -->
+<!--
+                <div class="navbar-toggle icon dropdown" style="border:0; margin-right:5px;">
+                  <a id="member_xs" class="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="num-circle" style="top:-5px; left:-5px; z-index:999;">1</span><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                    <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                        <p><span>你好，</span>
+                        <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                        使用者名稱</span></p>
+                        <div class="footer text-center">
+                            <div style="margin-bottom:5px; display:inline-flex;">
+                                <a href="member_%20footprints.html"><button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button></a>&nbsp;
+                                <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+-->
+                
+                <div class="navbar-toggle icon" style="border:0; margin-right:5px;">
+                    <a id="member_xs" href="#" data-toggle="modal" data-target="#LOGIN">
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></div>
+                <div class="navbar-toggle icon" style="border:0; margin-right:0;">
+                    <a href="#" data-toggle="collapse" data-target="#search_xs" style="color:#FFF">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+                <div style="z-index: 999;">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="images/nav_logo.png" alt="">
+                    </a>
+                    <form class="input-group"  id="search_box">
+                      <input type="text" class="form-control" placeholder="經銷商搜尋">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-search" type="button">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </form>
+                </div>
+            </div><!-- 手機版搜尋與會員鈕(含下拉選單) end -->
+            
+            <!--手機版搜尋欄-->
+            <form class="collapse navbar-collapse top_navbar" id="search_xs">
+                <div class="form-group has-feedback search_box">
+                  <div class="input-group" style="padding-top:15px">
+                    <span class="input-group-btn">
+                        <a href=""><button class="btn btn-secondary btn-search2" type="button" style="background-color:#ddd; color:#3B2212;">
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                            </button></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="經銷商搜尋">
+                  </div>
+                </div>
+            </form><!--手機版搜尋欄 end-->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse top_navbar" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav_ul">
+                    <li><a href="cpu_th-large%20.html"><img src="images/navbar_btn1.png">比較</a></li>
+                    <li><a href="calculate.html"><img src="images/navbar_btn2.png">計較</a></li>
+                    <li><a href="recycle.html"><img src="images/navbar_btn3.png">環保</a></li>
+                    <li class="hover"><a href="event-1.html"><img src="images/navbar_btn4.png">優惠</a></li>
+<!--                    <li><a href="store_valuation_list.html"><img src="images/navbar_btn5.png">選購</a></li>-->
+                </ul>
+                <!-- 電腦版搜尋與會員鈕 -->
+                <div id="member"><a href="#" data-toggle="modal" data-target="#LOGIN"></a></div>
+                <div id="member" class="hover" style="display:none"><span class="num-circle">1</span>
+                    <a href="#" onclick="myFunction()" class="dropbtn"></a></div>
+                <!-- 電腦版搜尋與會員鈕 end -->
+            </div>
+            
+            <!-- 電腦版會員下拉選單 -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="main" style="text-align:center;margin-left:5px;margin-right:5px;">
+                    <p><span>你好，</span>
+                    <span ng-if="Cookie.UserInfo_Name != 'null' &amp;&amp; Cookie.UserInfo_Name != null" class="ng-binding ng-scope">
+                    使用者名稱</span></p>
+                    <div class="footer text-center">
+                        <div class="col-sm-6" style="margin-bottom:5px;">
+                            <button id="Member_Manage" type="button" ng-click="Go('/Member/UserWebLog')" class="btn btn-primary">會員中心</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-right" data-toggle="modal" data-target="#LOGOUT">登出</button>
+                        </div>
+                    </div><!--footer end -->
+                </div>
+              </div><!-- 電腦版會員下拉選單 end -->
+            
+            <!-- /.navbar-collapse -->
+      
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row ">
+            <div class="event_list_m">
+                    <div class="right_ad">
+                        <img src="images/ad1.jpg" width="100%">
+                    </div>
+                    <div class="people99">
+                        <div class="name">	Hi! <a href="a">xxxx@mail.com</a></div>
+                        <div class="point">	<img src="images/monkey-bg.png" height="30px">$ 999,999</div>
+                        <div class="left">	<img src="images/monkey-2.png" height="30px">兌換記錄</div>
+                        <div class="right">	<img src="images/monkey-3.png" height="30px">如何取得i 點數</div>
+                    </div>
+            </div>
+            <div id="exTab1" class="container mobile">	
+                <ul  class="nav nav-pills">
+                    <li class="active">
+                        <a  href="#tab1" data-toggle="tab">全部</a>
+                    </li>
+                    <li>
+                        <a href="#tab2" data-toggle="tab">開學季</a>
+                    </li>
+                    <li>
+                        <a href="#tab3" data-toggle="tab">活動專區</a>
+                    </li>
+                    <li>
+                        <a href="#tab4" data-toggle="tab">活動專區2</a>
+                    </li>
+		          </ul>
+
+			  <div class="tab-content clearfix">
+                <section class="tab-pane active" id="tab1" title="全部">
+                    <div class="tab-group-product">
+                        <div class="title">限制字數零壹貳参肆伍陸</div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999,999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="mask">
+                            <img src="images/tab-end.png"
+                                 alt=""
+                                 width="100%;">
+                        </div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">豚鼠藍芽體感手環(白)</div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <!--1212修改-->
+                    <div class="tcdPageCode lg"><span class="disabled">上一頁</span><span class="current">1</span><a href="javascript:;" class="tcdNumber">2</a><a href="javascript:;" class="tcdNumber">3</a><a href="javascript:;" class="tcdNumber">4</a><span>...</span><a href="javascript:;" class="tcdNumber">6</a><a href="javascript:;" class="nextPage">下一頁</a></div>
+                    <script>
+                        $(".tcdPageCode").createPage({
+                            pageCount: 6,
+                            current: 1,
+                            backFn: function (p) {
+                                console.log(p);
+                            }
+                        });
+                    </script><!--1212修改-->
+                </section>
+                
+                <section class="tab-pane" id="tab2" title="開學季">
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="mask">
+                            <img src="images/tab-end.png"
+                                 alt=""
+                                 width="100%;">
+                        </div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <!--1212修改-->
+                    <div class="tcdPageCode lg"><span class="disabled">上一頁</span><span class="current">1</span><a href="javascript:;" class="tcdNumber">2</a><a href="javascript:;" class="tcdNumber">3</a><a href="javascript:;" class="tcdNumber">4</a><span>...</span><a href="javascript:;" class="tcdNumber">6</a><a href="javascript:;" class="nextPage">下一頁</a></div>
+                    <script src="js/jquery.page.js"></script>
+                    <script>
+                        $(".tcdPageCode").createPage({
+                            pageCount: 6,
+                            current: 1,
+                            backFn: function (p) {
+                                console.log(p);
+                            }
+                        });
+                    </script><!--1212修改-->
+                </section>
+                  
+                <section class="tab-pane" id="tab3" title="活動專區">
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="mask">
+                            <img src="images/tab-end.png"
+                                 alt=""
+                                 width="100%;">
+                        </div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <!--1212修改-->
+                    <div class="tcdPageCode lg"><span class="disabled">上一頁</span><span class="current">1</span><a href="javascript:;" class="tcdNumber">2</a><a href="javascript:;" class="tcdNumber">3</a><a href="javascript:;" class="tcdNumber">4</a><span>...</span><a href="javascript:;" class="tcdNumber">6</a><a href="javascript:;" class="nextPage">下一頁</a></div>
+                    <script src="js/jquery.page.js"></script>
+                    <script>
+                        $(".tcdPageCode").createPage({
+                            pageCount: 6,
+                            current: 1,
+                            backFn: function (p) {
+                                console.log(p);
+                            }
+                        });
+                    </script><!--1212修改-->
+                </section>
+                
+                <section class="tab-pane" id="tab4" title="活動專區2">
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="mask">
+                            <img src="images/tab-end.png"
+                                 alt=""
+                                 width="100%;">
+                        </div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <div class="tab-group-product">
+                        <div class="title">集點換 茶裏王 </div>
+                        <div class="img"><img src="images/tab-pro.jpg" alt="" width="100%;" data-toggle="modal" data-target="#desciption"></div>
+                        <div class="date">數量:5個</div>
+                        <div class="date2">建議售價:100000</div>
+                        <div class="date ng-binding ng-scope" style="margin-top:-5%;">已兌換:667個</div>
+                        
+                        <div class="date-end">
+                            <div class="tt">兌換截止日</div>
+                            <div class="monkey">2016/09/01</div>
+                        </div>
+                        <div class="date-chang">
+                            <div class="tt">兌 換</div>
+                            <div class="monkey">$999</div>
+                        </div>
+                        <div class="line99"></div>
+                        <div class="img2"><img src="images/monkey.png" alt="" width="100%;" data-toggle="modal" data-target="#exchange"></div>
+                    </div><!-- tab-group-product -->
+                    
+                    <!--1212修改-->
+                    <div class="tcdPageCode lg"><span class="disabled">上一頁</span><span class="current">1</span><a href="javascript:;" class="tcdNumber">2</a><a href="javascript:;" class="tcdNumber">3</a><a href="javascript:;" class="tcdNumber">4</a><span>...</span><a href="javascript:;" class="tcdNumber">6</a><a href="javascript:;" class="nextPage">下一頁</a></div>
+                    <script src="js/jquery.page.js"></script>
+                    <script>
+                        $(".tcdPageCode").createPage({
+                            pageCount: 6,
+                            current: 1,
+                            backFn: function (p) {
+                                console.log(p);
+                            }
+                        });
+                    </script><!--1212修改-->
+                </section>
+                
+			  </div>
+            </div>
+        </div>
+        
+        <footer class="container">
+            <hr>
+            <div class="copyright">
+            <div class="left">
+                Copyright © 2016 Saintmen IPCE All rights reserved. &nbsp; &nbsp;<a href="PrivacyPolicy.html">| 隱私權政策 |  </a>
+                <a href="UseTerms.html">| 使用條款 |  </a>
+            </div>
+            <div class="right">
+                <strong>客服專線：0800-000-234&nbsp;&nbsp;&nbsp;客服信箱: <a href="mailto:ipce@saintmen.com">iPCE@saintmen.com</a></strong>
+            </div>
+            </div>
+    </footer>
+    <br>
+    </div>
+    
+    <!-- 兌換商品介紹 -->
+    <div class="modal fade" id="desciption">
+      <div class="modal-dialog login-xs" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+              <div style="text-align:center">
+                <img src="images/Gogoro.jpg">
+              </div>
+              <div>
+                  請至i訊息詳閱活動資格！
+                  實用大方的「統一超商禮券」，每張均為100元，可在全國以下通路使用：
+                  統一超商、統一星巴客、統一渡假村、統一多拿滋、康是美藥粧店、21世紀風味館、高雄夢時代購物中心、樂清DUSKIN、統一時代百貨、酷聖石冰淇淋、聖娜多堡麵包、聖德科斯、BEING spa …
+              </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- 兌換商品介紹 end -->
+
+    <!-- 兌換modal -->
+    <div class="modal fade" id="exchange">
+      <div class="modal-dialog login-xs" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="padding:5px 10px 0 0; border:0;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Hi! 會員暱稱<br>
+            目前您的i點數 $ 99999 <img src="images/monkey-bg.png" height="25px" style="vertical-align:text-bottom;"><br>
+            <table class="table-result">
+                <thead>
+                    <tr>
+                        <th style="font-size:12pt">兌換項目</th>
+                        <th style="font-size:12pt">兌換數量</th>
+                        <th style="font-size:12pt">兌換後剩餘點數</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="border-right" style="text-align:left; line-height:26px;">集點換 20170407測試專用商品</div></td>
+                        <td><div class="border-right">0</div></td>
+                        <td><div class="border">99999</div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="border" style="text-align:left; padding:5px;"><div>以下寄送地址請完整填寫，送出後我們會盡快將您所喜愛的活動商品寄到您身邊，非常感您的參與！</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <table class="contact_info">
+                <tr>
+                    <th>收件所在區域</th>
+                    <td><select class="selectpicker" id="inlineFormCustomSelect" style="width:100%;">
+                                    <option selected>請選擇</option>
+                                    <option value="">台北市</option>
+                                    <option value="">新北市</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <th>方便聯絡時間</th>
+                    <td><select class="selectpicker" id="inlineFormCustomSelect" style="width:100%;">
+                                    <option selected>請選擇</option>
+                                    <option value="">10:00~12:00</option>
+                                    <option value="">13:00~17:00</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <th>收件地址：</th>
+                    <td><input type="text" class="form-control" id="address" placeholder="Ex: 台北市中正區八德路一段00號"></td>
+                </tr>
+                <tr>
+                    <th>聯絡人：</th>
+                    <td><input type="text" class="form-control" id="name" placeholder="Ex: 王小明"></td>
+                </tr>
+                <tr>
+                    <th>電子信箱：</th>
+                    <td><input type="text" class="form-control" id="email" placeholder="Ex: iPCE@saintmen.com"></td>
+                </tr>
+                <tr>
+                    <th>連絡電話：</th>
+                    <td><input type="text" class="form-control" id="mobile" placeholder="Ex: 0900000000"></td>
+                </tr>
+                <tr>
+                    <th>估價單編號：</th>
+                    <td><input type="text" class="form-control" id="numbering" placeholder="iPCE 估價單編號"></td>
+                </tr>
+                <tr>
+                    <th>發票號碼：</th>
+                    <td><input type="text" class="form-control" id="invoice" placeholder="發票號碼"></td>
+                </tr>
+                <tr>
+                    <th>購買發票照片：</th>
+                    <td><button>選擇檔案</button> 未選擇任何檔案</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:right;"><input type="checkbox" value=""> 更新會員資料</td>
+                </tr>
+            </table>
+            <br>
+            <div align="left"><img src="images/ad1.jpg" style="max-width:100%"></div>
+            <br>
+            <button type="button" class="btn-block" data-toggle="modal" data-target="#SentOut">送出</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- 兌換modal end -->
+    
+    <!-- 兌換完成 modal -->
+    <div class="modal fade" id="SentOut">
+      <div class="modal-dialog login-xs" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="padding:5px 10px 0 0; border:0;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="success" style="padding:20px 0 50px 0;">
+                <div style="text-align:center;"><h2 style="font-weight:900;">
+                    <i class="fa fa-check-circle fa-lg" aria-hidden="true" style="color:#8cc63f"></i> 完成送出</h2>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- 兌換完成 modal end -->
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.page.js"></script>
+                
+</body>
+</html>
